@@ -6,7 +6,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       ## Account 
       t.string :first_name
       t.string :last_name
-      t.blob :avatar
       t.string :company_name
       ## Database authenticatable
       t.string :email,              null: false, default: ""
