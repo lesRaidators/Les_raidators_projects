@@ -1,0 +1,2 @@
+class JoinOrderProduct < ApplicationRecord
+end
