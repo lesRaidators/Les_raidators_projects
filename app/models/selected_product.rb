@@ -1,0 +1,2 @@
+class SelectedProduct < ApplicationRecord
+end
