@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(post_params)
-    redirect_to root_path
+
   end
 
   def new
@@ -18,7 +18,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    binding.pry
     @product = Product.find(params[:id])
     @product.update(post_params)
     redirect_to products_path
@@ -37,7 +36,7 @@ class ProductsController < ApplicationController
   
 private 
 
-def post_params
+  def post_params
   params.require(:product).permit(:title, :description, :price, :image_url)
-end
+  end
 end 

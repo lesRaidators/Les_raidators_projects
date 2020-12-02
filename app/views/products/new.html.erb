@@ -5,27 +5,30 @@
 <p>Find me in app/views/products/new.html.erb</p>
 
 
-<%= form_tag url_for(action: 'create'), method: "post" do %>
+<%= form_for @product do |f| %>
 
-  <%= label_tag 'Image' %>
-  <%= text_field_tag '', :image_url %>
-  <br /> <br />
+  <div class="form-group">
+  <%= f.text_field :title, placeholder: 'Titre', class:"form-control" %>
+  </div>
 
-  <%= label_tag 'Description' %>
-  <%= text_field_tag '', :description %>
-  <br /> <br />
+  <div class="form_group">
+  <%= f.text_field :price, placeholder: 'Prix',  class: 'form-control' %>
+  </div>
 
-  <%= label_tag 'Titre' %>
-  <%= text_field_tag '', :title %>
-  <br /> <br />
+  <div class="form-group">
+  <%= f.text_area :description, placeholder: 'Description', class: 'form-control' %>
+  </div>
 
-  <%= label_tag 'Prix' %>
-  <%= text_field_tag '', :price %>
-  <br /> <br />
+  <div class="form-group">
+  <%= f.text_area :image_url, placeholder: 'Image_url', class: 'form-control' %>
+  </div>
 
-  <%= submit_tag "Créer un don / produit" %>
+  <div class="form-group">
+  <button class="btn-primary" type="submit"> Modifier le dons /produits </button>
+  </div>
 
-  <% end %>
+  <%end%>
+  
 
 </body>
 </html>
