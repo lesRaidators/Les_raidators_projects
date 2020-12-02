@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+Product.destroy_all
+
+20.times do |x|
+  
+  Product.create(
+      title: Faker::Name.first_name ,
+      description: Faker::ChuckNorris.fact,
+      price: Faker::Number.decimal(l_digits: 2),
+      image_url: Faker::Coffee.variety)
+  puts "Seeding of Item nb #{x}"
+end
