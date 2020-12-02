@@ -10,6 +10,6 @@ class Address < ApplicationRecord
   validates :country, presence: true
   validates :phone_number, presence: true
   
-  enum type [:billing, :shipping]
+  enum type: [:billing, :shipping]
 
 end
