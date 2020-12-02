@@ -1,7 +1,7 @@
 <html>
   <body>
     <div class="row ">
-    <button type="button" class="btn btn-outline-primary"><%= link_to "Créer", new_product_path(product.id) %></button>
+    <button type="button" class="btn btn-outline-primary"><%= link_to "Créer", new_product_path %></button>
       <% @products.each do |product| %>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card h-100">
