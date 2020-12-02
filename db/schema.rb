@@ -49,10 +49,8 @@ ActiveRecord::Schema.define(version: 2020_12_01_123030) do
 
   create_table "orders", force: :cascade do |t|
     t.string "stripe_customer_id"
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -93,7 +91,6 @@ ActiveRecord::Schema.define(version: 2020_12_01_123030) do
   add_foreign_key "carts", "users"
   add_foreign_key "join_order_products", "orders"
   add_foreign_key "join_order_products", "products"
-  add_foreign_key "orders", "users"
   add_foreign_key "selected_products", "carts"
   add_foreign_key "selected_products", "products"
 end
