@@ -1,1 +1,12 @@
-<p>Voici le recap des commande</p>
+<h2>Toutes les commandes</h2>
+
+<% @orders.each do |order| %>
+  <p>Reférence: <%= order.name %></p>
+  <p>Email: <%= order.email %></p>
+  <p>Articles: </p>
+  <ul>
+    <% order.join_order_products.each do |item| %>
+    <li><%= item.quantity %> x <%= item.product.name %></li>
+    <% end %>
+  </ul>
+<% end
