@@ -4,19 +4,19 @@
 
 <%= form_for @product do |f| %>
 
-  <div class="form_group">
-  <%= f.text_field :title, placeholder: Titre, class 'form_control' %>
+  <div class="form-group">
+  <%= f.text_field :title, class:"form-control" %>
   </div>
 
   <div class="form_group">
-  <%= f.text_field :price, placeholder: Prix, class 'form_control' %>
+  <%= f.text_field :price, class: 'form-control' %>
   </div>
 
-  <div class="form_group">
-  <%= f.text_field :description, placeholder: Description, class 'form_control' %>
+  <div class="form-group">
+  <%= f.text_area :description, class: 'form-control' %>
   </div>
 
-  <div class="form_group">
+  <div class="form-group">
   <button class="btn-primary" type="submit"> Modifier le dons /produits </button>
   </div>
 

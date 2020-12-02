@@ -1,3 +1,4 @@
+require 'pry'
 class ProductsController < ApplicationController
   def index
     @products = Product.all
@@ -17,24 +18,26 @@ class ProductsController < ApplicationController
   end
 
   def update
+    binding.pry
     @product = Product.find(params[:id])
     @product.update(post_params)
-    redirect_to root_path
+    redirect_to products_path
+  
   end
 
   def edit
-    @product = Products.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to root_path
+    redirect_to products_path
   end
   
 private 
 
 def post_params
-  params.require.(:products).permite(:title, :description, :price, :image_url)
+  params.require(:product).permit(:title, :description, :price, :image_url)
 end
 end 
