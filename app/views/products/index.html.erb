@@ -1,16 +1,19 @@
 <html>
-<body>
-
-<h1>Products#index</h1>
-
-
-<% @products.each do |product| %>
-
-  <h2> <%= product.image_url %> </h2>
-  <h2> <%= product.title %> </h2>
-  <h2> <%= product.price %> </h2>
-  
-<% end %>
-
-</body>
+  <body>
+    <div class="row ">
+      <% @products.each do |product| %>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <h3> Image Produit : <%= product.image_url %> </h3>
+            <h2> Titre :<%= product.title %> </h2>
+          <h5> Prix:<%= product.price %> </h5>
+          <button type="button" class="btn btn-outline-primary"><%= link_to "Voir détails", product_path(product.id) %></button>
+          <button type="button" class="btn btn-outline-primary"><%= link_to "Modifier", edit_product_path(product.id) %></button>
+          <button type="button" class="btn btn-outline-primary"><%= link_to "Supprimer", product_path(product.id), method: :DELETE %></button>
+    
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </body>
 </html>
