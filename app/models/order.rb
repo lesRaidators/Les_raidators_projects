@@ -4,7 +4,7 @@ class Order < ApplicationRecord
   belongs_to :user
   has_many :products, through: :join_order_products
 
-  enum type [:refuse, :waiting, :confirm]
+  enum type: [:refuse, :waiting, :confirm]
 
 
 end
