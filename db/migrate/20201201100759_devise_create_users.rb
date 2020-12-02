@@ -8,7 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :company_name
       t.timestamps null: false
-      t.references :adress, null: false, foreign_key: true
+
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""
@@ -41,7 +41,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.timestamps null: false
 
-      t.references :adress, null: false, foreign_key: true
     end
 
     add_index :users, :email,                unique: true

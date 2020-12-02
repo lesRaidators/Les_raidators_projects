@@ -1,7 +1,8 @@
 class CreateJoinOrderProducts < ActiveRecord::Migration[5.2]
   def change
     create_table :join_order_products do |t|
-      
+      t.references :order, null: false, foreign_key: true
+      t.references :product, null: false, foreign_key: true
       t.timestamps
     end
   end
