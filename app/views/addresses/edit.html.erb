@@ -1,0 +1,47 @@
+
+<h1> Modifier l'adresse </h1>
+
+<%= form_for @address do |f| %>
+
+  <div class="form-group">
+  <%= f.text_field :first_name, class:"form-control" %>
+  </div>
+
+  <div class="form_group">
+  <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.text_area :street_number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.text_area :street, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.text_area :zip_code, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.text_area :city, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.text_area :country, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.text_area :phone_number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.text_area :company_name, class: 'form-control' %>
+  </div>
+
+
+  <div class="form-group">
+  <button class="btn-primary" type="submit"> Modifier l'adresse /produits </button>
+  </div>
+
+  <%end%>

@@ -1,0 +1,14 @@
+Adress index
+
+<% @addresses.each do |address| %>
+
+  <p><%= address.first_name %></p>
+
+  <button type="button" class="btn btn-outline-primary"><%= link_to "Voir",address_path(address.id) %></button>
+  <button type="button" class="btn btn-outline-primary"><%= link_to "Modifier", edit_address_path(address.id) %></button>
+  <button type="button" class="btn btn-outline-primary"><%= link_to "Supprimer", address_path(address.id), method: :DELETE %></button>
+
+<% end %>
+
+
+

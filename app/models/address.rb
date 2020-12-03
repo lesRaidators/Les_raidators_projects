@@ -1,4 +1,4 @@
-class Adress < ApplicationRecord
+class Address < ApplicationRecord
   belongs_to :user
 
   validates :first_name, presence: true
@@ -10,6 +10,6 @@ class Adress < ApplicationRecord
   validates :country, presence: true
   validates :phone_number, presence: true
   
-  enum type [:billing, :shipping]
+  enum type: [:billing, :shipping]
 
 end
