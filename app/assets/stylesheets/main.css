@@ -1,18 +1,14 @@
-h1{
+/* custom.css */
+.image-signup{
+  background-image: url(signup-EuropRaid-2017-043); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
-
-h2{
-}
-.btn-raidators{
-}
-.round-picture{
-} 
-
-.card-raidators{
-}
-
-.picture-card-raidators{
-}
-
-.long-thumbnails-raidators{
+.banner-product{
+background-image: url(../images/EuropRaid-2017-0511.jpg);
+background-repeat: no-repeat; 
+background-size: cover; 
+background-position: center center;
+height: 100vh;
 }
