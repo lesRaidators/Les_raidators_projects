@@ -1,11 +1,9 @@
 class HomesController < ApplicationController
   def index
-    @user = User.all
-    
+    @users = User.all
   end
 
   def show
-    @user = find(params[:id])
-
+    @user = current_user
   end
 end
