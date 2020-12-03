@@ -2,6 +2,11 @@ require 'pry'
 class AddressesController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @addresses = Address.all
+
+  end 
+
   def show
     @address = Address.find(params[:id])
   end
@@ -24,6 +29,7 @@ class AddressesController < ApplicationController
   end
 
   def edit
+    @address = Address.find(params[:id])
   end
 
   def update
