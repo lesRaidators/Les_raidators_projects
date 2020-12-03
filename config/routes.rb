@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   resources :carts
   resources :homes
   resources :addresses
+
   resources :equipments
+  resources :charges
+
 end
