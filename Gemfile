@@ -61,7 +61,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails-erd'
 gem 'faker'
 gem 'pry'
-
-
+gem 'stripe'
+gem 'dotenv-rails'
 
 gem 'devise'
