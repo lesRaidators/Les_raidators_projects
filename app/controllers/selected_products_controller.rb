@@ -7,7 +7,7 @@ class SelectedProductsController < ApplicationController
     @selected_product = @cart.add_product(product)
 
     if @selected_product.save
-      redirect_to @selected_product.cart
+      redirect_to @selected_product.cart,
     else
       render :new 
     end
@@ -17,6 +17,11 @@ class SelectedProductsController < ApplicationController
     @selected_product = SelectedProduct.find(params[:id])
     @selected_product.destroy
     redirect_to @selected_product.cart
+  end
+
+private
+  def lineitem_params
+    params.require(:selected_product).permit(:cart_id, :product_id, :quantity)
   end
 
 
