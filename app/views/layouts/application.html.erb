@@ -10,7 +10,15 @@
   </head>
 
   <body>
+
+
+  <% if current_user %>
+<p> Connecté </p>
+  <% end %>
+
+
     <%= render 'layouts/navbar' %>
+
     <%= yield %>
     <%= render 'layouts/footer' %>
     <p class="notice"><%= notice %></p>

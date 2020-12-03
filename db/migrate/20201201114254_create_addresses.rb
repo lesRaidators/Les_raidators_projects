@@ -10,6 +10,7 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :country
       t.string :phone_number
       t.string :company_name
+      t.column :status, :integer, default: 0
       t.references :user, null: false, foreign_key: true
       t.timestamps
     end
