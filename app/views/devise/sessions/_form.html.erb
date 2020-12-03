@@ -1,0 +1,59 @@
+<!-- Main navigation -->
+<div class="container-fluid mt-3 mb-5 ">
+  
+  <!-- Full Page Intro -->
+  <section class:"image-signup">
+    <!-- Mask & flexbox options-->
+    <div class="mask d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container py-5 my-5">
+        
+        <h3 class="font-weight-bold text-center text-white pb-2">Bonjour</h3>
+        <p class="lead text-center text-white pt-2 mb-5">Ravis de vous revoir sur Europ.Raid</p>
+        
+        <!--Grid row-->
+        <div class="row d-flex align-items-center justify-content-center">
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-5">
+            <!--Form-->
+            <div class="card">
+              <div class="card-body z-depth-2 px-4">
+
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <div class:"field md-form mt-3">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control"  %>
+                  </div>
+
+                  <div class="field  md-form mt-3">
+                    <%= f.label :password %><br />
+                    <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
+                  </div>
+
+                  <% if devise_mapping.rememberable? %>
+                    <div class="field form-check"">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me %>
+                    </div>
+                  <% end %>
+
+                  <div class="actions text-center my-3">
+                    <%= f.submit "Log in", class:"btn btn-primary" %>
+                  </div>
+                <% end %>
+
+                <%= render "devise/shared/links" %>
+              </div>
+            </div>
+            <!--/.Form-->
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </section>
+  <!-- Full Page Intro -->
+</div>
