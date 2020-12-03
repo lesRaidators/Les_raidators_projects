@@ -1,1 +1,15 @@
-<p>La commande est crée</p>
+<h1>Voici votre bon de commande</h1>
+
+  <div class = "ordersheader">
+    <p> Commande effectuée le </p>
+    <p> Total</p>
+    <p> Livraison à </p>
+    <p> Numéro de commande </p>
+  </div>
+
+  <% @order.join_order_product.each do |myorder| %>
+    <%= product.image_url %>
+    <%= product.title %>
+    <%= product.price %>
+  <%end>
+

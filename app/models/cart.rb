@@ -2,4 +2,19 @@ class Cart < ApplicationRecord
   belongs_to :user
   has_many :selected_products
   
+  def add_product(product)
+   item = selected_products.find_by(product_id: product)
+    if item
+      item.quantity += 1
+    else
+      item = selected_products.new(product: product)
+    end
+    item
+  end
+
+
+def total 
+    selected_products.to_a.sum(&:total)
+end
+
 end
