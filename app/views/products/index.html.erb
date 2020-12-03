@@ -13,7 +13,8 @@
           <button type="button" class="btn btn-outline-primary"><%= link_to "Voir détails", product_path(product.id) %></button>
           <button type="button" class="btn btn-outline-primary"><%= link_to "Modifier", edit_product_path(product.id) %></button>
           <button type="button" class="btn btn-outline-primary"><%= link_to "Supprimer", product_path(product.id), method: :DELETE %></button>
-    
+          <button type="button" class="btn btn-outline-primary"><%= link_to "Ajouter au panier", selected_products_path(product_id: product.id), method: 'POST' %></button>
+
           </div>
         </div>
       <% end %>
