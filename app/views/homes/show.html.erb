@@ -1,0 +1,8 @@
+<h1>Homes#show</h1>
+<p>Find me in app/views/homes/show.html.erb</p>
+
+<h2> Email: <%= @user.email %> </h2>
+
+<button type="button" class="btn btn-outline-primary"><%= link_to "Créer Adresse",new_address_path %></button>
+<button type="button" class="btn btn-outline-primary"><%= link_to "Mes adresses",addresses_path %></button>
+<button type="button" class="btn btn-outline-primary"><%= link_to "Modifier mon mot de passe",edit_user_registration_path %></button>
