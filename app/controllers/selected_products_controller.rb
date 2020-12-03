@@ -6,11 +6,17 @@ class SelectedProductsController < ApplicationController
     product = Product.find(params[:product_id])
     @selected_product = @cart.add_product(product)
 
-    if selected_product.save
+    if @selected_product.save
       redirect_to @selected_product.cart
     else
       render :new 
     end
+  end
+
+  def destroy
+    @selected_product = SelectedProduct.find(params[:id])
+    @selected_product.destroy
+    redirect_to @selected_product.cart
   end
 
 
