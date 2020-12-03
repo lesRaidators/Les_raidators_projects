@@ -7,7 +7,7 @@ class SelectedProductsController < ApplicationController
     @selected_product = @cart.add_product(product)
 
     if @selected_product.save
-      redirect_to @selected_product.cart,
+      redirect_to @selected_product.cart
     else
       render :new 
     end

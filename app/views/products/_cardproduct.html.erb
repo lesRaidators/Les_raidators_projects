@@ -46,6 +46,7 @@
                 <h3 class="black-text"> Titre :<%= product.title %> </h3>
                 <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
                 <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Voir détails", product_path(product.id) %></button>
+                <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Ajouter au panier", selected_products_path(product_id: product.id), method: 'POST' %></button>
                 <br>
                 <button type="button" class="btn btn-outline-primary p-2 mx-1 mt-2"><%= link_to "Modifier", edit_product_path(product.id) %></button>
                 <button type="button" class="btn btn-outline-primary p-2 mx-2 mt-2"><%= link_to "Supprimer", product_path(product.id), method: :DELETE %></button>      
