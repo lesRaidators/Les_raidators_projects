@@ -1,5 +1,10 @@
 /* custom.css */
 
+.caroussel-caption { background: rgba(0,0,0,0.5); 
+  background-size: cover;
+  top:70%
+  }
+
 .footerend{
   display: flex;
   justify-content: center;
