@@ -3,6 +3,31 @@
 
 <h2> Email: <%= @user.email %> </h2>
 
+
+        <tbody>
+            <% @orders.each do |order| %>
+              <tr>
+                <th>Commande numéro : <strong><%= order.id %></strong></th>
+                <% total = 0 %>
+                <% order.join_order_prodcuts.each do |order_product| %>
+                  <% total += order_product.quantity * order_product.product.price %>
+                  <tr>
+                    <th class="text-center"><strong><%= order_product.product.title %></strong></th>
+                    <th class="text-center"><%= order_product.product.price %></th>
+                    <th class="text-center"><%= order_product.quantity %></th>
+                    <th class="text-center"><%= order_product.quantity * order_product.product.price %></th>
+                  </tr>
+                <% end %>
+                <th class="text-right">Total du prix de la commande : <strong><%= total %></strong></th>
+              </tr>
+            <% end %>
+          </tbody>
+
+
+
+
+
+
 <button type="button" class="btn btn-outline-primary"><%= link_to "Créer Adresse",new_address_path %></button>
 <button type="button" class="btn btn-outline-primary"><%= link_to "Mes adresses",addresses_path %></button>
 <button type="button" class="btn btn-outline-primary"><%= link_to "Modifier mon mot de passe",edit_user_registration_path %></button>

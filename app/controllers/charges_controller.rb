@@ -22,8 +22,13 @@ class ChargesController < ApplicationController
 
     if customer.save && charge.save
       @order = Order.create(stripe_customer_id: customer.id, user_id: current_user.id)
-      binding.pry
        @cart.selected_products.destroy_all
+
+       @selected_products.each do |product|
+				JoinOrderProducts.create(order_id: @order.id, product_id: product.product_id, quantity: product.quantity)
+			end
+
+
         redirect_to products_path
       else
        render 'new'
