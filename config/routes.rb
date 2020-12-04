@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   resources :charges
   resources :partnership
   resources :home_page
+  ressources :team
   
 end
