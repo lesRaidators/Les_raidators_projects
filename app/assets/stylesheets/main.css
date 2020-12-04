@@ -1,18 +1,4 @@
 /* custom.css */
-.image-signup{
-  background-image: 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-.banner{
-background-repeat: no-repeat;
-background-image: url(../images/signup-EuropRaid-2017-0431.jpg);  
-background-size: cover;
-max-height: 250px; 
-background-position: center center;
-height: 100vh;
-}
 
 .footerend{
   display: flex;
