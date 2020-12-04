@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root 'home_page#show'
   get 'home_page/show'
   devise_for :users
   resources :adresses

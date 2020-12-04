@@ -11,7 +11,7 @@
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
             <div class="view">
-              <img class="d-block w-100" src="../fichiers_MVP/Images/EuropRaid-2017-051.jpg"
+              <%= image_tag("home_page/EuropRaid-2017-051.jpg", class:"card-img-top", alt:"Card image cap") %>
               alt="First slide">
               <div class="mask rgba-black-light"></div>
             </div>
@@ -23,8 +23,8 @@
           <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-              <img class="d-block w-100" src="../fichiers_MVP/Images/EuropRaid-2019-071.jpg"
-              alt="Third slide">
+              <%= image_tag("home_page/EuropRaid-2019-071.jpg", class:"card-img-top", alt:"Card image cap") %>
+              
               <div class="mask rgba-black-strong"></div>
             </div>
             <div class="carousel-caption">
@@ -35,8 +35,8 @@
           <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-              <img class="d-block w-100" src="../fichiers_MVP/Images/EuropRaid-2019-038.jpg"
-              alt="Second slide">
+              <%= image_tag("home_page/EuropRaid-2019-038.jpg", class:"card-img-top", alt:"Card image cap") %>
+
               <div class="mask rgba-black-slight"></div>
             </div>
             <div class="carousel-caption">
@@ -140,7 +140,7 @@
                   <!-- Title -->
                   <h3 class="black-text">10 000 Kilomètres</h3>
                   <!-- Text -->
-                  <p class="card-title text-muted font-small mt-3 mb-2">Un parcours d'a moins 450 km par jour,avec seulement une boussole, une carte et un carnet de bord.</p>
+                  <p class="card-title text-muted font-small mt-3 mb-2">Un parcours d'au moins 450 km par jour,avec seulement une boussole, une carte et un carnet de bord.</p>
                   
                   <button type="button" class="btn btn-success text-white p-2 mx-0">En savoir plus</button>
                   
@@ -176,7 +176,7 @@
               <div class="card hoverable">
       
                 <!-- Card image -->
-                <img class="card-img-top" src="../fichiers_MVP/Images/professionnal.png" alt="Card image cap">
+                <%= image_tag("home_page/professionnal.png", class:"card-img-top", alt:"Card image cap") %>
                   
                   <!-- Card content -->
                   <div class="card-body">
@@ -203,7 +203,7 @@
               <div class="card hoverable">
       
                 <!-- Card image -->
-                <img class="card-img-top" src="../fichiers_MVP/Images/particular.png" alt="Card image cap">
+                <%= image_tag("home_page/particular.png", class:"card-img-top", alt:"Card image cap") %>
       
                 <!-- Card content -->
                 <div class="card-body">
@@ -243,9 +243,7 @@
       
               <!-- Featured video -->
               <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-                <iframe width="420" height="315"
-                src="../fichiers_MVP/Images/video_humanity.mp4">
-                </iframe>              
+              <%= video_tag "video_humanity.mp4", :size => "420x315", :controls => true %>          
                   
               </div>
       
@@ -310,8 +308,7 @@
       
               <!-- Featured image -->
               <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-                <img class="img-fluid" src="../fichiers_MVP/Images/children.png" alt="Sample image">
-               
+                <%= image_tag("home_page/children.png", class:"card-img-top", alt:"Card image cap") %>               
               </div>
       
             </div>
@@ -352,8 +349,9 @@
             <div class="card hoverable">
               <!-- Card content -->
               <div class="card-body my-4">
-    
-                <img class="img-fluid" src="../fichiers_MVP/Images/logo_1.png" alt="Sample image">
+
+                <%= image_tag("home_page/logo_1.png", class:"card-img-top", alt:"Card image cap") %>               
+
                 <h3 class="black-text mb-0">Scootcoot</h3>
                 
               </div>
@@ -372,9 +370,8 @@
               
               <!-- Card content -->
               <div class="card-body my-4">
-    
-                <img class="img-fluid" src="../fichiers_MVP/Images/logo_2.png" alt="Sample image">
-                
+                <%= image_tag("home_page/logo_2.png", class:"card-img-top", alt:"Card image cap") %>               
+                   
               </div>
     
             </div>
@@ -391,9 +388,8 @@
               
               <!-- Card content -->
               <div class="card-body my-4">
-    
-                <img class="img-fluid" src="../fichiers_MVP/Images/logo_3.png" alt="Sample image">
-                
+                <%= image_tag("home_page/logo_3.png", class:"card-img-top", alt:"Card image cap") %>               
+                  
               </div>
     
             </div>
@@ -410,8 +406,7 @@
               
               <!-- Card content -->
               <div class="card-body my-4">
-    
-                <img class="img-fluid" src="../fichiers_MVP/Images/logo_4.png" alt="Sample image">
+                <%= image_tag("home_page/logo_4.png", class:"card-img-top", alt:"Card image cap") %>               
                 
               </div>
     
