@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources :partnership
   resources :home_page
   resources :team
+  resources :privatevisitors
   
 end
