@@ -8,5 +8,11 @@ class StaticPagesController < ApplicationController
 
   def partnership
   end
+
+  def equipment
+  end
+
+  def privatevisitors
+  end
   
 end
