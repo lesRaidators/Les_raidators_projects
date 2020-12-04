@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  get '/partnership', to: "static_pages#partnership"
+  get '/home_page', to: "static_pages#home_page"
+  get '/team', to: "static_pages#team"
   get 'privatevisitors/show'
-  root 'home_page#show'
   devise_for :users
   resources :adresses
   resources :selected_products
@@ -12,8 +14,9 @@ Rails.application.routes.draw do
   resources :addresses
   resources :equipments
   resources :charges
-  resources :partnership
-  resources :home_page
-  resources :team
+
+  root 'static_pages#home_page'
+
+  
   
 end
