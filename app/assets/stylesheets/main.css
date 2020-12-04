@@ -13,9 +13,13 @@ background-position: center center;
 height: 100vh;
 }
 
-/* ---------------TEAM PAGE--------------------- */
 
-.w-200 {
-  width: 200px;
-}
+/* ----------CARROUSEL BOX SHADOW------------- */
 
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  top: 70%;
+  transform: translateY(-150%);
+ }
