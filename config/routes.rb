@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/home_page', to: "static_pages#home_page"
   get '/team', to: "static_pages#team"
   get 'privatevisitors/show'
+  
   devise_for :users
   resources :adresses
   resources :selected_products
