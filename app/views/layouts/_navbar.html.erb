@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-custom">
   <%= link_to "Europraid", products_path, class:"navbar-brand" %> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,9 +7,13 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-         <%= link_to "Accueil", products_path, class:"nav-link" %> 
-          <span class="sr-only">(current)</span>
-        </a>
+        <li><%= link_to "Accueil", home_page_path, class:"nav-link" %> </li>
+        <li><%= link_to "Professionnels", partnership_path, class:"nav-link" %></li> 
+        <li><%= link_to "Faire un don", partnership_path, class:"nav-link" %></li> 
+        <li><%= link_to "Collecte de fourniture", partnership_path, class:"nav-link" %> </li> 
+        <li><%= link_to "L'équipe", team_path, class:"nav-link" %></li>
+        <span class="sr-only">(current)</span>
+
       </li>
       <% if user_signed_in? %>
       <li class="nav-item active">
@@ -20,7 +24,7 @@
     <%else%>
     <%end%>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
+        <div class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Se connecter/s'inscrire</div>
         <div class="dropdown-menu">
         <%if user_signed_in?%>
           <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
