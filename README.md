@@ -21,11 +21,8 @@ https://raidators-project-development.herokuapp.com/
 * Rails 5.2.4.4
 
 #### Team 
-* Le Goff Emma 
-* Aussage Emillie 
-* Boisselier Louison
-* Leandri Lola 
-
+We have been working in peer programming.
+Le Goff Emma, Aussage Emillie, Boisselier Louison, Leandri Lola 
 
 #### Credit 
 Thank's to @cha-fa our mentor and all the community of The Hacking Project. 
