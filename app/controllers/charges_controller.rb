@@ -7,6 +7,7 @@ class ChargesController < ApplicationController
     # Amount in cents
     @cart = current_user.cart
     @amount = (@cart.total * 100).to_i
+    @selected_products = SelectedProduct.where(cart_id: @cart.id)
   
     customer = Stripe::Customer.create({
       email: params[:stripeEmail],
@@ -25,7 +26,8 @@ class ChargesController < ApplicationController
        @cart.selected_products.destroy_all
 
        @selected_products.each do |product|
-				JoinOrderProducts.create(order_id: @order.id, product_id: product.product_id, quantity: product.quantity)
+        @order_product = JoinOrderProducts.create(order_id: @order.id, product_id: product.product_id, quantity: product.quantity)
+        @order_product.save
 			end
 
 

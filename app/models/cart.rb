@@ -14,7 +14,24 @@ class Cart < ApplicationRecord
 
 
 def total 
-    selected_products.to_a.sum(&:total)
+ selected_products = self.selected_products
+  total = 0
+  selected_products.each do |t|
+    total += t.product.price
+  end
+  return total
 end
+
+
+def total_stripe
+  selected_products = self.selected_products
+  total = 0
+  selected_products.each do |item|
+    total += item.product.price
+  end
+  total = total *100
+  return total
+end
+
 
 end
