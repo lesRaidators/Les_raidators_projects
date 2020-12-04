@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'privatevisitors/show'
   root 'home_page#show'
   devise_for :users
   resources :adresses
@@ -13,6 +14,6 @@ Rails.application.routes.draw do
   resources :charges
   resources :partnership
   resources :home_page
-  ressources :team
+  resources :team
   
 end
