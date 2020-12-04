@@ -4,6 +4,7 @@
 This is the MVP of the Raidators project, a site that allows this association to collect donations in order to participate in the Europ'raid. 
 
 #### How to see it 
+https://raidators-project-development.herokuapp.com/
 https://raidators-project.herokuapp.com/
 
 
