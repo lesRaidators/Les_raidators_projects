@@ -4,14 +4,17 @@
     <title>RaidatorsProject</title>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="images/icons/tiger.png"/>
+      <%= stylesheet_link_tag 'application', media: 'all' %>
+      <%= javascript_include_tag 'application'%>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application'%>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+
+    <%= favicon_link_tag asset_path('cheetah.png') %>    
+
 
   </head>
-
+  <%= csrf_meta_tags %>
   <body>
     <%= render 'layouts/navbar' %>
       <!-- MESSAGES -->
