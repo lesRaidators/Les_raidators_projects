@@ -1,3 +1,81 @@
+<!-- Parts - line 1, line 18-how to help, line 93-material, line 641-use cases -->
+<!-- Container introduction and how to help -->
+<div class="container mt-5">
+
+  <!--Section: Content-->
+  <section class="">
+
+    <!-- Section heading -->
+    <h2 class="text-left font-weight-bold mb-5">Donner accès à l'éducation</h2>
+    <p class="text-left font-weight-bold mb-5">L’ Europ’Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
+    Ce raid consiste à traverser l’Europe en Peugeot 205 avec à son bord 70 Kg de matériel scolaire, sportif ou médical. Ces dernières seront ensuite distribuées dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.</p>
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-lg-6 col-md-12 mb-lg-3 mb-4">
+
+        <!-- Card -->
+        <div class="card hoverable">
+
+          <!-- Card image -->
+          <%= image_tag("equipment/wineshop.png", class:"card-img-top", alt:"Card image cap") %> 
+            
+            <!-- Card content -->
+            <div class="card-body">
+
+              <!-- Title -->
+              <h3 class="black-text">Faire un achat solidaire</h3>
+              <!-- Text -->
+              <p class="card-title text-muted font-small mt-3 mb-2"> Pour nous soutenir, vous pouvez faire un achat solidaire sur notre magasin en ligne ou faire directement un don pour nous aider à couvrir les frais logistiques.</p>
+              
+              <button type="button" class="btn btn-success text-white p-2 mx-0">Achat solidaire</button>
+              
+            </div>   
+
+        </div>
+        <!-- Card -->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-6 col-md-6 mb-md-3 mb-4">
+
+        <!-- Card -->
+        <div class="card hoverable">
+
+          <!-- Card image -->
+          <%= image_tag("equipment/schoolmaterial.png", class:"card-img-top", alt:"Card image cap") %> 
+
+          <!-- Card content -->
+          <div class="card-body">
+
+            <!-- Title -->
+            <h3 class="black-text">Donner du matériel</h3>
+            <!-- Text -->
+            <p class="card-title text-muted font-small mt-3 mb-2">Vous pouvez nous aider à atteindre les 70Kg d’équipements en faisant un don de matériel ! </p><br>
+            
+            <button type="button" class="btn btn-success text-white p-2 mx-0">Plus d’informations ci-dessous !</button>
+            
+          </div>
+
+        </div>
+        <!-- Card -->
+
+      </div>
+      <!-- Grid column -->
+      
+    </div>
+
+  </section>
+  <!--Section: Content-->
+</div>
+<!-- Container introduction -->
+
+
+<!-- Container Material -->
 <div class="container my-5">
   <section>
     <!--First row-->
@@ -9,13 +87,10 @@
         <!-- Nav tabs -->
         <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active font-weight-bold text-uppercase" data-toggle="tab" href="#panel31" role="tab">Scolaire</a>
+            <a class="nav-link active font-weight-bold text-uppercase" data-toggle="tab" href="#panel31" role="tab">Scolaire & Sportif</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#panel32" role="tab">Sport & Jeux</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#panel33" role="tab">Sanitaire</a>
+            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#panel32" role="tab">Hygiène & Médical</a>
           </li>
         </ul>
 
@@ -42,7 +117,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("backpack.jpg", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/backpack.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
@@ -59,7 +134,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("notebook.jpg", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/notebook.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
@@ -76,7 +151,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("scissor.png", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/scissor.png", class:"card-img-top", alt:"Card image cap") %> 
               <!-- Card content -->
               <div class="card-body">
 
@@ -92,7 +167,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("postit.jpg", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/postit.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
@@ -105,6 +180,41 @@
             </div>
             <!-- Card -->
 
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card image -->
+              <%= image_tag("equipment/sportbag.jpg", class:"card-img-top", alt:"Card image cap") %> 
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <p class="my-3"> Sac de sport</p>
+                <p class="card-text text-muted font-small mb-3">Bon état ou neuf</p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card image -->
+              <%= image_tag("equipment/drawingbook.jpg", class:"card-img-top", alt:"Card image cap") %> 
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <p class="my-3">Livres de dessin </p>
+                <p class="card-text text-muted font-small "></p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+
           </div>
           <!-- Grid column -->
 
@@ -115,7 +225,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("gridbook.png", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/gridbook.png", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
@@ -132,7 +242,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("linebook.png", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/linebook.png", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
@@ -150,7 +260,57 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("painting.jpg", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/computer.jpg", class:"card-img-top", alt:"Card image cap") %> 
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <p class="my-3">Matériel informatique<p>
+                <p class="card-text text-muted font-small mb-3">Ordinateur, imprimante, vidéoprojecteur</p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card image -->
+              <%= image_tag("equipment/pingpong.jpg", class:"card-img-top", alt:"Card image cap") %> 
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <p class="my-3">Tennis de table</p>
+                <p class="card-text text-muted font-small mb-3">Balle et raquettes</p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card image -->
+              <%= image_tag("equipment/basket.jpg", class:"card-img-top", alt:"Card image cap") %> 
+              <!-- Card content -->
+              <div class="card-body">
+
+                <p class="my-3"> Chaussure de sport  </p>
+                <p class="card-text text-muted font-small mb-3">Taille enfant</p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card image -->
+              <%= image_tag("equipment/painting.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
@@ -163,6 +323,7 @@
             </div>
             <!-- Card -->
 
+
           </div>
           <!-- Grid column -->
 
@@ -173,7 +334,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("paper.png", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/paper.png", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
@@ -190,7 +351,7 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("pencil.jpg", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/pencil.jpg", class:"card-img-top", alt:"Card image cap") %> 
               <!-- Card content -->
               <div class="card-body">
           
@@ -206,12 +367,12 @@
             <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
               <!-- Card image -->
-              <%= image_tag("chalkboard.png", class:"card-img-top", alt:"Card image cap") %> 
+              <%= image_tag("equipment/chalkboard.png", class:"card-img-top", alt:"Card image cap") %> 
 
               <!-- Card content -->
               <div class="card-body">
         
-                <p class="my-3"> Ardoises et accessoires </p>
+                <p class="my-3"> Ardoises, tableau blanc et accessoires </p>
                 <p class="card-text text-muted font-small mb-3">ardoises et chiffons, crayons ardoises ou craies</p>
 
               </div>
@@ -219,6 +380,40 @@
             </div>
             <!-- Card -->
             
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card image -->
+              <%= image_tag("equipment/sportwear.jpg", class:"card-img-top", alt:"Card image cap") %> 
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <p class="my-3"> Maillot de sport </p>
+                <p class="card-text text-muted font-small mb-3">taille enfant</p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card image -->
+              <%= image_tag("equipment/game.jpg", class:"card-img-top", alt:"Card image cap") %> 
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <p class="my-3">Jeux éducatifs<p>
+                <p class="card-text text-muted font-small mb-3">animaux, nombres, saisons, alphabet)</p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
 
           </div>
           <!-- Grid column -->
@@ -241,70 +436,35 @@
               <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
                 <!-- Card image -->
-                <%= image_tag("sportbag.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/soap.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3"> Sport bag</p>
-                  <p class="card-text text-muted font-small mb-3">Bon état ou neuf</p>
+                  <p class="my-3"> Savon à main </p>
+                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
 
                 </div>
 
               </div>
-              <!-- Card -->
+              <!-- Card --> 
 
               <!-- Card -->
               <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
                 <!-- Card image -->
-                <%= image_tag("pingpong.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/shampoo.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3">Tennis de table</p>
-                  <p class="card-text text-muted font-small mb-3">Balle et raquettes</p>
+                  <p class="my-3"> Gel douche et shampooing sec </p>
+                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
 
                 </div>
 
               </div>
-              <!-- Card -->
-
-              <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-                <!-- Card image -->
-                <%= image_tag("basket.jpg", class:"card-img-top", alt:"Card image cap") %> 
-                <!-- Card content -->
-                <div class="card-body">
-
-                  <p class="my-3"> Chaussure de sport  </p>
-                  <p class="card-text text-muted font-small mb-3">Taille enfant</p>
-
-                </div>
-
-              </div>
-              <!-- Card -->
-
-              <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-                <!-- Card image -->
-                <%= image_tag("sportwear.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-                <!-- Card content -->
-                <div class="card-body">
-
-                  <p class="my-3"> Maillot de sport </p>
-                  <p class="card-text text-muted font-small mb-3">taille enfant</p>
-
-                </div>
-
-              </div>
-              <!-- Card -->
-              <!-- Grid column -->
-
+              <!-- Card -->       
               
             </div>
             <!-- Grid column -->
@@ -316,53 +476,35 @@
               <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
                 <!-- Card image -->
-                <%= image_tag("game.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/coton.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3">Jeux éducatifs<p>
-                  <p class="card-text text-muted font-small mb-3">animaux, nombres, saisons, alphabet)</p>
+                  <p class="my-3"> Coton-tige réutilisable </p>
+                  <p class="card-text text-muted font-small mb-3">réutilisable seulement</p>
 
                 </div>
 
               </div>
-              <!-- Card -->
-
+              <!-- Card -->   
+              
               <!-- Card -->
               <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
                 <!-- Card image -->
-                <%= image_tag("linebook.png", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/tissue.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3">Cahier de brouillon</p>
-                  <p class="card-text text-muted font-small mb-3">Bon état ou neuf</p>
-
-                </div>
-
-                
-              </div>
-              <!-- Card -->
-
-              <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-                <!-- Card image -->
-                <%= image_tag("painting.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-                <!-- Card content -->
-                <div class="card-body">
-
-                  <p class="my-3"> Peinture </p>
-                  <p class="card-text text-muted font-small mb-3">Tube de peinture, pinceaux, feuilles de peinture</p>
+                  <p class="my-3"> Mouchoirs </p>
+                  <p class="card-text text-muted font-small mb-3"></p>
 
                 </div>
 
               </div>
-              <!-- Card -->
+              <!-- Card -->    
 
             </div>
             <!-- Grid column -->
@@ -370,56 +512,41 @@
             <!-- Grid column -->
             <div class="col-md-6 col-lg-3">
 
+              
               <!-- Card -->
               <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
                 <!-- Card image -->
-                <%= image_tag("drawingbook.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/shampoo.jpg", class:"card-img-top", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3">Livres de dessin </p>
-                  <p class="card-text text-muted font-small "></p>
+                  <p class="my-3"> Gel douche et shampooing sec </p>
+                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
 
                 </div>
 
               </div>
-              <!-- Card -->
+              <!-- Card -->  
 
               <!-- Card -->
               <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
 
                 <!-- Card image -->
-                <%= image_tag("pencil.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/toothbrush.jpg", class:"card-img-top", alt:"Card image cap") %> 
+
                 <!-- Card content -->
                 <div class="card-body">
+
+                  <p class="my-3">  Brosse à dent et dentifrice en bloc </p>
+                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->  
             
-                  <p class="my-3"> Crayons et stylos </p>
-                  <p class="card-text text-muted font-small">Stylos à bille, crayons à papier, crayons de couleur, crayons feutres</p>
-
-                </div>
-
-              </div>
-              <!-- Card -->
-
-              <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-                <!-- Card image -->
-                <%= image_tag("chalkboard.png", class:"card-img-top", alt:"Card image cap") %> 
-
-                <!-- Card content -->
-                <div class="card-body">
-          
-                  <p class="my-3"> Ardoises et accessoires </p>
-                  <p class="card-text text-muted font-small mb-3">ardoises et chiffons, crayons ardoises ou craies</p>
-
-                </div>
-
-              </div>
-              <!-- Card -->
-              
 
             </div>
             <!-- Grid column -->
@@ -430,9 +557,7 @@
       </div>
       <!--Panel 2-->
 
-      <!--Panel 3-->
-      
-      <!--Panel 3-->
+
 
 
     </div>
@@ -442,4 +567,148 @@
   </section>
   <!-- Section -->
 
+</div>
+<!-- Container Material -->
+
+<!-- Container Use cases -->
+<div class="container mt-5">
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+      
+    <!-- Grid row -->
+    <div class="row align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-lg-7">
+
+        <!-- Category -->
+        <i class="fas fa-hands-helping"></i>
+      
+        <!-- Post title -->
+        <h3 class="font-weight-bold mb-3"><strong>Cas d’usage: École  </strong></h3>
+        <!-- Excerpt -->
+        <p>En tant qu'établissement scolaire ou parent d'élève, nous vous proposons de réaliser une collecte au sein de l'établissement. En échange, nous pourrons venir expliquer et témoigner de notre expérience avant ou après la course. Nous vous enverrons aussi une carte lors de notre voyage.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-5">
+
+        <!-- Featured image -->
+        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+          <img class="img-fluid" src="../fichiers_MVP/Images/children.png" alt="Sample image">
+        
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    
+
+    </div>
+    <!-- Grid row -->
+
+    <hr class="my-5">
+    
+  </section>
+  <!--Section: Content-->
+</div>
+
+<div class="container mt-5">
+
+
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+      
+    <!-- Grid row -->
+    <div class="row align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-lg-5">
+
+        <!-- Featured video -->
+        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+        <img class="img-fluid" src="../fichiers_MVP/Images/children.png" alt="Sample image">
+      
+      </div>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-7">
+
+        <!-- Category -->
+          <i class="fas fa-dumbbell"></i>
+        
+        <!-- Post title -->
+        <h3 class="font-weight-bold mb-3"><strong>Magasin</strong></h3>
+        <!-- Excerpt -->
+        <p>Les fêtes de fin d'années approchent ! La solidarité est mise à l'honneur pendant cette période. Pourquoi ne pas soutenir une cause solidaire en mettant en place un point de collecte ? Nous vous fournissons des affiches explicatives et venons récupérer le matériel. 
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    <hr class="my-5">
+    
+  </section>
+  <!--Section: Content-->
+
+
+</div>
+
+<div class="container mt-5">
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+      
+    <!-- Grid row -->
+    <div class="row align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-lg-7">
+
+        <!-- Category -->
+        <i class="fas fa-hands-helping"></i>
+      
+        <!-- Post title -->
+        <h3 class="font-weight-bold mb-3"><strong>Cas d’usage: Particulier  </strong></h3>
+        <!-- Excerpt -->
+        <p> Vous souhaitez soutenir une action solidaire ? Vous pouvez simplement nous expédier le matériel à l'adresse suivante :
+        10 Route de la Noé d'Armengeo 44600 Saint-Nazaire
+        Vous pouvez aussi nous le remettre en main propre à Saint-Nazaire, Nantes ou Angers.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-5">
+
+        <!-- Featured image -->
+        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+          <img class="img-fluid" src="../fichiers_MVP/Images/children.png" alt="Sample image">
+        
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    
+
+    </div>
+    <!-- Grid row -->
+
+    <hr class="my-5">
+    
+  </section>
+  <!--Section: Content-->
+</div>
+<!-- Container Use cases -->
+
+<div class="container mt-5 align-items-center">
+  <p> link_to "Plus d'informations", root_path,class:"btn btn-success btn-md btn-rounded mx-0"  </p>
+</div>
+  
 </div>
