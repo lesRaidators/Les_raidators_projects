@@ -6,11 +6,16 @@
   background-position: center center;
 }
 .banner-product{
-background-image: url(../images/EuropRaid-2017-0511.jpg);
 background-repeat: no-repeat; 
 background-size: cover;
 max-height: 250px; 
 background-position: center center;
 height: 100vh;
+}
+
+/* ---------------TEAM PAGE--------------------- */
+
+.w-200 {
+  width: 200px;
 }
 
