@@ -1,15 +1,25 @@
 /* custom.css */
 .image-signup{
-  background-image: url(signup-EuropRaid-2017-043); 
+  background-image: url(../images/signup-EuropRaid-2017-0431.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .banner-product{
-background-image: url(EuropRaid-2017-0511.jpg);
 background-repeat: no-repeat; 
-background-size: cover; 
+background-size: cover;
+max-height: 250px; 
 background-position: center center;
 height: 100vh;
 }
 
+
+/* ----------CARROUSEL BOX SHADOW------------- */
+
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  top: 70%;
+  transform: translateY(-150%);
+ }
