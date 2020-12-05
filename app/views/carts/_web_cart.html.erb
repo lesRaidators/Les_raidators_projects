@@ -148,9 +148,10 @@
     
                       <!--Grid column-->
                       <div class="col-md-5 mb-4">
+                        <% @cart.selected_products.each do |myproduct| %>
+                        <img class="img-fluid z-depth-1-half" alt="Second sample image"> <%=myproduct.product.image_url %> </img>
+
     
-                        <img src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" class="img-fluid z-depth-1-half"
-                          alt="Second sample image">
     
                       </div>
                       <!--Grid column-->
@@ -158,21 +159,24 @@
                       <!--Grid column-->
                       <div class="col-md-7 mb-4">
     
-                        <h5 class="mb-3 h5">Nom du produit</h5>
+                        <h3 class="mb-3 h5"><%= myproduct.product.title %></h3>
     
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ea ut aperiam corrupti,
                           dolorem.</p>
     
                         <!--Name-->
+
                         <select class="mdb-select colorful-select dropdown-info">
                           <option value="" disabled>Quantité</option>
-                          <option value="1" selected>1</option>
+                          <option value="" selected> <%= myproduct.quantity %></option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
                         </select>
     
                         <button type="button" class="btn btn-success btn-md btn-rounded mx-0">Ajouter les modifications</button>
+                        <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
+
     
                       </div>
                       <!--Grid column-->
@@ -197,7 +201,7 @@
                       <!--Grid column-->
                       <div class="col-md-7 mb-4">
     
-                        <h5 class="mb-3 h5">Nom du produit</h5>
+                        <h5 class="mb-3 h5"><%= myproduct.product.title %></h5>
     
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ea ut aperiam corrupti,
                           dolorem.</p>
@@ -291,10 +295,12 @@
     
                     <dl class="row">
                       <dd class="col-sm-8">
+
+
                         Nom du produit
                       </dd>
                       <dd class="col-sm-4">
-                        PRIX €€
+                      <p><%= myproduct.product.price %>€</p>
                       </dd>
                     </dl>
     
@@ -330,6 +336,8 @@
                         PRIX €€
                       </dt>
                     </dl>
+                  <% end %>
+
                   </div>
     
                 </div>
