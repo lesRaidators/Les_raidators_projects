@@ -11,6 +11,16 @@
   align-items: flex-end;
 }
 
+/* ----------CARROUSEL BOX SHADOW------------- */
+
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  top: 70%;
+  transform: translateY(-150%);
+ }
+ 
 /* ------------NAVBAR------------ */
  .navbar-custom {
   background-color: #143724;

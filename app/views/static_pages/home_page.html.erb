@@ -21,7 +21,7 @@
               <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
 
               <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
-
+               <%= link_to 'Nous soutenir', products_path, class: "btn btn-success text-white p-2 mx-0"%>
             </div>
           </div>
           <div class="carousel-item ">
@@ -34,6 +34,7 @@
             <div class="carousel-caption">
               <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
               <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
+               <%= link_to 'Nous soutenir', products_path, class: "btn btn-success text-white p-2 mx-0"%>
             </div>
           </div>
           <div class="carousel-item ">
@@ -46,6 +47,8 @@
             <div class="carousel-caption">
               <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
               <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
+              <%= link_to 'Nous soutenir', products_path, class: "btn btn-success text-white p-2 mx-0"%>
+              
             </div>
           </div>
         </div>
@@ -191,8 +194,7 @@
                     <!-- Text -->
                     <p class="card-title text-muted font-small mt-3 mb-2">Devenez partenaire ! Financier ou en nature, vous pouvez soutenir la cause !</p>
                     
-                    <button type="button" class="btn btn-success text-white p-2 mx-0">Devenir partenaire entreprise</button>
-                    
+                    <%= link_to 'Devenir un partenaire', partnership_path, class: "btn btn-success text-white p-2 mx-0"%>                    
                   </div>   
 
               </div>
@@ -218,8 +220,7 @@
                   <!-- Text -->
                   <p class="card-title text-muted font-small mt-3 mb-2">Soutenez Europ.Raid en achetant un produits ou en faisant un don de matériel !</p>
                   
-                  <button type="button" class="btn btn-success text-white p-2 mx-0">Soutenir en tant que particuliers</button>
-                  
+                  <%= link_to 'Soutenir en tant que particuliers', privatevisitors_path, class: "btn btn-success text-white p-2 mx-0"%>                  
                 </div>
       
               </div>
