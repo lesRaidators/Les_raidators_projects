@@ -1,52 +1,35 @@
-<header>
-  <!-- Full Page Intro -->
-  <div class="banner-product">
-    <!-- Mask & flexbox options-->
-    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-      <!-- Content -->
-      <div class="container">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-md-12 mb-4 text-white text-center">
-            <h1 class="h1-reponsive text-white text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
-              data-wow-delay="0.3s"><strong>NOUS SOUTENIR</strong></h1>
-            <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
-            <p class="text-uppercase mb-4 text-white wow fadeInDown" data-wow-delay="0.4s"><strong>La solidarité na pas de frontière</strong></p>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </div>
-      <!-- Content -->
-    </div>
-    <!-- Mask & flexbox options-->
-  </div>
-  <!-- Full Page Intro -->
-</header>
-<!-- Main navigation -->
+<%= render :partial => "shared/banner" %>
 
+<div class="container mt-5">
+  <!--Section: Content-->
+  <section class="">
+    <!-- Section heading -->
+    <h2 class="text-left font-weight-bold mb-5 text-center">Un achat solidaire</h2>
+    <p class="text-left font-weight-bold mb-5 text-center">Tout achat de produit nous rapproche de l’objectif : permettre à l’équipe Raidators de participer à Europ.Raid pour acheminer 70Kg de matériels vers des écoles défavorisées. </p>
+  </section>
+  <!--Section: Content-->
+</div>
+<br>
+<hr>
 
 <!--Section: Content-->
 <div class="container mt-5">
   <section class="mb-10">
 
-    <div class="mb-5">
-      <button type="button" class="btn btn-outline-primary "><%= link_to "Créer", new_product_path %></button>
-      <button type="button" class="btn btn-outline-primary"><%= link_to "Créer Adresse",new_address_path %></button>
-    </div>
-
     <div class="row">
       <% @products.each do |product| %>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card h-100 card hoverable">
-            <h3 class="card-img-top"> Image Produit : <%= product.image_url %> </h3>
+            <h3 class="card-img-top"> <%= image_tag product.image_url, width: "100%" %> </h3>
             <!-- Card content -->
               <div class="card-body">
-                <h3 class="black-text"> Titre :<%= product.title %> </h3>
+                <h3 class="black-text"> <%= product.title %> </h3>
                 <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
-                <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Voir détails", product_path(product.id) %></button>
-                <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Ajouter au panier", selected_products_path(product_id: product.id), method: 'POST' %></button>
+                <% if user_signed_in? %>
+                <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST' %></button>
+                <% else %>
+                <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "soutenir le projet", new_user_session_path %></button>
+                <% end %>
                 <br>
                 <% if current_user && current_user.admin %>
                 <button type="button" class="btn btn-outline-primary p-2 mx-1 mt-2"><%= link_to "Modifier", edit_product_path(product.id) %></button>

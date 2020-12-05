@@ -2,7 +2,7 @@
   <ul>
     <% @cart.selected_products.each do |myproduct| %>
       <h3><%= myproduct.product.title %></h3>
-      <img> <%=myproduct.product.image_url %></img>
+      <h3 class="card-img-top"> <%= image_tag myproduct.product.image_url, width: "20%" %> </h3>
       <li> Quantité : <%= myproduct.quantity %></li>
       <p><%= myproduct.product.price %>€</p>
       <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger'%>

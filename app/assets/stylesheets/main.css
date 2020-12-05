@@ -1,18 +1,15 @@
 /* custom.css */
-.image-signup{
-  background-image: url(../images/signup-EuropRaid-2017-0431.jpg); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-.banner-product{
-background-repeat: no-repeat; 
-background-size: cover;
-max-height: 250px; 
-background-position: center center;
-height: 100vh;
-}
 
+.caroussel-caption { background: rgba(0,0,0,0.5); 
+  background-size: cover;
+  top:70%
+  }
+
+.footerend{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 
 /* ----------CARROUSEL BOX SHADOW------------- */
 
@@ -23,3 +20,23 @@ height: 100vh;
   top: 70%;
   transform: translateY(-150%);
  }
+ 
+/* ------------NAVBAR------------ */
+ .navbar-custom {
+  background-color: #143724;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: rgba(115, 151, 56, 0.938);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.801);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #0ea500;
+}
+

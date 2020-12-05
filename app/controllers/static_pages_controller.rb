@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
   def partnership
   end
 
-  def equipment
+  def equipments
   end
 
   def privatevisitors
