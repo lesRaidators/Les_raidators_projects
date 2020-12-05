@@ -1,28 +1,15 @@
 /* custom.css */
-.image-signup{
-  background-image: url(../images/signup-EuropRaid-2017-0431.jpg); 
-  background-repeat: no-repeat;
+
+.caroussel-caption { background: rgba(0,0,0,0.5); 
   background-size: cover;
-  background-position: center center;
+  top:70%
+  }
+
+.footerend{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-.banner-product{
-background-repeat: no-repeat; 
-background-size: cover;
-max-height: 250px; 
-background-position: center center;
-height: 100vh;
-}
-
-
-/* ----------CARROUSEL BOX SHADOW------------- */
-
-
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  top: 70%;
-  transform: translateY(-150%);
- }
 
 /* ------------NAVBAR------------ */
  .navbar-custom {
@@ -42,3 +29,4 @@ height: 100vh;
 .navbar-custom .nav-item:hover .nav-link {
   color: #0ea500;
 }
+
