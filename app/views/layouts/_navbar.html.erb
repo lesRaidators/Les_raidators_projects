@@ -1,39 +1,51 @@
-<nav class="navbar navbar-expand-lg navbar-custom">
-  <%= link_to "Europraid", home_page_path, class:"navbar-brand" %> 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top scrolling-navbar">
+  <%= link_to 'Europraid', home_page_path, class:'navbar-brand'%> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+    aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarColor02">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active ">
-        <li><%= link_to "Accueil", home_page_path, class:"nav-link" %> </li>
-        <li><%= link_to "Professionnels", partnership_path, class:"nav-link" %></li> 
-        <li><%= link_to "Faire un don", products_path, class:"nav-link" %></li> 
-        <li><%= link_to "Collecte de fourniture", equipments_path, class:"nav-link" %> </li> 
-        <li><%= link_to "L'équipe", team_path, class:"nav-link" %></li>
-        <span class="sr-only">(current)</span>
-
-      </li>
-      <% if user_signed_in? %>
       <li class="nav-item active">
-      <%= link_to "Panier", cart_path(Cart.find_or_create_by(user_id: current_user.id)), class:"nav-link" %> </i> <b>
-      <span class="sr-only">(current)</span>
-     </a>
-    </li>
-    <%else%>
-    <%end%>
+        <%= link_to "Accueil", home_page_path, class:"nav-link" %>
+        <span class="sr-only">(current)</span>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Professionnels", partnership_path, class:"nav-link" %>
+      </li> 
+      <li class="nav-item">
+        <%= link_to "Faire un don", products_path, class:"nav-link" %>
+      </li> 
+      <li class="nav-item">
+        <%= link_to "Collecte de fourniture", equipments_path, class:"nav-link" %> 
+      </li> 
+      <li class="nav-item">
+        <%= link_to "L'équipe", team_path, class:"nav-link" %>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">  
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+        <%= link_to "Panier", cart_path(Cart.find_or_create_by(user_id: current_user.id)), class:"nav-link" %> </i> <b>
+        <span class="sr-only">(current)</span>
+      </li>
+      <%else%>
+      <%end%>
       <li class="nav-item dropdown">
-        <div class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Se connecter/s'inscrire</div>
-        <div class="dropdown-menu">
-        <%if user_signed_in?%>
-          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
-          <%= link_to "Profil", home_path(current_user.id), class:"dropdown-item" %>
-        <%else%>
-          <%= link_to "Inscription", new_user_registration_path, class:"dropdown-item" %>
-          <%= link_to "Log in", new_user_session_path, class:"dropdown-item" %>
-        <%end%> 
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Menu
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <%if user_signed_in?%>
+            <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+            <%= link_to "Profil", user_path(current_user.id), class:"dropdown-item" %>
+          <%else%>
+            <%= link_to "Inscription", new_user_registration_path, class:"dropdown-item" %>
+            <%= link_to "Log in", new_user_session_path, class:"dropdown-item" %>
+          <%end%> 
         </div>
       </li>
+    </ul>
   </div>
 </nav>

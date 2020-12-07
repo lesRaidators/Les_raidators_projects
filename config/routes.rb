@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :products
   resources :orders
   resources :carts
-  resources :homes
+  resources :users
   resources :addresses
   resources :charges
   resources :posts do

@@ -1,3 +1,5 @@
+   <% content_for :title, "Sponsoring | Raidators" %>
+
    <%= render :partial => "shared/banner" %>
 
     <div class="container mt-5">
@@ -5,12 +7,11 @@
       <!--Section: Content-->
       <section class="">
 
-        <h2 class="text-left font-weight-bold mb-5">Pourquoi devenir Partenaire ?</h2>
-
 
         <div class="row mb-3">
           <div class="col-6 themed-grid-col">
-            <p class="text-left font-weight-bold mb-3 mt-5">Depuis sa création en 2014, Europ'Raid a déjà distribué plus de 65 tonnes de matériel scolaire sportif et médical qui ont été distribuées dans une vingtaine d’écoles situées en Bosnie-Herzégovine, Albanie, Macédoine, Bulgarie et Roumanie. En six ans, l’aide solidaire des équipages de Europ’Raid est ainsi passée de plusieurs centaines de kilogrammes à plusieurs dizaines de tonnes chaque année. En tant qu’entreprise, vous pouvez contribuer au succès de l’édition 2021 et contribuer à rendre  plus accessible l’éducation.
+            <h3 class="text-left font-weight-bold mb-3">Pourquoi devenir Partenaire ?</h3>
+            <p class="text-left font-weight-bold mb-5">Depuis sa création en 2014, Europ'Raid a déjà distribué plus de 65 tonnes de matériel scolaire sportif et médical qui ont été distribuées dans une vingtaine d’écoles situées en Bosnie-Herzégovine, Albanie, Macédoine, Bulgarie et Roumanie. En six ans, l’aide solidaire des équipages de Europ’Raid est ainsi passée de plusieurs centaines de kilogrammes à plusieurs dizaines de tonnes chaque année. En tant qu’entreprise, vous pouvez contribuer au succès de l’édition 2021 et contribuer à rendre  plus accessible l’éducation.
             </p>
 
             <button type="button" class="btn btn-success btn-raidators text-white p-10 mx-5">Telecharger le dossier de sponsoring</button>
@@ -39,9 +40,11 @@
             </p>
 
           </div>
+          
+          <button type="button" class="btn btn-success text-white p-10 mx-5"><%= link_to 'Télécharger le dossier de sponsoring', asset_path('partnership/Dossier_sponsoring_Raidators.pdf') %> </button>
         </div>
     
-       
+
 
       </section>
       <!--Section: Content-->
