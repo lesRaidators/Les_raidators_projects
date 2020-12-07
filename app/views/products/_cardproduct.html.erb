@@ -31,6 +31,10 @@
                 <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "soutenir le projet", new_user_session_path %></button>
                 <% end %>
                 <br>
+                <% if current_user && current_user.admin %>
+                <button type="button" class="btn btn-outline-primary p-2 mx-1 mt-2"><%= link_to "Modifier", edit_product_path(product.id) %></button>
+                <button type="button" class="btn btn-outline-primary p-2 mx-2 mt-2"><%= link_to "Supprimer", product_path(product.id), method: :DELETE %></button> 
+                <%end%>     
               </div>
           </div>
         </div>

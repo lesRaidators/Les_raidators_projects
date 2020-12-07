@@ -1,4 +1,47 @@
 <div class="container">
+<% if current_user && current_user.admin %>
+
+<h3> Profil Administrateur </h3>
+
+  <div class="table ">
+    <table class="table">
+      <thead class="table-header h4">
+        <tr><th class="h3"><strong>Les commandes:</strong></th></tr>
+        <tr>
+          <th scope="col">N° de commande</th>
+          <th scope="col">Email</th>
+          <th scope="col">Titre</th>
+          <th scope="col">Prix (€)</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Total</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% Order.all.each do |order| %>
+          <tr>
+            <th>Commande numéro : <strong><%= order.id %></strong></th>
+            <th class="text-center"><%= order.user.email %></th>
+            <% total = 0 %>
+            <% order.join_order_products.each do |order_product| %>
+              <% total += order_product.quantity * order_product.product.price %>
+
+                <th class="text-center"><strong><%= order_product.product.title %></strong></th>
+                <th class="text-center"><%= order_product.product.price %> €</th>
+                <th class="text-center"><%= order_product.quantity %></th>
+                <th class="text-center"><%= order_product.quantity * order_product.product.price %> €</th>
+                <th class="text-center"><%= order_product.created_at.strftime("%d/%m/%Y") %></th>
+              </tr>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+
+<% else %>
 
   <div>
     <h2 class="text-center mt-5">Mon Profil</h2>
@@ -46,3 +89,5 @@
     <button type="button" class="btn btn-outline-primary"><%= link_to "Modifier mon mot de passe",edit_user_registration_path %></button>
   </div>
 </div>
+
+<% end %>
