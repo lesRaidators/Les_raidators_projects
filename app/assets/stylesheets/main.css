@@ -16,7 +16,13 @@
  }
  
 /* ------------NAVBAR------------ */
- .navbar-custom {
+
+.fa-bars {
+  color: white;
+  justify-content: center;
+  margin-top: 10%;
+}
+.navbar-custom {
   background-color: #1B221D ;
 }
 /* change the brand and text color */
