@@ -41,5 +41,14 @@ Post.create(
   image_url: "https://images.unsplash.com/photo-1518101645466-7795885ff8f8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
   user_id: 1
 )
-puts "articles du blog"
 end
+puts "articles du blog"
+
+u = User.new
+u.email = "Raidators@outlook.fr"
+u.password = "123456"
+u.admin = true
+u.save
+
+
+puts "Admin is here"
