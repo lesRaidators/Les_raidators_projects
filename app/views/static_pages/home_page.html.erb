@@ -11,10 +11,8 @@
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active ">
             <div class="view">
-             
-              <div class="mask rgba-black-light">
               <%= image_tag("home_page/EuropRaid-2017-051.jpg", class:"card-img-top", alt:"Card image cap") %>
-              
+              <div class="banner-filter">
               </div>
             </div>
             <div class="carousel-caption">
@@ -27,8 +25,8 @@
             <!--Mask color-->
             <div class="view">
               <%= image_tag("home_page/EuropRaid-2019-071.jpg", class:"card-img-top", alt:"Card image cap") %>
-              
-              <div class="mask rgba-black-strong"></div>
+              <div class="banner-filter">
+              </div>
             </div>
             <div class="carousel-caption">
               <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
@@ -40,7 +38,8 @@
             <!--Mask color-->
             <div class="view">
               <%= image_tag("home_page/EuropRaid-2019-038.jpg", class:"card-img-top", alt:"Card image cap") %>
-              <div class="mask rgba-black-slight"></div>
+              <div class="banner-filter">
+              </div>
             </div>
             <div class="carousel-caption">
               <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
@@ -67,10 +66,9 @@
 
     <section>
 
-      <div class="container mt-5">
-        <section class="">
-      
-          <!-- Section heading -->
+      <section>
+        <div class="container">
+        
           <h2 class="text-left font-weight-bold mb-5">L'Équipe Raidators participent à Europ.Raid</h2>
           <h3 class="text-left font-weight-bold mb-5">Le premier raid aventure en Europe</h3>
 
@@ -156,16 +154,15 @@
             </div>
             <!-- Grid column -->
           </div>
-        </section>
-      </div>
+        
+        </div>
+      </section>
 
-      <div class="container mt-5">
-
-
-        <!--Section: Content-->
-        <section class="">
+      <section class="light-background-raidators">
+        <div class="container mt-5">
+          <!--Container: Content-->
       
-          <!-- Section heading -->
+          <!-- container heading -->
           <h2 class="text-left font-weight-bold mb-5">Une aventure solidaire</h2>
           <p class="text-left font-weight-bold mb-5">Pour pouvoir aider des miliers d’élèves défavorisés, l’équipage Raidators a besoin de soutien. Entreprises, particulier ou écoles, chacun peut contribuer pour construire un monde meilleur. </p>
   
@@ -186,10 +183,12 @@
                   <div class="card-body">
         
                     <!-- Title -->
-                    <h3 class="black-text">Je suis une professionnel</h3>
+                    <h3 class="black-text">Je suis un.e professionnel</h3>
                     <!-- Text -->
+                    
                     <p class="card-title text-muted font-small mt-3 mb-2">Devenez partenaire ! <br> Financier ou en nature, vous pouvez soutenir la cause. <br> </p>                
                     <%= link_to 'Devenir un partenaire', partnership_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                    
+
                   </div>   
 
               </div>
@@ -213,9 +212,12 @@
                   <!-- Title -->
                   <h3 class="black-text">Je suis un particulier</h3>
                   <!-- Text -->
+                                   
+
                   <p class="card-title text-muted font-small mt-3 mb-2">Soutenez Europ.Raid en achetant un produits ou en faisant un don de matériel ! <br></p>
                 
                   <%= link_to 'Soutenir en tant que particulier', privatevisitors_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                  
+
 
                 </div>
       
@@ -227,108 +229,181 @@
             
           </div>
 
-        </section>
-        <!--Section: Content-->
-      </div>
-      
-      <div class="container mt-5">
-        <div>
-         <h2 class="text-left font-weight-bold mb-5"> L'initiative Europ.Raid</h2>
-         <p class="text-left font-weight-bold mb-5">Un rails qui réunit des centaines d'équipes telles que les Raidators chaque année.</p>
         </div>
         <!--Section: Content-->
-        <section class="dark-grey-text">
+      </section>
+      
+      <section>
+        <div class="container">
+          <div>
+          <h2 class="text-left font-weight-bold mb-5"> L'initiative Europ.Raid</h2>
+          <p class="text-left font-weight-bold mb-5">Un rails qui réunit des centaines d'équipes telles que les Raidators chaque année.</p>
+          </div>
+          <!--Section: Content-->
+          <section class="dark-grey-text">
+              
+            <!-- Grid row -->
+            <div class="row align-items-center">
+        
+              <!-- Grid column -->
+              <div class="col-lg-5">
+        
+                <!-- Featured video -->
+                <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 ">
+                <%= video_tag "video_humanity.mp4", :size => "420x315", :controls => true %>      
+                    
+                </div>
+        
+              </div>
+              <!-- Grid column -->
+        
+              <!-- Grid column -->
+              <div class="col-lg-7">
+        
+                <!-- Category -->
+                <i class="fas fa-dumbbell"></i>
+              
+                <!-- Post title -->
+                <h3 class="font-weight-bold mb-3"><strong>Une aventure sportive</strong></h3>
+                <!-- Excerpt -->
+                <p>L’ Europ’Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
+                  Ce raid consiste à traverser 20 pays de l’Europe en Peugeot 205 pendant 23 jours. L’équipage parcourra 10 000 kilomètres afin de  distribuer du matériel  dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.</p>
+                <!-- Read more button -->
+                <%= link_to "Faire un don de matériel", equipments_path, class:"btn btn-success  btn-raidators btn-md btn-rounded mx-0" %> 
+        
+              </div>
+              <!-- Grid column -->
+        
+            </div>
+            <!-- Grid row -->
+        
+            <hr class="my-5">
             
-          <!-- Grid row -->
-          <div class="row align-items-center">
+          </section>
+          <!--Section: Content-->
+        
+        
+        </div>
+
+        <div class="container">
+          <!--Section: Content-->
+          <section class="dark-grey-text">
+              
+            <!-- Grid row -->
+            <div class="row align-items-center">
+        
+              <!-- Grid column -->
+              <div class="col-lg-7">
+        
+                <!-- Category -->
+                <i class="fas fa-hands-helping"></i>
+              
+                <!-- Post title -->
+                <h3 class="font-weight-bold mb-3"><strong>Une aventure humaine</strong></h3>
+                <!-- Excerpt -->
+                <p>Europ’Raid est une aventure sportive, culturelle et solidaire, mais surtout une action humanitaire hors du commun.
+                  Le but premier est de venir en aide à des enfants défavorisés d’Europe de l’Est. En effet, depuis 2014 tous les équipages ont pour mission d’apporter 70 kg de fournitures scolaires.</p>
+                <!-- Read more button -->
+                <%= link_to "Faire un achat solidaire ou don", products_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %> 
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-lg-5">
+        
+                <!-- Featured image -->
+                <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+                  <%= image_tag("home_page/children.png", class:"card-img-top card-with-right-left-image-raidators", alt:"Card image cap") %>               
+                </div>
+        
+              </div>
+              <!-- Grid column -->
+        
+            
+        
+            </div>
+            <!-- Grid row -->
+            
+          </section>
+          <!--Section: Content-->
+        
+        
+        </div>
+      </section>
+
+      <section class="light-background-raidators">
+        <div class="container"> 
+          <!-- Section heading -->
+          <h3 class="font-weight-bold black-text mb-4 pb-2">Ils nous soutiennent</h3>
+          <hr class="w-header">
+          <!-- Section description -->
+          <p class="lead text-muted mx-auto mt-4 pt-2 mb-5">Cette aventure ne serait pas possible sans le soutient de nos partenaires. Entreprise ou particulier, chaque soutien compte. </p>
       
-            <!-- Grid column -->
-            <div class="col-lg-5">
+          <!--First row-->
+          <div class="row">
       
-              <!-- Featured video -->
-              <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 ">
-              <%= video_tag "video_humanity.mp4", :size => "420x315", :controls => true %>      
+            <!--Grid column-->
+            <div class="col-md-3 mb-4">
+      
+              <!-- Card -->
+              <div class="card card-rounded-raidators">
+                <!-- Card content -->
+                <div class="card-body my-4 ">
+
+                  <%= image_tag("home_page/scootcoot.png", class:"card-img-top", alt:"Card image cap") %>               
                   
+                </div>
+              </div>  
+              
+              <!-- Card -->
+      
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-md-3 mb-4">
+      
+              <!-- Card -->
+              <div class="card card-rounded-raidators">
+                
+                <!-- Card content -->
+                <div class="card-body my-4">
+                  <%= image_tag("home_page/euronext.png", class:"card-img-top", alt:"Card image cap") %>               
+                    
+                </div>
+      
               </div>
+              <!-- Card -->
       
             </div>
-            <!-- Grid column -->
-      
-            <!-- Grid column -->
-            <div class="col-lg-7">
-      
-              <!-- Category -->
-               <i class="fas fa-dumbbell"></i>
-             
-              <!-- Post title -->
-              <h3 class="font-weight-bold mb-3"><strong>Une aventure sportive</strong></h3>
-              <!-- Excerpt -->
-              <p>L’ Europ’Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
-                Ce raid consiste à traverser 20 pays de l’Europe en Peugeot 205 pendant 23 jours. L’équipage parcourra 10 000 kilomètres afin de  distribuer du matériel  dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.</p>
-              <!-- Read more button -->
-              <%= link_to "Faire un don de matériel", equipments_path, class:"btn btn-success  btn-raidators btn-md btn-rounded mx-0" %> 
-      
-            </div>
-            <!-- Grid column -->
-      
-          </div>
-          <!-- Grid row -->
-      
-          <hr class="my-5">
-          
-        </section>
-        <!--Section: Content-->
-      
-      
-      </div>
-
-      
-      <div class="container mt-5">
-        <!--Section: Content-->
-        <section class="dark-grey-text">
+            <!--Grid column-->
             
-          <!-- Grid row -->
-          <div class="row align-items-center">
+            <!--Grid column-->
+            <div class="col-md-3 mb-4">
       
-            <!-- Grid column -->
-            <div class="col-lg-7">
+              <!-- Card -->
+              <div class="card card-rounded-raidators">
+                
+                <!-- Card content -->
+                <div class="card-body my-4">
+                  <%= image_tag("home_page/ansys.png", class:"card-img-top", alt:"Card image cap") %>               
+                    
+                </div>
       
-              <!-- Category -->
-              <i class="fas fa-hands-helping"></i>
-             
-              <!-- Post title -->
-              <h3 class="font-weight-bold mb-3"><strong>Une aventure humaine</strong></h3>
-              <!-- Excerpt -->
-              <p>Europ’Raid est une aventure sportive, culturelle et solidaire, mais surtout une action humanitaire hors du commun.
-                Le but premier est de venir en aide à des enfants défavorisés d’Europe de l’Est. En effet, depuis 2014 tous les équipages ont pour mission d’apporter 70 kg de fournitures scolaires.</p>
-              <!-- Read more button -->
-              <%= link_to "Faire un achat solidaire ou don", products_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %> 
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-lg-5">
-      
-              <!-- Featured image -->
-              <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 ">
-                <%= image_tag("home_page/children.png", class:"card-img-top", alt:"Card image cap") %>               
               </div>
+              <!-- Card -->
       
             </div>
-            <!-- Grid column -->
+            <!--Grid column-->
+            
+            <!--Grid column-->
+            <div class="col-md-3 mb-4">
       
-           
-      
-          </div>
-          <!-- Grid row -->
-      
-          <hr class="my-5">
-          
-        </section>
-        <!--Section: Content-->
-      
-      
+
+              <!-- Card -->
+              <div class="card card-rounded-raidators">
+
       </div>
 
       <div class="container my-5">
@@ -341,7 +416,7 @@
         <h3 class="font-weight-bold black-text mb-4 pb-2">Ils nous soutiennent</h3>
         <hr class="w-header">
         <!-- Section description -->
-        <p class="lead text-muted mx-auto mt-4 pt-2 mb-5">Cette aventure ne serait pas possible sans le soutient de nos partenaires. Entreprise ou particulier, chaque soutient compte. </p>
+        <p class="lead text-muted mx-auto mt-4 pt-2 mb-5">Cette aventure ne serait possible sans le soutient de nos partenaires. Entreprise ou particulier, chaque soutient compte. </p>
     
         <!--First row-->
         <div class="row">
@@ -357,72 +432,23 @@
                 <%= image_tag("home_page/logo_1.png", class:"card-img-top", alt:"Card image cap") %>               
 
                 <h3 class="black-text mb-0">Scootcoot</h3>
+
                 
-              </div>
-            </div>  
-            
-            <!-- Card -->
-    
-          </div>
-          <!--Grid column-->
-    
-          <!--Grid column-->
-          <div class="col-md-3 mb-4">
-    
-            <!-- Card -->
-            <div class="card">
-              
-              <!-- Card content -->
-              <div class="card-body my-4">
-                <%= image_tag("home_page/logo_2.png", class:"card-img-top", alt:"Card image cap") %>               
-                   
-              </div>
-    
-            </div>
-            <!-- Card -->
-    
-          </div>
-          <!--Grid column-->
-          
-          <!--Grid column-->
-          <div class="col-md-3 mb-4">
-    
-            <!-- Card -->
-            <div class="card">
-              
-              <!-- Card content -->
-              <div class="card-body my-4">
-                <%= image_tag("home_page/logo_3.png", class:"card-img-top", alt:"Card image cap") %>               
+                <!-- Card content -->
+                <div class="card-body my-4">
+                  <%= image_tag("home_page/thoughtworks.png", class:"card-img-top", alt:"Card image cap") %>               
                   
+                </div>
+      
               </div>
-    
+              <!-- Card -->
+      
             </div>
-            <!-- Card -->
-    
+            <!--Grid column-->
+      
           </div>
-          <!--Grid column-->
-          
-          <!--Grid column-->
-          <div class="col-md-3 mb-4">
-    
-            <!-- Card -->
-            <div class="card hoverable">
-              
-              <!-- Card content -->
-              <div class="card-body my-4">
-                <%= image_tag("home_page/logo_4.png", class:"card-img-top", alt:"Card image cap") %>               
-                
-              </div>
-    
-            </div>
-            <!-- Card -->
-    
-          </div>
-          <!--Grid column-->
-    
+          <!--First row-->
         </div>
-        <!--First row-->
-    
       </section>
       
         
