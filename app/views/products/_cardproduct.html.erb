@@ -19,8 +19,8 @@
     <div class="row">
       <% @products.each do |product| %>
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100 card hoverable">
-            <h3 class="card-img-top"> <%= image_tag product.image_url, width: "100%" %> </h3>
+          <div class="card h-100 card SmallcardRaidators">
+            <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"SmallcardImageRaidators" %> </div>
             <!-- Card content -->
               <div class="card-body">
                 <h3 class="black-text"> <%= product.title %> </h3>
