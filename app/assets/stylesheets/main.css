@@ -49,7 +49,7 @@
 
 /* Found in equipments and donation/products and home pages  */
 /* change the radius and shadows  of cards  */
-.SmallcardRaidators {
+.small-card-raidators {
   background: #FFFFFF;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10);
   border-radius: 12px;
@@ -57,14 +57,14 @@
   margin-bottom: 10px;
 }
 
-.SmallcardImageRaidators {
+.small-card-image-raidators {
   border-top-left-radius: 12px ;
   border-top-right-radius: 12px ;
   box-shadow: 0px 0px 0px;
 }
 /* ------------Card with image right or left------------ */
 
-.CardImageRightLeftRaidators{
+.card-with-right-left-image-raidators{
   border-radius: 20px;
 }
 
@@ -97,7 +97,7 @@ p{
 .banner{
   height: 300px;
 }
-.bannerbackground{
+.banner-background{
   color: #f1f1f1; /* Grey text */
   background: url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
   background-repeat: no-repeat;
@@ -107,7 +107,7 @@ p{
   position: relative;
 }
 
-.bannerfilter{
+.banner-filter{
   background-color: rgba(81, 103, 90, 0.5);
   position: absolute;
   top: 0;
@@ -116,7 +116,7 @@ p{
   height: 100%;
 }
 
-.bannercontainer{
+.banner-container{
   position: absolute;
   top: 40%;
   text-align: center;
