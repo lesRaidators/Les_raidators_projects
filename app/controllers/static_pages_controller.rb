@@ -14,5 +14,6 @@ class StaticPagesController < ApplicationController
 
   def privatevisitors
   end
+
   
 end
