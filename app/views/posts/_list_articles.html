@@ -1,0 +1,62 @@
+<div class="container mt-5">
+
+
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+
+    <!-- Section heading -->
+    <h2 class="text-center font-weight-bold mb-4 pb-2">Articles récents</h2>
+    <!-- Section description -->
+    <p class="text-center mx-auto w-responsive mb-5">Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
+      Bonne lecture &#128214;
+    </p>
+
+    <!-- Grid row -->
+    <div class="row align-items-center">
+      <% @posts.each do |post| %>
+
+
+      <!-- Grid column -->
+      <div class="col-lg-5 col-xl-4">
+
+        <!-- Featured image -->
+
+        <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+          <%= post.image_url %>          
+            <div class="mask rgba-white-slight"></div>
+          
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-7 col-xl-8">
+
+        <!-- Post title -->
+        <h4 class="font-weight-bold mb-3"><strong><%= post.title %></strong></h4>
+        <!-- Excerpt -->
+        <p class="dark-grey-text">Résumé de l'article</p>
+        <!-- Post data -->
+        <p>Rédigé le 'DATE'</p>
+        <!-- Read more button -->
+        <button class="btn-primary" type="submit"> <%= link_to " Voir l'article complet", post_path(post.id) %></button>
+      
+
+
+      </div>
+      <!-- Grid column -->
+
+      <%end%>
+
+
+    </div>
+    <!-- Grid row -->
+
+    <hr class="my-5">
+
+  </section>
+  <!--Section: Content-->
+
+
+</div>
