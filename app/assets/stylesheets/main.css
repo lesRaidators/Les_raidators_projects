@@ -91,7 +91,7 @@ p{
 
 /* ------------background body------------ */
 .light-background-raidators{
-  background-color: rgba(249, 249, 249);
+  background-color: rgba(249, 249, 249, 1);
   padding-top:5%; 
   padding-bottom: 5%;
   margin-top: 5%;
