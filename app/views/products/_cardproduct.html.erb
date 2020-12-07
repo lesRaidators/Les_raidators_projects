@@ -26,9 +26,9 @@
                 <h3 class="black-text"> <%= product.title %> </h3>
                 <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
                 <% if user_signed_in? %>
-                <button class="btn btn-success btn-raidators text-white p-10 mx-5"><%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST' %></button>
+                  <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
                 <% else %>
-                <button class="btn btn-success btn-raidators text-white p-10 mx-5"><%= link_to "soutenir le projet", new_user_session_path %></button>
+                  <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
                 <% end %>
                 <br>
                 <% if current_user && current_user.admin %>
