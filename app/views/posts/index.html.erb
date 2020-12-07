@@ -4,7 +4,6 @@
 <% @posts.each do |post| %>
   <p> Titre <%= post.title %></p>
   <p><%= post.content %></p>
-  <p><%= post.image_url %> </p>
   <button class="btn-primary" type="submit"> <%= link_to "article complet", post_path(post.id) %></button>
   <button class="btn-primary" type="submit"> <%= link_to "modifier l'article", edit_post_path(post.id) %></button>
 <%end%>
