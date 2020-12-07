@@ -23,7 +23,8 @@
  
 /* ------------NAVBAR------------ */
  .navbar-custom {
-  background-color: #143724;
+  background-color: #1B221D ;
+  
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
@@ -40,7 +41,40 @@
   color: #0ea500;
 }
 
+<<<<<<< HEAD
 /* ------------Titles------------ */
 .h1{
   font-family: Segoe UI;
 }
+=======
+/* ------------SMALL CARD WITH IMAGE TOP AND TEXT BELLOW------------ */
+
+/* Found in equipments and donation/products and home pages  */
+/* change the radius and shadows  of cards  */
+.SmallcardRaidators {
+background: #FFFFFF;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10);
+border-radius: 12px;
+border: none;
+margin-bottom: 10px;
+}
+
+.SmallcardImageRaidators {
+border-top-left-radius: 12px ;
+border-top-right-radius: 12px ;
+box-shadow: 0px 0px 0px
+}
+/* ------------Card with image right or left------------ */
+
+.CardImageRightLeftRaidators{
+border-radius: 20px;
+}
+
+.btn-raidators {
+background: #57B48A;
+/* Actionable Item */
+border-color:#57B48A;
+box-sizing: border-box;
+border-radius: 6px; 
+}
+>>>>>>> origin
