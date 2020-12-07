@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :homes
   resources :addresses
   resources :charges
+  resources :posts
 
   root 'static_pages#home_page'
   
