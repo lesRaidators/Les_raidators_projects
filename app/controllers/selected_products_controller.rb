@@ -19,5 +19,10 @@ class SelectedProductsController < ApplicationController
     redirect_to @selected_product.cart
   end
 
+private
+  def lineitem_params
+    params.require(:selected_product).permit(:cart_id, :product_id, :quantity)
+  end
+
 
 end

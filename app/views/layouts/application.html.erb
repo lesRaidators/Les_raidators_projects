@@ -2,26 +2,23 @@
 <html>
   <head>
     <title>RaidatorsProject</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="utf-8">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag 'application', media: 'all' %>
+      <%= javascript_include_tag 'application'%>
+      <%= favicon_link_tag asset_path('cheetah.png') %>    
+
+
   </head>
-
+  <%= csrf_meta_tags %>
   <body>
-
-
-  <% if current_user %>
-<p> Connecté </p>
-  <% end %>
-
-
     <%= render 'layouts/navbar' %>
-
-    <%= yield %>
+      <!-- MESSAGES -->
+      <%= render 'layouts/flash' %>
+      <!-- CONTENU DE LA PAGE -->
+      <%= yield %>
+      <!-- FOOTER-->
     <%= render 'layouts/footer' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
   </body>
+      <script src="https://kit.fontawesome.com/17892e5f3b.js" crossorigin="anonymous"></script>
 </html>

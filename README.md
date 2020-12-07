@@ -1,24 +1,36 @@
-# README
+# README :racing_car:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About 
+This is the MVP of the Raidators project, a site that allows this association to collect donations in order to participate in the Europ'raid. 
 
-Things you may want to cover:
+#### How to see it 
+https://raidators-project-development.herokuapp.com/
+https://raidators-project.herokuapp.com/
 
-* Ruby version
 
-* System dependencies
+#### Tools 
+* Figma 
+* Bootstrap 
+* Heroku 
 
-* Configuration
+#### Gem 
+* Devise
+* Pry 
+* Erd
+* Dotenv 
+* Faker
+* Stripe
 
-* Database creation
+#### API 
+* Stripe
 
-* Database initialization
+#### Versions
+* Ruby 2.7.1 
+* Rails 5.2.4.4
 
-* How to run the test suite
+#### Team 
+We have been working in peer programming.
+Le Goff Emma, Aussage Emillie, Boisselier Louison, Leandri Lola 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Credit 
+Thank's to @cha-fa our mentor and all the community of The Hacking Project. 
