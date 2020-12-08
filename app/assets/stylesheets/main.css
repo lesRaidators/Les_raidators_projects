@@ -178,6 +178,10 @@ section{
   border-radius: 12px;
   margin: auto;
 }
+
+.form-control-raidators{
+  border-radius: 12px;
+}
 /* ------------Team------------ */
 .text-in-three-columns{
   column-count: 3;

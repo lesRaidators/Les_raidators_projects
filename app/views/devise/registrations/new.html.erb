@@ -8,7 +8,7 @@
       <!-- Content -->
       <div class="container py-5 my-5  ">
         
-        <h2 class="text-center pb-2">Prêt à nous rejoindre ?</h3>
+        <h3 class="text-center pb-2">Prêt à nous rejoindre ?</h3>
         <p class="lead text-center pt-2 mb-5">La solidarité n’a pas de frontière.</p>
         
         <!--Grid row-->
@@ -24,7 +24,7 @@
 
                     <div class="field md-form mt-3">
                       <%= f.label :email %><br />
-                      <%= f.email_field :email, autofocus: true, autocomplete: "email", id:"form3", class:"form-control" %>
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email", id:"form3", class:"form-control form-control-raidators" %>
                     </div>
 
                     <div class="field md-form mt-3">
@@ -32,12 +32,12 @@
                       <% if @minimum_password_length %>
                       <em>(<%= @minimum_password_length %> characters minimum)</em>
                       <% end %><br />
-                      <%= f.password_field :password, autocomplete: "new-password", id:"form4", class:"form-control" %>
+                      <%= f.password_field :password, autocomplete: "new-password", id:"form4", class:"form-control form-control-raidators" %>
                     </div>
 
                     <div class="field md-form mt-3">
                       <%= f.label :password_confirmation %><br />
-                      <%= f.password_field :password_confirmation, autocomplete: "new-password", id:"form4", class:"form-control" %>
+                      <%= f.password_field :password_confirmation, autocomplete: "new-password", id:"form4", class:"form-control form-control-raidators" %>
                     </div>
 
                     <div class="actions text-center my-3">
