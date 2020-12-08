@@ -92,7 +92,7 @@
             <!-- Text -->
             <p class="card-title text-muted font-small mt-3 mb-2">3 coéquipier se sont engagé à livrer 70 kg de matériel en voiture dans des écoles isolées d'Europe. Pour atteindre leur objectif, l'équipe Raidators a besoin de votre soutien.</p>
             
-            <%= link_to "Découvrir l'équipe", team_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+            <%= link_to "Découvrir l'équipe", equipe_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
 
           </div>
 
@@ -143,7 +143,7 @@
             <!-- Title -->
             <h3 class="black-text"> Tous solidaires</h3>
             <!-- Text -->
-            <p class="card-title text-muted font-small mt-3 mb-2">En six ans, Europ.Raid a distribué plus de 65 tonnes de matériel scolaire, sportif et médical dans des écoles isolées en Europe. Chaque voiture transporte 70Kg de matériel.</p>
+            <p class="card-title text-muted font-small mt-3 mb-2">En six ans, Europ.Raid a distribué plus de 65 tonnes de matériel scolaire, sportif et médical dans des écoles isolées en Europe. Chaque voiture permet de transporter 70Kg de matériel en plus.</p>
             <br>
             <br>
             
@@ -187,7 +187,7 @@
               <h3 class="black-text">Je suis un.e professionnel</h3>
               <!-- Text -->
               <p class="card-title text-muted font-small mt-3 mb-2">Devenez partenaire ! <br> Financier ou en nature, vous pouvez soutenir la cause. <br> </p>                
-              <%= link_to 'Devenir un partenaire', partnership_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                    
+              <%= link_to 'Devenir un partenaire', partenariat_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                    
             </div>   
 
         </div>
@@ -201,7 +201,7 @@
 
         <!-- Card -->
         <div class="card small-card-raidators">
-          
+
           <!-- Card image -->
           <%= image_tag("home_page/particular.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %>
 
@@ -213,7 +213,7 @@
             <!-- Text -->
             <p class="card-title text-muted font-small mt-3 mb-2">Soutenez Europ.Raid en achetant un produits ou en faisant un don de matériel ! <br></p>
           
-            <%= link_to 'Soutenir en tant que particulier', privatevisitors_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                  
+            <%= link_to 'Soutenir en tant que particulier', dons_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                  
 
           </div>
 
@@ -245,7 +245,11 @@
         <div class="col-lg-5">
   
           <!-- Featured video -->
-          <%= video_tag "video_humanity.mp4", :controls => true, class:"video-size-homepage-raidators card-with-right-left-image-raidators" %>      
+          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 ">
+          <%= video_tag "video_humanity.mp4", :size => "420x315", :controls => true %>      
+
+          </div>
+  
         </div>
         <!-- Grid column -->
   
@@ -261,7 +265,7 @@
           <p>L’ Europ’Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
             Ce raid consiste à traverser 20 pays de l’Europe en Peugeot 205 pendant 23 jours. L’équipage parcourra 10 000 kilomètres afin de  distribuer du matériel  dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.</p>
           <!-- Read more button -->
-          <%= link_to "Faire un don de matériel", equipments_path, class:"btn btn-success  btn-raidators btn-md btn-rounded mx-0" %> 
+          <%= link_to "Faire un don de matériel", equipements_path, class:"btn btn-success  btn-raidators btn-md btn-rounded mx-0" %> 
   
         </div>
         <!-- Grid column -->
@@ -302,10 +306,10 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-lg-5 col d-none d-md-block">
+        <div class="col-lg-5">
   
           <!-- Featured image -->
-          <div class="view mb-lg-0 mb-4">
+          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
             <%= image_tag("home_page/children.png", class:"card-img-top card-with-right-left-image-raidators", alt:"Card image cap") %>               
           </div>
   

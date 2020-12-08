@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
 
-  get '/partnership', to: "static_pages#partnership"
-  get '/home_page', to: "static_pages#home_page"
-  get '/team', to: "static_pages#team"
-  get '/privatevisitors', to: "static_pages#privatevisitors"
-  get '/equipments', to:"static_pages#equipments"
+  get '/partenariat', to: "static_pages#partnership"
+  get '/acceuil', to: "static_pages#home_page"
+  get '/equipe', to: "static_pages#team"
+  get '/dons', to: "static_pages#privatevisitors"
+  get '/equipements', to:"static_pages#equipments"
 
   devise_for :users
   resources :addresses
   resources :selected_products
-  resources :products
-  resources :orders
-  resources :carts
-  resources :users
+  resources :products, path: 'boutique'
+  resources :orders, path: 'commande'
+  resources :carts, path: 'panier'
+  resources :users, path: 'profil'
   resources :addresses
-  resources :charges
+  resources :charges, path: 'paiement'
   resources :posts do
     resources :comments
   end 
