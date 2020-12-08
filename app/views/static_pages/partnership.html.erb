@@ -13,9 +13,6 @@
             <h3 class="text-left font-weight-bold mb-3">Pourquoi devenir Partenaire ?</h3>
             <p class="text-left font-weight-bold mb-5">Depuis sa création en 2014, Europ'Raid a déjà distribué plus de 65 tonnes de matériel scolaire sportif et médical qui ont été distribuées dans une vingtaine d’écoles situées en Bosnie-Herzégovine, Albanie, Macédoine, Bulgarie et Roumanie. En six ans, l’aide solidaire des équipages de Europ’Raid est ainsi passée de plusieurs centaines de kilogrammes à plusieurs dizaines de tonnes chaque année. En tant qu’entreprise, vous pouvez contribuer au succès de l’édition 2021 et contribuer à rendre  plus accessible l’éducation.
             </p>
-
-            <button type="button" class="btn btn-success btn-raidators text-white p-10 mx-5">Telecharger le dossier de sponsoring</button>
-
           </div>
           <div class="col-6 themed-grid-col">
             <h3 class="text-left font-weight-bold mb-3"><strong>Couverture médiatique</strong></h3>
@@ -40,8 +37,8 @@
             </p>
 
           </div>
-          
-          <button type="button" class="btn btn-success text-white p-10 mx-5"><%= link_to 'Télécharger le dossier de sponsoring', asset_path('partnership/Dossier_sponsoring_Raidators.pdf') %> </button>
+
+          <%= link_to 'Télécharger le dossier de sponsoring', asset_path('partnership/Dossier_sponsoring_Raidators.pdf'),class:"btn btn-success btn-raidators"%>
         </div>
     
 
@@ -63,8 +60,8 @@
           <div class="col-lg-5">
     
             <!-- Featured Image -->
-            <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-              <%= image_tag("partnership/205.png", class:"card-img-top", alt:"Card image cap") %>
+            <div class=" mb-lg-0 mb-4">
+              <%= image_tag("partnership/205.png", class:"card-img-top card-with-right-left-image-raidators", alt:"Card image cap") %>
          
             </div>
     
@@ -84,8 +81,7 @@
               La carrosserie de la 205 est réservée aux encarts publicitaires de nos sponsors, avec des emplacements différents selon le type de partenariat. Votre entreprise peut choisir l'emplacement qui lui convient, parmi ceux disponibles et être visible à travers 20 pays et 10 capitales.
             </p>
             <!-- Read more button -->
-            <button type="button" class="btn btn-success btn-raidators text-white p-10 mx-5">Découvrir la voiture et ses emplacements disponibles</button>
-    
+            <%= link_to 'Découvrir la voiture et ses emplacements disponibles', asset_path('partnership/Dossier_sponsoring_Raidators.pdf'),class:"btn btn-success btn-raidators"%>
           </div>
           <!-- Grid column -->
     
@@ -119,7 +115,7 @@
               <!-- Card content -->
               <div class="card-body my-4">
 
-                <%= image_tag("partnership/Logo_France_3.png", class:"card-img-top", alt:"Card image cap") %>               
+                <%= image_tag("partnership/Logo_France_3.png", class:"card-img-top ", alt:"Card image cap") %>               
                 
               </div>
             </div>  
@@ -257,19 +253,17 @@
               Récoltez du matériel caritatif ou sponsorisez-nous en nous permettant de revendre vos produits sur notre plateforme, ou en nous équipant pour le raid (équipement numériques, camping
               </p>
             <!-- Read more button -->
-            <button type="button" class="btn btn-success btn-raidators text-white p-10 mx-5">Partenariat nature</button>
-            <button type="button" class="btn btn-success btn-raidators text-white p-10 mx-5">Nous contacter</button>
+            <%= link_to 'Partenariat nature', equipments_path, class:"btn btn-success btn-raidators", target:"_blank"%>
 
-    
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-lg-5">
+          <div class="col-lg-5 col d-none d-md-block">
     
             <!-- Featured image -->
-            <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-              <%= image_tag("partnership/don_materiel.png", class:"card-img-top", alt:"Card image cap") %>
+            <div class=" mb-lg-0 mb-4 ">
+              <%= image_tag("partnership/don_materiel.png", class:"card-img-top card-with-right-left-image-raidators", alt:"Card image cap") %>
              
             </div>
     
