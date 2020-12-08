@@ -71,3 +71,14 @@ border-color:#57B48A;
 box-sizing: border-box;
 border-radius: 6px; 
 }
+
+.stripe-button-el {
+  background-color: #4CAF50;
+  border-radius: 8px;
+
+}
+
+.stripe-button-el:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
