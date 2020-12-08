@@ -136,3 +136,16 @@ section{
   text-align: center;
   width: 100%;
 }
+
+/* STRIPE */
+
+.stripe-button-el {
+  background-color: #4CAF50;
+  border-radius: 8px;
+
+}
+
+.stripe-button-el:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}

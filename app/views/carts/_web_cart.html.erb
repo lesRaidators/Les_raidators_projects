@@ -8,6 +8,7 @@
     
         <div class="card">
           <div class="card-body">
+            <h1>Mon Panier </h1>
     
             <!--Grid row-->
             <div class="row">
@@ -18,181 +19,86 @@
                 <!-- Pills navs -->
                 <ul class="nav md-pills nav-justified pills-primary font-weight-bold">
                   <li class="nav-item">
+<<<<<<< HEAD
+                    <a class="nav-link" data-toggle="tab" href="#tabCheckoutAddons123" role="tab">Produit</a>
+=======
                     <a class="nav-link active" data-toggle="tab" href="#tabCheckoutBilling12" role="tab">1. Facture</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#tabCheckoutAddons12" role="tab">2. Produit</a>
+>>>>>>> development
                   </li>
                 </ul>
     
                 <!-- Pills panels -->
                 <div class="tab-content pt-4">
-    
-                  <!--Panel 1-->
-                  <div class="tab-pane fade in show active" id="tabCheckoutBilling123" role="tabpanel">
-    
-                    <!--Card content-->
-                    <form>
-    
-                      <!--Grid row-->
-                      <div class="row">
-    
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-4">
-    
-                          <!--firstName-->
-                          <label for="firstName" class="">Nom</label>
-                          <input type="text" id="firstName" class="form-control">
-    
-                        </div>
-                        <!--Grid column-->
-    
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-2">
-    
-                          <!--lastName-->
-                          <label for="lastName" class="">Prénom</label>
-                          <input type="text" id="lastName" class="form-control">
-    
-                        </div>
-                        <!--Grid column-->
-    
-                      </div>
-                      <!--Grid row-->
-    
-                      <!--email-->
-                      <label for="email" class="">Email</label>
-                      <input type="text" id="email" class="form-control mb-4" placeholder="email@exemple.com">
-    
-                      <!--address-->
-                      <label for="address" class="">Addresse</label>
-                      <input type="text" id="address" class="form-control mb-4" placeholder="1234 rue de la porte">
-    
-                      <!--address-2-->
-                      <label for="address-2" class="">Addresse 2 (optionel)</label>
-                      <input type="text" id="address-2" class="form-control mb-4" placeholder="n° appartement / étage">
-    
-                      <!--Grid row-->
-                      <div class="row">
-    
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-    
-                          <label for="country">Pays</label>
-                          <select class="custom-select d-block w-100" id="country" required>
-                            <option value="">Choisir...</option>
-                            <option>France</option>
-                            <option>Autre</option>
-                            
-                          </select>
-                          <div class="invalid-feedback">
-                            Choisissez un pays
-                          </div>
-    
-                        </div>
-                        <!--Grid column-->
-    
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-    
-                          <label for="zip">Ville</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
-                          <div class="invalid-feedback">
-                            Ville obligatoire
-                          </div>
-    
-                        </div>
-                        <!--Grid column-->
-    
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-    
-                          <label for="zip">Code postal</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
-                          <div class="invalid-feedback">
-                            Code postal obligatoire
-                          </div>
-    
-                        </div>
-                        <!--Grid column-->
-    
-                      </div>
-                      <!--Grid row-->
-    
-                      <hr>
-    
-                      <div class="mb-1">
-                        <input type="checkbox" class="form-check-input filled-in" id="chekboxRules">
-                        <label class="form-check-label" for="chekboxRules">J'accepte les termes et conditions de prévente</label>
-                      </div>
-                      <div class="mb-1">
-                        <input type="checkbox" class="form-check-input filled-in" id="subscribeNewsletter">
-                        <label class="form-check-label" for="subscribeNewsletter">En ne cochant pas ce bouton, vous nous donnez l'autorisation de vous envoyer des newsletters (pas beaucoup promis)</label>
-                      </div>
-    
-                      <hr>
-    
-                      <button class="btn btn-success btn-md btn-rounded mx-0" type="submit">Etape suivante</button>
-    
-                    </form>
-    
-                  </div>
-                  <!--/.Panel 1-->
-    
+
                   <!--Panel 2-->
-                  <div class="tab-pane fade" id="tabCheckoutAddons123" role="tabpanel">
+                  <div class="tab-pane fade in show active" id="tabCheckoutAddons123" role="tabpanel">
     
                     <!--Grid row-->
-                    <div class="row">
-    
-                      <!--Grid column-->
-                      <div class="col-md-5 mb-4">
-                        <% @cart.selected_products.each do |myproduct| %>
-                        <img class="img-fluid z-depth-1-half" alt="Second sample image"> <%=myproduct.product.image_url %> </img>
+                    <form>
+                      <div class="row">
+      
+                        <!--Grid column-->
+                        <div class="col-md-5 mb-4">
+                          <% @cart.selected_products.each do |myproduct| %> 
+                          <hr class="mb-5">
 
-    
-    
+                          <img class="img-fluid z-depth-1-half" alt="Second sample image"> <%=myproduct.product.image_url %> </img>
+                          <% end %>
+      
+      
+                        </div>
+                        <!--Grid column-->
+      
+                        <!--Grid column-->
+                        <div class="col-md-7 mb-4">
+                          <% @cart.selected_products.each do |myproduct| %> 
+                          <hr class="mb-5">
+
+
+      
+                          <h3 class="mb-3 h3"><%= myproduct.product.title %></h3>
+      
+                          <p>Description</p>
+      
+                          <!--Name-->
+
+                          <select class="mdb-select colorful-select dropdown-info">
+                            <option value="" disabled>Quantité</option>
+                            <option value="" selected> <%= myproduct.quantity %></option>
+                          </select>
+
+                          <h3> Prix: <%= myproduct.product.price %>€</h3>
+                          <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
+              
+                          <% end %>
+
+
+                          
+
+                          <% if @cart.selected_products.length != 0 %>
+                          <% else %>
+                            <p> Votre panier est vide </p>
+                          <% end %>
+
+
+      
+                        </div>
+                        <!--Grid column-->
+      
                       </div>
-                      <!--Grid column-->
-    
-                      <!--Grid column-->
-                      <div class="col-md-7 mb-4">
-    
-                        <h3 class="mb-3 h3"><%= myproduct.product.title %></h3>
-    
-                        <p>Description</p>
-    
-                        <!--Name-->
-
-                        <select class="mdb-select colorful-select dropdown-info">
-                          <option value="" disabled>Quantité</option>
-                          <option value="" selected> <%= myproduct.quantity %></option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-    
-                        <button type="button" class="btn btn-success btn-md btn-rounded mx-0">Ajouter les modifications</button>
-                        <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
-
-    
-                      </div>
-                      <!--Grid column-->
-    
-                    </div>
                     <!--Grid row-->
-    
+                    </form>
                     <hr class="mb-5">
     
     
-                    <hr class="mb-4">
     
-                    <button class="btn btn-success btn-md btn-rounded mx-0" type="submit">Valider la commande</button>
     
                   </div>
                   <!--/.Panel 2-->
-    
-    
+
                 </div>
                 <!-- Pills panels -->
     
@@ -203,9 +109,8 @@
               <!--Grid column-->
 
               <div class="col-lg-4 mb-4">
+
     
-                <button class="btn btn-success btn-lg btn-block" type="submit">Valider la commande</button>
-                <%= render 'stripe' %>
 
                 <!--Card-->
                 <div class="card z-depth-0 border border-light rounded-0">
@@ -213,6 +118,8 @@
                   <!--Card content-->
                   <div class="card-body">
                     <h4 class="mb-4 mt-1 h5 text-center font-weight-bold">Résumé</h4>
+                    <% @cart.selected_products.each do |myproduct| %>
+
     
                     <hr>
     
@@ -224,7 +131,9 @@
                       <p><%= myproduct.product.price %>€</p>
                       </dd>
                     </dl>
+
                     <% end %>
+
         
                     <hr>
 
@@ -241,6 +150,15 @@
                      <% else %>
                       <p> Votre panier est vide </p>
                     <% end %>
+
+                  <button class="btn btn-success btn-lg btn-block" type="submit">Valider la commande </button>
+
+                  <div class="container mt-5 mb-3 text-center w-50 card-center">
+                    <div id="stripe" class="mt-2">
+
+                      <%= render 'stripe' %>
+                    </div>
+                  </div>
 
 
 
