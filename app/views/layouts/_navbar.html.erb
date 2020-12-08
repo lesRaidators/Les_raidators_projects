@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top scrolling-navbar">
-  <%= link_to 'Europraid', home_page_path, class:'navbar-brand'%> 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+  <%= link_to(image_tag("Raidators_noir_logo.png", height:"30", class:"d-inline-block align-top"), root_path) %>
+  <button class="navbar-toggler navbar-position" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
     aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav navbar-hamburger-display">
       <li class="nav-item active">
         <%= link_to "Accueil", home_page_path, class:"nav-link" %>
         <span class="sr-only">(current)</span>
@@ -26,13 +26,13 @@
     </ul>
     <ul class="navbar-nav ml-auto">  
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item active navbar-hamburger-display">
         <%= link_to "Panier", cart_path(Cart.find_or_create_by(user_id: current_user.id)), class:"nav-link" %> </i> <b>
         <span class="sr-only">(current)</span>
       </li>
       <%else%>
       <%end%>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown navbar-hamburger-display">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Menu
         </a>
@@ -42,7 +42,7 @@
             <%= link_to "Profil", user_path(current_user.id), class:"dropdown-item" %>
           <%else%>
             <%= link_to "Inscription", new_user_registration_path, class:"dropdown-item" %>
-            <%= link_to "Log in", new_user_session_path, class:"dropdown-item" %>
+            <%= link_to "Se connecter", new_user_session_path, class:"dropdown-item" %>
           <%end%> 
         </div>
       </li>

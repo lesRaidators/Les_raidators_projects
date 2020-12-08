@@ -143,7 +143,7 @@
             <!-- Title -->
             <h3 class="black-text"> Tous solidaires</h3>
             <!-- Text -->
-            <p class="card-title text-muted font-small mt-3 mb-2">En six ans, Europ.Raid a distribué plus de 65 tonnes de matériel scolaire, sportif et médical dans des écoles isolées en Europe. Chaque voiture permet de transporter 70Kg de matériel en plus.</p>
+            <p class="card-title text-muted font-small mt-3 mb-2">En six ans, Europ.Raid a distribué plus de 65 tonnes de matériel scolaire, sportif et médical dans des écoles isolées en Europe. Chaque voiture transporte 70Kg de matériel.</p>
             <br>
             <br>
             
@@ -201,7 +201,7 @@
 
         <!-- Card -->
         <div class="card small-card-raidators">
-
+          
           <!-- Card image -->
           <%= image_tag("home_page/particular.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %>
 
@@ -245,10 +245,7 @@
         <div class="col-lg-5">
   
           <!-- Featured video -->
-          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 ">
-          <%= video_tag "video_humanity.mp4", :size => "420x315", :controls => true %>      
-          </div>
-  
+          <%= video_tag "video_humanity.mp4", :controls => true, class:"video-size-homepage-raidators card-with-right-left-image-raidators" %>      
         </div>
         <!-- Grid column -->
   
@@ -305,10 +302,10 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-lg-5">
+        <div class="col-lg-5 col d-none d-md-block">
   
           <!-- Featured image -->
-          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+          <div class="view mb-lg-0 mb-4">
             <%= image_tag("home_page/children.png", class:"card-img-top card-with-right-left-image-raidators", alt:"Card image cap") %>               
           </div>
   
