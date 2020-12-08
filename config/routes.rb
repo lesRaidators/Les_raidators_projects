@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get '/partenariat', to: "static_pages#partnership"
-  get '/acceuil', to: "static_pages#home_page"
+  get '/accueil', to: "static_pages#home_page"
   get '/equipe', to: "static_pages#team"
   get '/dons', to: "static_pages#privatevisitors"
   get '/equipements', to:"static_pages#equipments"
