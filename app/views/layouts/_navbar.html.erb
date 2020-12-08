@@ -26,13 +26,13 @@
     </ul>
     <ul class="navbar-nav ml-auto">  
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item active navbar-hamburger-display">
         <%= link_to "Panier", cart_path(Cart.find_or_create_by(user_id: current_user.id)), class:"nav-link" %> </i> <b>
         <span class="sr-only">(current)</span>
       </li>
       <%else%>
       <%end%>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown navbar-hamburger-display">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Menu
         </a>
