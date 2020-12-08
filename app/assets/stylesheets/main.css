@@ -16,7 +16,13 @@
  }
  
 /* ------------NAVBAR------------ */
- .navbar-custom {
+
+.fa-bars {
+  color: white;
+  justify-content: center;
+  margin-top: 10%;
+}
+.navbar-custom {
   background-color: #1B221D ;
 }
 /* change the brand and text color */
@@ -91,7 +97,7 @@ p{
 
 /* ------------background body------------ */
 .light-background-raidators{
-  background-color: rgba(249, 249, 249);
+  background-color: rgba(249, 249, 249, 1);
   padding-top:5%; 
   padding-bottom: 5%;
   margin-top: 5%;
@@ -129,4 +135,17 @@ section{
   top: 40%;
   text-align: center;
   width: 100%;
+}
+
+/* STRIPE */
+
+.stripe-button-el {
+  background-color: #4CAF50;
+  border-radius: 8px;
+
+}
+
+.stripe-button-el:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
