@@ -1,4 +1,8 @@
 <h1>Blog</h1>
+<br>
+<br>
+<br>
+
 <button class="btn-primary" type="submit"> <%= link_to "nouvel article", new_post_path %></button>
 
 <% @posts.each do |post| %>
@@ -9,11 +13,4 @@
   <button class="btn-primary" type="submit"> <%= link_to "modifier l'article", edit_post_path(post.id) %></button>
 <%end%>
 
-<div class="underpic">  
-    <%= render "comments/comment"%>
-</div>
-
-<div class="underpic w-50">
-    <%= render "comments/form" %>
-</div>
 
