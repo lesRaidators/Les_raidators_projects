@@ -191,6 +191,8 @@ section{
 .card-product-aligment{
   margin: auto;
   text-align: center;
+}
+
 /* STRIPE */
 
 .stripe-button-el {
@@ -204,4 +206,14 @@ section{
   color: white;
 }
 
-/* ----------PROFIL */
+/* ----------Maps--------*/
+
+.maps-sizing {
+
+  height: 100%; 
+  width: 100%;
+  right: -10%;
+
+
+}
+
