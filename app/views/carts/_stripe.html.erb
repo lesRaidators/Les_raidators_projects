@@ -21,3 +21,4 @@
     </script>
   <% end %>
 <% end %>
+<%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: @cart.total), class: "btn btn-primary my-3", remote: true %>

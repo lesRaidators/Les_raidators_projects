@@ -19,5 +19,10 @@ Rails.application.routes.draw do
 
   root 'static_pages#home_page'
   
+  scope '/checkout' do
+    post 'create', to: 'checkout#create', as: 'checkout_create'
+    get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
+    get 'success', to: 'checkout#success', as: 'checkout_success'
+  end
   
 end
