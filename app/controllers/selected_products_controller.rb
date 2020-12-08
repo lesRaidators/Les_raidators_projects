@@ -13,6 +13,19 @@ class SelectedProductsController < ApplicationController
     end
   end
 
+def update
+  @selected_product = SelectedProduct.find(params[:id])
+  @selected_product.update(quantity: @selected_product.quantity - 1)
+  @cart = Cart.find(current_user.id)
+  respond_to do |format|
+    format.html { redirect_to root_path }
+    format.js { }
+  end
+end 
+
+
+
+
   def destroy
     @selected_product = SelectedProduct.find(params[:id])
     @selected_product.destroy

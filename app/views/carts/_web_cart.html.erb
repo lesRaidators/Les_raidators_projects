@@ -37,10 +37,12 @@
     
                         <!--Grid column-->
                         <div class="col-md-6 mb-4">
-    
+
+                        <%= form_for @address do |f|  %>
+
                           <!--firstName-->
                           <label for="firstName" class="">Nom</label>
-                          <input type="text" id="firstName" class="form-control">
+                          <%= f.text_field :first_name, placeholder: 'Prénom', class:"form-control" %>
     
                         </div>
                         <!--Grid column-->
@@ -50,7 +52,8 @@
     
                           <!--lastName-->
                           <label for="lastName" class="">Prénom</label>
-                          <input type="text" id="lastName" class="form-control">
+                          <%= f.text_field :first_name, placeholder: 'Nom', class:"form-control" %>
+                          
     
                         </div>
                         <!--Grid column-->
@@ -60,15 +63,16 @@
     
                       <!--email-->
                       <label for="email" class="">Email</label>
-                      <input type="text" id="email" class="form-control mb-4" placeholder="email@exemple.com">
+                      <%= f.text_field :first_name, placeholder: 'Email', class:"form-control mb-4" %>
+                      
     
                       <!--address-->
-                      <label for="address" class="">Addresse</label>
-                      <input type="text" id="address" class="form-control mb-4" placeholder="1234 rue de la porte">
+                      <label for="address" class="">Adresse</label>
+                      <%= f.text_field :first_name, placeholder: 'Adresse', class:"form-control mb-4" %>
     
                       <!--address-2-->
-                      <label for="address-2" class="">Addresse 2 (optionel)</label>
-                      <input type="text" id="address-2" class="form-control mb-4" placeholder="n° appartement / étage">
+                      <label for="address-2" class="">Adresse 2 (optionel)</label>
+                      <%= f.text_field :first_name, placeholder: 'Adresse 2', class:"form-control mb-4" %>
     
                       <!--Grid row-->
                       <div class="row">
@@ -94,7 +98,7 @@
                         <div class="col-lg-4 col-md-6 mb-4">
     
                           <label for="zip">Ville</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <%= f.text_field :first_name, placeholder: 'Ville', class:"form-control" %>
                           <div class="invalid-feedback">
                             Ville obligatoire
                           </div>
@@ -106,11 +110,11 @@
                         <div class="col-lg-4 col-md-6 mb-4">
     
                           <label for="zip">Code postal</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <%= f.text_field :first_name, placeholder: "Code Postal", class:"form-control" %>
                           <div class="invalid-feedback">
                             Code postal obligatoire
                           </div>
-    
+                          
                         </div>
                         <!--Grid column-->
     
@@ -131,7 +135,7 @@
                       <hr>
     
                       <button class="btn btn-success btn-md btn-rounded mx-0" type="submit">Etape suivante</button>
-    
+                      <% end %>
                     </form>
     
                   </div>
