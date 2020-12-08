@@ -16,13 +16,28 @@ class CheckoutController < ApplicationController
       success_url: checkout_success_url + '?session_id={CHECKOUT_SESSION_ID}',
       cancel_url: checkout_cancel_url
     )
+  
+
     respond_to do |format|
       format.js # renders create.js.erb
     end
+
   end
   def success
     @session = Stripe::Checkout::Session.retrieve(params[:session_id])
     @payment_intent = Stripe::PaymentIntent.retrieve(@session.payment_intent)
+    
+    @cart = current_user.cart
+    @order = Order.new(user_id: current_user.id, total_price: @cart.total)
+
+    if @order.save
+      @selected_products = @cart.selected_products
+      @selected_products.each do |item|
+        @join_order_product = JoinOrderProduct.create(order_id: @order.id, product_id: item.product_id, quantity: 1)
+        @join_order_product.save
+        item.destroy
+      end
+    end
   end
   def cancel
     @session = Stripe::Checkout::Session.retrieve(params[:session_id])
