@@ -44,8 +44,10 @@
       </div>
       <div class="carousel-caption">
         <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
-        <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
-        <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
+        <div class="col d-none d-md-block">
+          <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
+          <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
+        </div>
       </div>
     </div>
   </div>
@@ -69,10 +71,10 @@
 
 <section>
   <div class="container">
-  
-    <h2 class="text-left font-weight-bold mb-5">L'Équipe Raidators participent à Europ.Raid</h2>
-    <h3 class="text-left font-weight-bold mb-5">Le premier raid aventure en Europe</h3>
-
+    <div>
+      <h2 class="text-left font-weight-bold mb-5">L'Équipe Raidators participent à Europ.Raid</h2>
+      <h3 class="text-left font-weight-bold mb-5">Le premier raid aventure en Europe</h3>
+    </div>
 
     <!-- Grid row -->
     <div class="row">
@@ -92,7 +94,9 @@
             <!-- Text -->
             <p class="card-title text-muted font-small mt-3 mb-2">3 coéquipier se sont engagé à livrer 70 kg de matériel en voiture dans des écoles isolées d'Europe. Pour atteindre leur objectif, l'équipe Raidators a besoin de votre soutien.</p>
             
-            <%= link_to "Découvrir l'équipe", equipe_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+            <div class="card-product-aligment-center">
+              <%= link_to "Découvrir l'équipe", equipe_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+            </div>
 
           </div>
 
@@ -117,8 +121,7 @@
             <!-- Title -->
             <h3 class="black-text">20 pays en 23 jours</h3>
             <!-- Text -->
-            <p class="card-title text-muted font-small mt-3 mb-2">Un itinéraire traversant des capitales et patrimoines mondiaux inscrits à l’UNESCO. Un parcours de 450 km par jour, avec seulement une boussole, une carte et un carnet de bord.</p>
-            <br>
+            <p class="card-title text-muted font-small mt-3 mb-2">Un itinéraire traversant des capitales et patrimoines mondiaux inscrits à l’UNESCO. Un parcours de 450 km par jour, avec seulement une boussole, une carte et un carnet de bord.<br>Une aventure !</p>
             <br>
           </div>
 
@@ -143,7 +146,7 @@
             <!-- Title -->
             <h3 class="black-text"> Tous solidaires</h3>
             <!-- Text -->
-            <p class="card-title text-muted font-small mt-3 mb-2">En six ans, Europ.Raid a distribué plus de 65 tonnes de matériel scolaire, sportif et médical dans des écoles isolées en Europe. Chaque voiture transporte 70Kg de matériel.</p>            <br>
+            <p class="card-title text-muted font-small mt-3 mb-2">En six ans, Europ.Raid a distribué plus de 65 tonnes de matériel scolaire, sportif et médical dans des écoles isolées en Europe. Chaque voiture transporte 70Kg de matériel !</p>            <br>
             <br>
             
           </div>
