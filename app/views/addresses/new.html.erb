@@ -2,7 +2,7 @@
 <p>Find me in app/views/addresses/new.html.erb</p>
 
 
-<%= form_for @address do |f| %>
+<%= form_for Adress.create do |f| %>
 
   <div class="form-group">
   <%= f.text_field :first_name, placeholder: 'Prénom', class:"form-control" %>

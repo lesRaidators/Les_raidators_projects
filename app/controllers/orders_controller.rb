@@ -9,6 +9,8 @@ class OrdersController < ApplicationController
   
  
 def create
+
+      @adderess= Address.find_or_create_by(user_id: current_user)
       @total = current_user.cart.total_stripe.to_i
 
       customer = Stripe::Customer.create({

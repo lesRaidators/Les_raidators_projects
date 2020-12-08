@@ -191,4 +191,15 @@ section{
 .card-product-aligment{
   margin: auto;
   text-align: center;
+/* STRIPE */
+
+.stripe-button-el {
+  background-color: #4CAF50;
+  border-radius: 8px;
+
+}
+
+.stripe-button-el:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }

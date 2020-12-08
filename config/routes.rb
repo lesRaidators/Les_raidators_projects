@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/equipments', to:"static_pages#equipments"
 
   devise_for :users
-  resources :adresses
+  resources :addresses
   resources :selected_products
   resources :products
   resources :orders
@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   resources :users
   resources :addresses
   resources :charges
-  resources :posts
-
+  resources :posts do
+    resources :comments
+  end 
   root 'static_pages#home_page'
-  
   
 end
