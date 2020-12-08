@@ -44,7 +44,13 @@
   font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', 'sans-serif';
   font-weight: lighter;
 }
+.navbar-position{
+  margin-left: auto;
+}
 
+.navbar-hamburger-display{
+  text-align: center;
+}
 /* ------------SMALL CARD WITH IMAGE TOP AND TEXT BELLOW------------ */
 
 /* Found in equipments and donation/products and home pages  */
@@ -74,6 +80,11 @@
   border-color:#57B48A;
   box-sizing: border-box;
   border-radius: 6px; 
+}
+
+.video-size-homepage-raidators{
+  height: 100%;
+  width: 100%;
 }
 /* ------------Simple rounder card------------ */
 .card-rounded-raidators{
