@@ -91,6 +91,11 @@
   border-top-right-radius: 12px ;
   box-shadow: 0px 0px 0px;
 }
+/* ------------Center card content------------ */
+.card-product-aligment-center{
+  margin: auto;
+  text-align: center;
+}
 /* ------------Card with image right or left------------ */
 
 .card-with-right-left-image-raidators{
@@ -132,8 +137,6 @@ p{
   background-color: rgb(249, 249, 249);
   padding-top:5%; 
   padding-bottom: 5%;
-  margin-top: 5%;
-  margin-bottom:5% ;
 }
 section{
   margin-top: 5%;
@@ -183,14 +186,13 @@ section{
   border-radius: 12px;
 }
 /* ------------Team------------ */
-.text-in-three-columns{
-  column-count: 3;
+@media (min-width: 992px) {
+  .text-in-three-columns{
+    column-count: 3;
+  }
 }
 
-/* ------------Product------------ */
-.card-product-aligment{
-  margin: auto;
-  text-align: center;
+
 /* STRIPE */
 
 .stripe-button-el {
