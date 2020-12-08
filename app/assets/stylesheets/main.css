@@ -7,6 +7,29 @@
   align-items: flex-end;
 }
 
+.btn-raidators {
+  background: #57B48A;
+  /* Actionable Item */
+  border-color:#57B48A;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
+
+.btn-dark-raidators{
+  background: #1B221D;
+  /* Actionable Item */
+  border-color:white;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
+
+.btn-light-raidators{
+  background: rgb(235, 235, 235, 1);
+  /* Actionable Item */
+  border-color:white;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
 /* ----------CARROUSEL TEXT POSITION------------- */
 
 .carousel-caption {
@@ -16,7 +39,13 @@
  }
  
 /* ------------NAVBAR------------ */
- .navbar-custom {
+
+.fa-bars {
+  color: white;
+  justify-content: center;
+  margin-top: 10%;
+}
+.navbar-custom {
   background-color: #1B221D ;
 }
 /* change the brand and text color */
@@ -38,7 +67,13 @@
   font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', 'sans-serif';
   font-weight: lighter;
 }
+.navbar-position{
+  margin-left: auto;
+}
 
+.navbar-hamburger-display{
+  text-align: center;
+}
 /* ------------SMALL CARD WITH IMAGE TOP AND TEXT BELLOW------------ */
 
 /* Found in equipments and donation/products and home pages  */
@@ -62,12 +97,10 @@
   border-radius: 12px;
 }
 
-.btn-raidators {
-  background: #57B48A;
-  /* Actionable Item */
-  border-color:#57B48A;
-  box-sizing: border-box;
-  border-radius: 6px; 
+
+.video-size-homepage-raidators{
+  height: 100%;
+  width: 100%;
 }
 /* ------------Simple rounder card------------ */
 .card-rounded-raidators{
@@ -83,15 +116,20 @@ h2{
   font-family:'Roboto', 'Open Sans', 'Helvetica Neue', 'sans-serif';
 }
 
+h3{
+  color: #1B221D;
+}
 p{
-  font-family: 'Nunito','lato','Open Sans';
+  font-family: 'Nunito Sans','lato','Open Sans';
+  font-weight: normal;
   font-size: 15px;
   line-height: 1.6;
+  justify-content: auto;
 }
 
 /* ------------background body------------ */
 .light-background-raidators{
-  background-color: rgba(249, 249, 249);
+  background-color: rgb(249, 249, 249);
   padding-top:5%; 
   padding-bottom: 5%;
   margin-top: 5%;
@@ -130,3 +168,40 @@ section{
   text-align: center;
   width: 100%;
 }
+
+/* ------------Form------------ */
+.form-background-raidators{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+  border-radius: 12px;
+  margin: auto;
+}
+
+.form-control-raidators{
+  border-radius: 12px;
+}
+/* ------------Team------------ */
+.text-in-three-columns{
+  column-count: 3;
+}
+
+/* ------------Product------------ */
+.card-product-aligment{
+  margin: auto;
+  text-align: center;
+/* STRIPE */
+
+.stripe-button-el {
+  background-color: #4CAF50;
+  border-radius: 8px;
+
+}
+
+.stripe-button-el:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+/* ----------PROFIL */

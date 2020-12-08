@@ -19,6 +19,9 @@
         // have more than 1 button of that class
         document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
     </script>
+    <button type="submit" class="stripe-button-el">Confirmer mon panier</button>
   <% end %>
 <% end %>
 <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: @cart.total), class: "btn btn-primary my-3", remote: true %>
+<% end %>
+
