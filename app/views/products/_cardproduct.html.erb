@@ -19,18 +19,22 @@
     <div class="row">
       <% @products.each do |product| %>
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100 card SmallcardRaidators">
-            <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"SmallcardImageRaidators" %> </div>
+          <div class="card h-100 card small-card-raidators">
+            <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"small-card-image-raidators" %> </div>
             <!-- Card content -->
               <div class="card-body">
                 <h3 class="black-text"> <%= product.title %> </h3>
                 <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
                 <% if user_signed_in? %>
-                <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST' %></button>
+                  <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
                 <% else %>
-                <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "soutenir le projet", new_user_session_path %></button>
+                  <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
                 <% end %>
                 <br>
+                <% if current_user && current_user.admin %>
+                <button type="button" class="btn btn-outline-primary p-2 mx-1 mt-2"><%= link_to "Modifier", edit_product_path(product.id) %></button>
+                <button type="button" class="btn btn-outline-primary p-2 mx-2 mt-2"><%= link_to "Supprimer", product_path(product.id), method: :DELETE %></button> 
+                <%end%>     
               </div>
           </div>
         </div>
