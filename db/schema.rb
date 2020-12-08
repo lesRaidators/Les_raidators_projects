@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_100739) do
+ActiveRecord::Schema.define(version: 2020_12_07_150754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 2020_12_07_100739) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "post_id", null: false
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "join_order_products", force: :cascade do |t|
@@ -107,6 +117,8 @@ ActiveRecord::Schema.define(version: 2020_12_07_100739) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "carts", "users"
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
   add_foreign_key "join_order_products", "orders"
   add_foreign_key "join_order_products", "products"
   add_foreign_key "orders", "users"
