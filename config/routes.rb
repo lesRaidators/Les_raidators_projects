@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/equipments', to:"static_pages#equipments"
 
   devise_for :users
-  resources :adresses
+  resources :addresses
   resources :selected_products
   resources :products
   resources :orders
