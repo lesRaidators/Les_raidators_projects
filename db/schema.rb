@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_164832) do
   create_table "join_order_products", force: :cascade do |t|
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_join_order_products_on_order_id"
