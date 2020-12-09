@@ -24,7 +24,7 @@
 }
 
 .btn-light-raidators{
-  background: rgb(235, 235, 235, 1);
+  background: rgb(235, 235, 235);
   /* Actionable Item */
   border-color:white;
   box-sizing: border-box;
@@ -147,7 +147,6 @@ section{
   height: 300px;
 }
 .banner-background{
-  color: #f1f1f1; /* Grey text */
   background: url(home_page/EuropRaid-2017-051.jpg);
   background-repeat: no-repeat;
   background-size: cover;
