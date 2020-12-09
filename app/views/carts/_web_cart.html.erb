@@ -3,7 +3,7 @@
     <div class="container mt-5">
 
    <!--Section: Content-->
-      <section class="dark-grey-text">
+      <section class="">
     
         <div class="card">
           <div class="card-body">
@@ -16,7 +16,7 @@
               <div class="col-lg-8">
     
                 <!-- Pills navs -->
-                <ul class="nav md-pills nav-justified pills-primary font-weight-bold">
+                <ul class="nav md-pills nav-justified pills-primary ">
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#tabCheckoutAddons123" role="tab">Produit</a>
                   </li>
@@ -40,7 +40,6 @@
                           <img class="img-fluid" alt="Second sample image"> <%=myproduct.product.image_url %> </img>
                           <% end %>
       
-      
                         </div>
                         <!--Grid column-->
       
@@ -55,7 +54,7 @@
       
                           <!--Name-->
                             
-                            <h5>Quantité : <%= myproduct.quantity %></h5>
+                            <p>Quantité : <%= myproduct.quantity %></p>
 
                           <h3> Prix: <%= myproduct.product.price %>€</h3>
                           <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
@@ -99,7 +98,7 @@
     
                   <!--Card content-->
                   <div class="card-body">
-                    <h4 class="mb-4 mt-1 h5 text-center font-weight-bold">Résumé</h4>
+                    <p class="mb-4 mt-1 text-center ">Résumé</p>
                     <% @cart.selected_products.each do |myproduct| %>
                     <hr>
 
