@@ -1,28 +1,31 @@
-<html>
-<body>
+<% content_for :title, "Nouvel article | Raidators" %>
 
-<h1>Nouveaux posts</h1>
+<div class="container-fluid mt-3 mb-5 light-background-raidators ">
 
-  <%= form_for @post do |editpost| %>
+  <div class="col-lg-6 col-md-4 form-background-raidators">
+    <div class="container py-5 my-5">
+      <h3 class="text-center pb-2">Bonjour</h3>
+      <%= form_for @post do |editpost| %>
 
-    <div class="form-group">
-      <%= editpost.text_field :title, placeholder: 'Titre', class:"form-control" %>
+        <div class="form-group">
+          <%= editpost.text_field :title, placeholder: 'Titre', class:"form-control form-control-raidators" %>
+        </div>
+
+        <div class="form_group">
+          <%= editpost.text_area :content, placeholder: "Contenu de l'article",  class:"form-control form-posts-content form-control-raidators mb-5" %>
+        </div>
+
+        <div class="form-group">
+          <%= editpost.text_field :image_url, placeholder: 'Image', class:"form-control form-control-raidators" %>
+        </div>
+
+        <div class="form-group">
+          <button class="btn-primary  btn-raidators " type="submit"> Publier</button>
+        </div>
+
+      <%end%>
     </div>
+  </div>
+</div>
 
-    <div class="form_group">
-      <%= editpost.text_area :content, placeholder: "Contenu de l'article",  class:"form-control" %>
-    </div>
 
-    <div class="form-group">
-      <%= editpost.text_field :image_url, placeholder: 'Image', class:"form-control" %>
-    </div>
-
-    <div class="form-group">
-      <button class="btn-primary" type="submit"> Publier</button>
-    </div>
-
-  <%end%>
-  
-
-</body>
-</html>

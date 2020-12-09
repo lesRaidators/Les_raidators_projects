@@ -30,6 +30,14 @@
   box-sizing: border-box;
   border-radius: 6px; 
 }
+
+.btn-warning-raidators{
+  background: rgb(180, 87, 129);
+  /* Actionable Item */
+  border-color:white;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
 /* ----------CARROUSEL TEXT POSITION------------- */
 
 .carousel-caption {
@@ -220,4 +228,7 @@ section{
 
 
 }
-
+/* ----------Posts--------*/
+.form-posts-content{
+  height : 300px !important;
+}
