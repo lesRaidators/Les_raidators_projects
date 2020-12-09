@@ -68,3 +68,5 @@ gem 'dotenv-rails'
 gem 'devise'
 
 gem 'rails_12factor', group: :production
+
+gem "aws-sdk-s3", require: false

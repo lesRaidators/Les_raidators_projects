@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RaidatorsProject</title>
+     <title><%= yield(:title) %></title>
     <meta charset="utf-8">
-
       <%= stylesheet_link_tag 'application', media: 'all' %>
       <%= javascript_include_tag 'application'%>
-      <%= favicon_link_tag asset_path('cheetah.png') %>    
+
+      <%= favicon_link_tag asset_path('cheetah.png') %>  
+      <script src="https://js.stripe.com/v3/"></script>  
+
+      <%= favicon_link_tag asset_path('cheetah.png') %>   
+      <script src="https://kit.fontawesome.com/17892e5f3b.js" crossorigin="anonymous"></script>
+      <%= csrf_meta_tags %>
+    </meta>
 
 
   </head>
-  <%= csrf_meta_tags %>
   <body>
     <%= render 'layouts/navbar' %>
       <!-- MESSAGES -->
@@ -20,5 +25,5 @@
       <!-- FOOTER-->
     <%= render 'layouts/footer' %>
   </body>
-      <script src="https://kit.fontawesome.com/17892e5f3b.js" crossorigin="anonymous"></script>
+      
 </html>

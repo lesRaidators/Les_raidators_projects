@@ -36,7 +36,9 @@
 <!-- Container  -->
 <div class="container mt-5">
 
-  <!--Section: Content-->
+ <% content_for :title, "Dons | Raidators" %>
+
+ <!--Section: Content-->
   <section class="dark-grey-text">
       
     <!-- Grid row -->
@@ -53,7 +55,7 @@
         <!-- Excerpt -->
         <p>Notre mission est d'acheminer du matériel scolaire, sportif et médical dans des écoles défavorisées. Vous pouvez nous aider à atteindre les 70Kg d’équipements en faisant un don de matériel ! plus d’informations sur la page don de matériel.</p>
 
-        <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Faire un don", equipments_path %></button>
+        <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Faire un don", equipements_path %></button>
       </div>
       <!-- Grid column -->
 

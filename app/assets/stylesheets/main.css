@@ -1,9 +1,5 @@
 /* custom.css */
 
-.caroussel-caption { background: rgba(0,0,0,0.5); 
-  background-size: cover;
-  top:70%
-  }
 
 .footerend{
   display: flex;
@@ -11,18 +7,45 @@
   align-items: flex-end;
 }
 
-/* ----------CARROUSEL BOX SHADOW------------- */
+.btn-raidators {
+  background: #57B48A;
+  /* Actionable Item */
+  border-color:#57B48A;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
 
+.btn-dark-raidators{
+  background: #1B221D;
+  /* Actionable Item */
+  border-color:white;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
+
+.btn-light-raidators{
+  background: rgb(235, 235, 235);
+  /* Actionable Item */
+  border-color:white;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
+/* ----------CARROUSEL TEXT POSITION------------- */
 
 .carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
   background-size: cover;
   top: 70%;
   transform: translateY(-150%);
  }
  
 /* ------------NAVBAR------------ */
- .navbar-custom {
+
+.fa-bars {
+  color: white;
+  justify-content: center;
+  margin-top: 10%;
+}
+.navbar-custom {
   background-color: #1B221D ;
 }
 /* change the brand and text color */
@@ -44,7 +67,13 @@
   font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', 'sans-serif';
   font-weight: lighter;
 }
+.navbar-position{
+  margin-left: auto;
+}
 
+.navbar-hamburger-display{
+  text-align: center;
+}
 /* ------------SMALL CARD WITH IMAGE TOP AND TEXT BELLOW------------ */
 
 /* Found in equipments and donation/products and home pages  */
@@ -62,20 +91,26 @@
   border-top-right-radius: 12px ;
   box-shadow: 0px 0px 0px;
 }
+/* ------------Center card content------------ */
+.card-product-aligment-center{
+  margin: auto;
+  text-align: center;
+}
 /* ------------Card with image right or left------------ */
 
 .card-with-right-left-image-raidators{
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
-.btn-raidators {
-  background: #57B48A;
-  /* Actionable Item */
-  border-color:#57B48A;
-  box-sizing: border-box;
-  border-radius: 6px; 
-}
 
+.video-size-homepage-raidators{
+  height: 100%;
+  width: 100%;
+}
+/* ------------Simple rounder card------------ */
+.card-rounded-raidators{
+  border-radius: 12px;
+}
 /* ------------Fonts------------ */
 
 h1{
@@ -86,20 +121,34 @@ h2{
   font-family:'Roboto', 'Open Sans', 'Helvetica Neue', 'sans-serif';
 }
 
+h3{
+  color: #1B221D;
+}
 p{
-  font-family: 'Nunito','lato','Open Sans';
+  font-family: 'Nunito Sans','lato','Open Sans';
+  font-weight: normal;
   font-size: 15px;
   line-height: 1.6;
+  justify-content: auto;
 }
 
-
+/* ------------background body------------ */
+.light-background-raidators{
+  background-color: rgb(249, 249, 249);
+  padding-top:5%; 
+  padding-bottom: 5%;
+}
+section{
+  margin-top: 5%;
+  margin-bottom:5% ;
+}
 /* ------------Banner------------ */
 .banner{
   height: 300px;
 }
 .banner-background{
   color: #f1f1f1; /* Grey text */
-  background: url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background: url(home_page/EuropRaid-2017-051.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -122,3 +171,62 @@ p{
   text-align: center;
   width: 100%;
 }
+
+/* ------------Form------------ */
+.form-background-raidators{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+  border-radius: 12px;
+  margin: auto;
+}
+
+.form-control-raidators{
+  border-radius: 12px;
+}
+/* ------------Team------------ */
+@media (min-width: 992px) {
+  .text-in-three-columns{
+    column-count: 3;
+  }
+}
+
+/* ------------Product------------ */
+.card-product-aligment{
+  margin: auto;
+  text-align: center;
+}
+/* STRIPE */
+
+.stripe-button-el {
+  background-color: #4CAF50;
+  border-radius: 8px;
+
+}
+
+.stripe-button-el:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+/* ----------PROFIL ------*/
+
+.avatar-storage {
+vertical-align: middle;
+border-style: none;
+height: 100%;
+width: 100%;
+
+}
+/* ----------Maps--------*/
+
+.maps-sizing {
+
+  height: 100%; 
+  width: 100%;
+  right: -10%;
+
+
+}
+

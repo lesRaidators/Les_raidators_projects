@@ -1,3 +1,5 @@
+   <% content_for :title, "L'équipage | Raidators" %>
+    <%= render :partial => "shared/banner" %>
     <div class="container mt-5">
 
       <!--Section: Content-->
@@ -6,73 +8,75 @@
         <!-- Section heading -->
         <h2 class="text-left font-weight-bold mb-5">Présentation de l’équipe</h2>
         <h3 class="text-left font-weight-bold mb-5">La petite histoire des raidators</h3>
-        <p class="text-left font-weight-bold mb-5">L'équipage est composé de 3 pilotes, voyageurs téméraires aguerris et se serreront les coudes pour toucher à leur but. En effet, au cours de leurs différentes aventures, ils ont pu se rendre compte qu'ils pouvaient aider autrement les pays et les enfants dans le besoin. Ils cherchaient à se rendre utile autrement qu'en visitant le pays...En juillet 2020, sur la côte, face à l'océan, l'histoire des Raid'ateurs et de leur petite 205 commence.
-          Ils s'apprêtent à parcourir un long périple pour accomplir une mission très importante : livrer du matériel dans des pays de l'Europe de l'Est.
-          Nous devions créer une association afin d’'encadrer légalement nos démarches: ouvrir un compte bancaire ou même être assuré lors des événements auxquels nous organiserons.</p>
-
+        <div class="text-in-three-columns ">
+          <p > L'équipage est composé de 3 pilotes, voyageurs téméraires aguerris qui se serreront les coudes pour atteindre leur but. En effet, au cours de leurs différentes aventures, ils ont pu se rendre compte qu'ils pouvaient aider autrement les pays et les enfants dans le besoin. Ils cherchaient à se rendre utile autrement qu'en visitant le pays....En juillet 2020, sur la côte, face à l'océan, l'histoire des Raid'ateurs et de leur petite 205 commence.
+          Ils s'apprêtent à parcourir un long périple pour accomplir une mission très importante : livrer du matériel dans des pays de l'Europe de l'Est. Depuis, ils ont créé une association, se sont inscrits à Europ.Raid, ont acheté leur voiture, et ils ne leur manque plus que vous pour atteindre leurs objectifs financier et en dons en matériel...Qu'attendez-vous pour les soutenir ?  </p>
+        </div>
+        </div>
+        </div>
       </section>
       <!--Section: Content-->
     </div>
 
 
-    <div class="container my-5 p-5 z-depth-1">
+    <div class="container my-5">
 
     
-      
-      <!--Section: Content-->
-      <section class="team-section text-center dark-grey-text">
-        
+      <section>       
         <!-- Section heading -->
-        <h2 class="font-weight-bold text-center dark-grey-text pb-2">Rencontrez notre équipage</h2>
+        <h3 class="pb-2">Rencontrez notre équipage</h2>
         <hr class="w-header my-4">
         <!-- Section description -->
-        <p class="lead text-center text-muted pt-2 mb-5">A bord d’une peugeot 205, Benjamin, Hélène et Émilie vont acheminer plus de 70kg de fournitures scolaires et vivre une aventure sportive exceptionnelle.
+        <p class="lead text-muted pt-2 mb-5">A bord d’une peugeot 205, Benjamin, Hélène et Émilie vont acheminer plus de 70kg de fournitures scolaires et vivre une aventure sportive exceptionnelle.
         </p>
+      </section>
+
+      <!--Section: Content-->
+      <section class="team-section text-center">
+ 
     
         <!-- Grid row -->
         <div class="row">
     
           <!-- Grid column -->
-          <div class="col-md-4 mb-4">
+          <div class="col-lg-4 col-md-12 mb-4">
     
             <div class="w-200 mx-auto mb-4">
-              <%= image_tag("team/LN.png", class:"z-depth-1 rounded-circle img-fluid mx-auto", alt:"Card image cap") %>
+              <%= image_tag("team/LN.png", class:" rounded-circle img-fluid mx-auto", alt:"Card image cap") %>
 
             </div>
-            <h3 class="font-weight-bold">Hélène</h3>
+            <h3>Hélène</h3>
             <p class="mt-3 mb-4 text-muted">Originaire de région parisienne aussi. Elle a décidé d'emménager Saint Nazaire pour pouvoir déjeuner les pieds dans le sable lors de ses pauses au travail. Elle a la main sur le coeur et à une imagination débordante !</p>
           </div>
           <!-- Grid column -->
           
           <!-- Grid column -->
-          <div class="col-md-4 mb-4">
+          <div class="col-lg-4 col-md-12 mb-4">
     
             <div class="w-200 mx-auto mb-4">
-              <%= image_tag("team/Ben.png", class:"z-depth-1 rounded-circle img-fluid mx-auto", alt:"Card image cap") %>
+              <%= image_tag("team/Ben.png", class:"rounded-circle img-fluid mx-auto", alt:"Card image cap") %>
 
             </div>
-            <h3 class="font-weight-bold">Benjamin</h3>
+            <h3 >Benjamin</h3>
             <p class="mt-3 mb-4 text-muted">Nantais d’origine, il a toujours vadrouillé en parallèle de son travail. En plus, d'être passionné de voyage et aimant les relations humaines, c’est un grand sportif avide de nouvelles aventures.</p>
     
           </div>
           <!-- Grid column -->
           
           <!-- Grid column -->
-          <div class="col-md-4 mb-4">
+          <div class="col-lg-4 col-md-12 mb-4">
     
             <div class="w-200 mx-auto mb-4">
-              <%= image_tag("team/Emy.png", class:"z-depth-1 rounded-circle img-fluid mx-auto", alt:"Card image cap") %>
+              <%= image_tag("team/Emy.png", class:" rounded-circle img-fluid mx-auto", alt:"Card image cap") %>
 
             </div>
-            <h3 class="font-weight-bold">Emilie</h3>
+            <h3>Emilie</h3>
             <p class="mt-3 mb-4 text-muted">Originaire de région parisienne. Elle s'est installée à Angers pour faire ses études et obtenir son master en commerce et entrepreneuriat. Elle a la joie de vivre au quotidien et met beaucoup de coeur dans ses projets.
             </p>
     
           </div>
           <!-- Grid column -->
 
-
-  
     
         </div>
         <!-- Grid row -->
