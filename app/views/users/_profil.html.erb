@@ -169,7 +169,7 @@
 
 
 <% else %>
-<% content_for :title, "Profil | Raidators" %>
+  <% content_for :title, "Profil | Raidators" %>
 
   <div class="container my-5">
 
@@ -177,19 +177,27 @@
     <section class="team-section">
 
       <div class="card">
-        <div class="card-header white d-flex justify-content-between">
-          <p class="h3-responsive font-weight-bold mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
-        </div>
         <div class="card-body">
+          <div class="card-header white d-flex justify-content-between">
+            <p class="h3-responsive font-weight-bold mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
+          </div>
           <div class="row pt-4">
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-4">
-              <div class="avatar white text-center">
-              <%# Active storage %>
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="img-fluid rounded-circle z-depth-1"/>
-              </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 pb-4">            
+                <%if @user.avatar.attached?%>
+                  <%= image_tag @user.avatar, alt: 'avatar', class: 'avatar-storage' %>
+                <%else%>
+                  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+                <%end%>
+
             </div>
           </div>
-        </div>  
+         
+          <h3>Changer d'avatar ?</h3>
+          <%= form_tag user_avatars_path(@user), multipart: true do %>
+            <%= file_field_tag :avatar %>
+            <%= submit_tag "mettre à jour" %>
+          <% end %>
+        </div>
       </div>
 
     </section>
@@ -255,3 +263,4 @@
     
   </div>
 <% end %>
+
