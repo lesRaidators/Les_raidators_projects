@@ -1,4 +1,4 @@
-<% content_for :title, "Renvoie instructions pour confirmation compte | Raidators" %>
+<% content_for :title, "Envoi instructions pour confirmation compte | Raidators" %>
 
 <!-- Main navigation -->
 <div class="container-fluid mt-3 mb-5 light-background-raidators">
@@ -10,7 +10,7 @@
       <!-- Content -->
       <div class="container my-5">
         
-        <h3 class="text-center pb-2">Renvoyer les instructions de connexion.</h3>
+        <h3 class="text-center pb-2">Envoyer les instructions de connexion.</h3>
         <p class="lead text-center text-dark pt-2 mb-5"></p>
         
         <!--Grid row-->
@@ -25,7 +25,7 @@
 
                   <div class="field md-form mt-3">
                     <%= f.label :email %><br />
-                    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),, class:"form-control form-control-raidators" %>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class:"form-control form-control-raidators" %>
                   </div>
 
                   <div class="actions my-3">
