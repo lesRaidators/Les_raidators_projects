@@ -5,43 +5,43 @@
   <p><%= @post.content %></p>
   <p><%= @post.image_url %> </p>
   
-
-
-  <% if current_user != nil %>
-  <h4 class="text-center mb-3">Ajoutez un commentaire</h4>
-
-  <%= form_for([@post, @post.comments.build]) do |f| %>
-
-      <div class="form-group">
-          <%= f.text_area :content,  class:"form-control", placeholder: "Votre commentaire..." %>
-      </div>
-
-  <%= f.submit 'Ajoutez votre commentaire', :class => 'btn btn-success btn-block', remote: true %>
-  <% end %>
-<% end %>
-
 <% @post.comments.each do |comment| %>
 
-<div class="card text-center  mb-2">
-    <div class="row">
-        <div class="col pt-2">
+<div class="">
+    <div class="">
+    <div class="">
+    </div>
+        <div class="">
             <blockquote class="blockquote">
                 <p><small><%= comment.content %></small></p>
         </div>
-        <div class="col pt-3">
-                <footer class="blockquote-footer">
+        <div class="">
+                <footer class="">
                 <p>Écrit le </p><cite title="Source Title"><%= comment.created_at %></cite>
                 </footer>
             </blockquote>
         </div>
 
-        <div class="col pt-2">
+        <div class="">
             <% if current_user %>
                 <% if current_user.id == comment.user_id %>
-                <%= link_to 'Supprimer', [comment.post,comment], method: :delete, data: { confirm: 'Êtes-vous certain.e de vouloir supprimer votre commentaire ?' }, class: 'btn btn-danger' %>
+                <%= link_to 'Supprimer', [comment.post, comment], method: :delete, data: { confirm: 'Êtes-vous certain.e de vouloir supprimer votre commentaire ?' }, class: 'btn btn-danger' %>
                 <% end %>
             <% end %>
           <% end %>
         </div> 
     </div>
 </div>
+
+<% if current_user != nil %>
+  <h4 class="">Ajoutez un commentaire</h4>
+
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+
+    <div class="">
+        <%= f.text_area :content,  class:"form-control", placeholder: "Votre commentaire..." %>
+    </div>
+
+    <%= f.submit 'Ajoutez votre commentaire', :class => 'btn btn-success btn-block', remote: true %>
+  <% end %>
+<% end %>

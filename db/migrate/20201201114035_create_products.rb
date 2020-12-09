@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :description
       t.integer :price
       t.string :image_url
+      t.integer :category, default: 0
       t.timestamps
     end
   end
