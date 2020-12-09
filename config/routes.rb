@@ -7,15 +7,19 @@ Rails.application.routes.draw do
   get '/equipements', to: "static_pages#equipments"
   get '/contact', to: "static_pages#contact"
 
-  devise_for :users
+  devise_for :users 
   resources :addresses
   resources :selected_products
   resources :products, path: 'boutique'
   resources :orders, path: 'commande'
   resources :carts, path: 'panier'
-  resources :users, path: 'profil'
   resources :addresses
   resources :charges, path: 'paiement'
+  
+  resources :users, path: 'profil'do
+  resources :avatars, only: [:create]
+  end
+
   resources :posts do
     resources :comments
   end 

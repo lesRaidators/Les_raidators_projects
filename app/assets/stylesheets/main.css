@@ -204,7 +204,6 @@ section{
   margin: auto;
   text-align: center;
 }
-
 /* STRIPE */
 
 .stripe-button-el {
@@ -218,6 +217,15 @@ section{
   color: white;
 }
 
+/* ----------PROFIL ------*/
+
+.avatar-storage {
+vertical-align: middle;
+border-style: none;
+height: 100%;
+width: 100%;
+
+}
 /* ----------Maps--------*/
 
 .maps-sizing {
@@ -231,4 +239,15 @@ section{
 /* ----------Posts--------*/
 .form-posts-content{
   height : 300px !important;
+}
+
+
+/* --------------LIST_POSTS------------ */
+
+
+.post_image {
+
+  height: 100%;
+  width: 100%;
+  
 }
