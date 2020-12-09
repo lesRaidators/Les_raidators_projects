@@ -20,40 +20,39 @@
             <!--Form-->
             <div class="card">
               <div class="card-body px-4">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                  <%= render "devise/shared/error_messages", resource: resource %>
+                    <div class="field md-form mt-3">
+                      <%= f.label :email %><br />
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-raidators"  %>
+                    </div>
 
-              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-                <%= render "devise/shared/error_messages", resource: resource %>
-                  <div class="field md-form mt-3">
-                    <%= f.label :email %><br />
-                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-raidators"  %>
-                  </div>
-
-                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                  <div>En attente de confirmation du mail: <%= resource.unconfirmed_email %></div>
-                  <% end %>
-
-                  <div class="field md-form mt-3">
-                    <%= f.label :mot_de_passe %> <i>(ne pas remplir si vous ne voulez pas changer de mot de passe)</i><br>
-                    <%= f.password_field :password, autocomplete: "new-password", class:"field md-form form-control form-control-raidators" %>
-                    <% if @minimum_password_length %>
-                      <br/>
-                      <em><%= @minimum_password_length %> caractères minimum</em>
+                    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                    <div>En attente de confirmation du mail: <%= resource.unconfirmed_email %></div>
                     <% end %>
-                  </div>
 
-                  <div class="field md-form">
-                    <%= f.label :confirmation_mot_de_passe %><br/>
-                    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"field md-form form-control form-control-raidators" %>
-                  </div>
+                    <div class="field md-form mt-3">
+                      <%= f.label :mot_de_passe %> <i>(ne pas remplir si vous ne voulez pas changer de mot de passe)</i><br>
+                      <%= f.password_field :password, autocomplete: "new-password", class:"field md-form form-control form-control-raidators" %>
+                      <% if @minimum_password_length %>
+                        <br/>
+                        <em><%= @minimum_password_length %> caractères minimum</em>
+                      <% end %>
+                    </div>
 
-                  <div class="field md-form">
-                    <%= f.label :mot_de_passe_actuel %> <i>(Nous avons besoin de votre mot de passe actuel pour confirmer vos changements)</i><br/>
-                    <%= f.password_field :current_password, autocomplete: "current-password", class:"field md-form form-control form-control-raidators mt-3" %>
-                  </div>
+                    <div class="field md-form">
+                      <%= f.label :confirmation_mot_de_passe %><br/>
+                      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"field md-form form-control form-control-raidators" %>
+                    </div>
 
-                  <div class="actions my-3">
-                     <%= f.submit "Mettre à jour mon mot de passe",class:"btn btn-primary btn-md btn-dark-raidators mx-0" %>
-                  </div>
+                    <div class="field md-form">
+                      <%= f.label :mot_de_passe_actuel %> <i>(Nous avons besoin de votre mot de passe actuel pour confirmer vos changements)</i><br/>
+                      <%= f.password_field :current_password, autocomplete: "current-password", class:"field md-form form-control form-control-raidators mt-3" %>
+                    </div>
+
+                    <div class="actions my-3">
+                      <%= f.submit "Mettre à jour mon mot de passe",class:"btn btn-primary btn-md btn-dark-raidators mx-0" %>
+                    </div>
                 <% end %>
                 <br>
               
