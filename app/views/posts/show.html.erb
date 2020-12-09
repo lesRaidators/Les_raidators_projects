@@ -78,7 +78,7 @@
               <i class="fas fa-comment fa-2x mr-0"></i>
             </div>
             <div class="col-10">
-              <p>John Doe</p>
+              <p><%= @user.email.split('@')[0].capitalize %></p>
               <div class="card-data">
                 <ul class="list-unstyled mb-1">
                   <li class="comment-date font-small grey-text">
