@@ -22,7 +22,7 @@
       <% @products.each do |product| %>
         <% if product.donation? %>
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100 card small-card-raidators card-product-aligment">
+          <div class="card h-100 card small-card-raidators card-product-aligment-center">
             <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"small-card-image-raidators" %> </div>
     
             <!-- Card content -->
@@ -30,9 +30,9 @@
                 <h3 class="black-text"> <%= product.title %> </h3>
                 <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
                 <% if user_signed_in? %>
-                  <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
+                  <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md  mx-0" %>
                 <% else %>
-                  <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
+                  <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md  mx-0" %>
                 <% end %>
                 <br>
                 <% if current_user && current_user.admin %>
