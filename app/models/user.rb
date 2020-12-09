@@ -10,7 +10,4 @@ class User < ApplicationRecord
          has_one :cart
          has_many :products, through: :cart
 
-  def avatar
-    avatar.attach(params[:avatar])
-  end
 end
