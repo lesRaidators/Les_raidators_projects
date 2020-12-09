@@ -34,10 +34,10 @@
       
                         <!--Grid column-->
                         <div class="col-md-5 mb-4">
-                          <% @cart.selected_products.each do |myproduct| %> 
+                          <% @cart.selected_products.each do |product| %> 
                           <hr class="mb-5">
 
-                          <img class="img-fluid z-depth-1-half" alt="Second sample image"> <%=myproduct.product.image_url %> </img>
+                          <img class="img-fluid z-depth-1-half" alt="Second sample image"> <%=product.product.image_url %> </img>
                           <% end %>
       
       
@@ -46,19 +46,19 @@
       
                         <!--Grid column-->
                         <div class="col-md-7 mb-4">
-                          <% @cart.selected_products.each do |myproduct| %> 
+                          <% @cart.selected_products.each do |product| %> 
                           <hr class="mb-5">
 
-                          <h3 class="mb-3 h3"><%= myproduct.product.title %></h3>
+                          <h3 class="mb-3 h3"><%= product.product.title %></h3>
       
                           <p>Description</p>
       
                           <!--Name-->
                             
-                            <h5>Quantité : <%= myproduct.quantity %></h5>
+                            <h5>Quantité : <%= product.quantity %></h5>
 
-                          <h3> Prix: <%= myproduct.product.price %>€</h3>
-                          <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
+                          <h3> Prix: <%= product.product.price %>€</h3>
+                          <%= button_to 'Supprimer', product, method: :delete, class: 'btn btn-danger'%>
               
                           <% end %>
 

@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
 has_many :join_order_products
-has_many :select_products
-has_many :order, through: :join_order_products
+has_many :selected_products
+has_many :orders, through: :join_order_products
 
 validates :title, presence: true
 validates :description, presence: true
