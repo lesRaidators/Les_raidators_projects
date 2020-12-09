@@ -133,7 +133,11 @@
 
                   <div class="container mt-5 mb-3 text-center w-50 card-center">
                     <div id="stripe" class="mt-2">
+                    <% if @user.addresses.empty? %>
+                    <button type="button" class= "btn btn-success my-3"><%= link_to "Créer Adresse",new_address_path %></button>
+                    <%else%>
                       <%= render 'stripe' %>
+                    <%end%>
                     </div>
                   </div>
 
@@ -158,3 +162,4 @@
     
     
     </div>
+
