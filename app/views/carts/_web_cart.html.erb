@@ -2,8 +2,7 @@
 
     <div class="container mt-5">
 
-
-      <!--Section: Content-->
+   <!--Section: Content-->
       <section class="dark-grey-text">
     
         <div class="card">
@@ -50,34 +49,24 @@
                           <% @cart.selected_products.each do |myproduct| %> 
                           <hr class="mb-5">
 
-
-      
                           <h3 class="mb-3 h3"><%= myproduct.product.title %></h3>
       
                           <p>Description</p>
       
                           <!--Name-->
-
-                          <select class="mdb-select colorful-select dropdown-info">
-                            <option value="" disabled>Quantité</option>
-                            <option value="" selected> <%= myproduct.quantity %></option>
-                          </select>
+                            
+                            <h5>Quantité : <%= myproduct.quantity %></h5>
 
                           <h3> Prix: <%= myproduct.product.price %>€</h3>
                           <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
               
                           <% end %>
 
-
-                          
-
                           <% if @cart.selected_products.length != 0 %>
                           <% else %>
                             <p> Votre panier est vide </p>
                           <% end %>
 
-
-      
                         </div>
                         <!--Grid column-->
       
@@ -112,16 +101,16 @@
                   <div class="card-body">
                     <h4 class="mb-4 mt-1 h5 text-center font-weight-bold">Résumé</h4>
                     <% @cart.selected_products.each do |myproduct| %>
-
-    
                     <hr>
-    
+
                     <dl class="row">
                       <dd class="col-sm-8">
                         <%= myproduct.product.title %>
                       </dd>
                       <dd class="col-sm-4">
                       <p><%= myproduct.product.price %>€</p>
+
+                      <%= myproduct.quantity * myproduct.product.price %>
                       </dd>
                     </dl>
 
@@ -129,8 +118,6 @@
 
         
                     <hr>
-
-    
                     <% if @cart.selected_products.length != 0 %>
                     <dl class="row">
                       <dt class="col-sm-8">
@@ -146,12 +133,9 @@
 
                   <div class="container mt-5 mb-3 text-center w-50 card-center">
                     <div id="stripe" class="mt-2">
-
                       <%= render 'stripe' %>
                     </div>
                   </div>
-
-
 
                   </div>
     
