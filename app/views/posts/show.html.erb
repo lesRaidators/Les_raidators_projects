@@ -1,5 +1,5 @@
 <% content_for :title, "Un article | Raidators" %>
-
+<%= render :partial => "shared/banner" %>
 <div class="container-fluid mt-3 mb-5 light-background-raidators">
   <section class="post">
     <!-- Block -->
@@ -27,7 +27,7 @@
               <div class="card-body card-body-cascade text-center">
 
                 <!-- Title -->
-                <h2 class="font-weight-bold"><%= @post.title %></h2>
+                <h2 class=""><%= @post.title %></h2>
                 <!-- Social shares -->
                 <div class="social-counters">
                   <!-- Facebook -->
@@ -67,6 +67,7 @@
 
   <!--Section: Comments-->
   <section>
+    <h2 class="text-center mb-4 pb-2">Commentaires</h2>
     <!-- Block-->
     <div class="col-lg-10 col-md-8 form-background-raidators">
       <!-- Content -->
@@ -78,7 +79,7 @@
               <i class="fas fa-comment fa-2x mr-0"></i>
             </div>
             <div class="col-10">
-              <p>John Doe</p>
+              <p><%= @user.email.split('@')[0].capitalize %></p>
               <div class="card-data">
                 <ul class="list-unstyled mb-1">
                   <li class="comment-date font-small grey-text">
@@ -99,24 +100,7 @@
       </div>
       <hr>
     </div>
-    <div class="col-lg-10 col-md-8 form-background-raidators">
-      <div class="container">
-        <div class="row">
-         <% if current_user != nil %>
-            <div class="col-2">
-              <p>Ajoutez un commentaire</p>
-            </div>
-            <div class="col-10">
-              <%= form_for([@post, @post.comments.build]) do |f| %>
-                <div class="">
-                    <%= f.text_area :content,  class:"form-control form-control-raidators", placeholder: "Votre commentaire..." %>
-                </div>
-                <%= f.submit 'Ajoutez votre commentaire', :class => 'btn btn-success btn-raidators btn-block my-5', remote: true %>
-              <% end %> 
-          <% end %>
-        </div>
-      </div>
-    </div>
+    <%= render :partial => "comments/comment" %>
   </section>
   <!--Section: Block Content-->
 </div>
