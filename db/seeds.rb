@@ -15,7 +15,7 @@ Order.destroy_all
 Product.create(
   title: 'Don 10€',
   description: "Soutenez l'équipe Raidators",
-  price: 1000,
+  price: 1000/100,
   image_url: "seed/donation.jpg"
 )
   puts "don de 10 euros"
@@ -23,7 +23,7 @@ Product.create(
  Product.create(
   title: 'Don 20€',
   description: 'Participer aux frais logistiques et aider Raidators à atteindre son objectif',
-  price: 2000,
+  price: 2000/100,
   image_url:"seed/donation.jpg"
 )
 puts "don de 20 euros"
@@ -32,19 +32,38 @@ puts "don de 20 euros"
  Product.create(
   title:  'Don 30€',
   description: 'Participer aux frais logistiques et aider Raidators à atteindre son objectif',
-  price: 3000,
+  price: 3000/100,
   image_url: "seed/donation.jpg"
 )
 puts "don de 30 euros"
 
 Product.create(
-  title:  'Pull Noir Raidators',
-  description: "Un pull en laine qui portera chaud tout l'hiver et même les soirs d'été",
-  price: 3500,
+  title:  'Sweat-shirt à capuche Raidators',
+  description: "Un pull en laine qui portera chaud tout l'hiver et même les soirs d'été. 65% Coton - 35% Polyester.",
+  price: 3500/100,
   image_url: "products/pull.png",
   category: 1
 )
-puts "-----Pull------"
+
+
+Product.create(
+  title:  'Casquette Raidators',
+  description: "Casquette avec logo raidators - 100% coton",
+  price: 1500/100,
+  image_url: "products/casquette.png",
+  category: 1
+)
+
+Product.create(
+  title:  'Bonnet Raidators',
+  description: "Bonnet avec logo raidators ",
+  price: 0500/10,
+  image_url: "products/Bonnet.png",
+  category: 1
+)
+
+
+puts "-----Pull/Casquette/Casquette------"
 
 
 
