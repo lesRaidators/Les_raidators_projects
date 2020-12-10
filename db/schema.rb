@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_164832) do
+ActiveRecord::Schema.define(version: 2020_12_10_105001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_164832) do
 
   create_table "carts", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.decimal "stripe_price"
+    t.integer "stripe_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_carts_on_user_id"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_164832) do
   create_table "join_order_products", force: :cascade do |t|
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
-    t.integer "quantity", default: 1
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_join_order_products_on_order_id"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_164832) do
   create_table "orders", force: :cascade do |t|
     t.string "stripe_customer_id"
     t.bigint "user_id", null: false
-    t.decimal "total_price"
+    t.integer "total_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_164832) do
     t.integer "price"
     t.string "image_url"
     t.integer "category", default: 0
+    t.integer "donation_part"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

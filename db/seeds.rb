@@ -8,13 +8,14 @@
 
 Product.destroy_all
 Post.destroy_all
+Order.destroy_all
 
 
 
 Product.create(
   title: 'Don 10€',
   description: "Soutenez l'équipe Raidators",
-  price: '10€',
+  price: 1000,
   image_url: "seed/donation.jpg"
 )
   puts "don de 10 euros"
@@ -22,7 +23,7 @@ Product.create(
  Product.create(
   title: 'Don 20€',
   description: 'Participer aux frais logistiques et aider Raidators à atteindre son objectif',
-  price: '20€',
+  price: 2000,
   image_url:"seed/donation.jpg"
 )
 puts "don de 20 euros"
@@ -31,7 +32,7 @@ puts "don de 20 euros"
  Product.create(
   title:  'Don 30€',
   description: 'Participer aux frais logistiques et aider Raidators à atteindre son objectif',
-  price: '30€',
+  price: 3000,
   image_url: "seed/donation.jpg"
 )
 puts "don de 30 euros"
@@ -39,7 +40,7 @@ puts "don de 30 euros"
 Product.create(
   title:  'Pull Noir Raidators',
   description: "Un pull en laine qui portera chaud tout l'hiver et même les soirs d'été",
-  price: '35€',
+  price: 3500,
   image_url: "products/pull.png",
   category: 1
 )
@@ -56,6 +57,14 @@ Post.create(
 )
 end
 puts "-----Articles du blog-----"
+
+order = Order.create(
+  user: User.first,
+  total_price: 3000,
+  stripe_customer_id: 'AZERTY'
+)
+JoinOrderProduct.create(order: Order.last, product: Product.last, quantity: 4)
+puts "il a payer 30"
 
 u = User.new
 u.email = "Raidators@outlook.fr"
