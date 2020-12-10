@@ -70,6 +70,7 @@
             <!-- Price -->
             <div class="price header white-text blue rounded-top">
               <h2 class="">Pack voyageur</h2>
+              <%= image_tag("car/traveller1.png", class:"card-img-top car-icons", alt:"Card image cap") %>
               <div class="version">
                 <p class="number mb-0">250 €</p>
               </div>
@@ -77,6 +78,7 @@
 
             <!-- Features -->
             <div class="card-body striped mb-1">
+
 
               <ul>
                 <li>
@@ -93,7 +95,7 @@
                   <p>Posts remerciements avant/pendant/ fin du raid</p>
                 </li>
               </ul>
-              <button class="btn btn-blue">Nous contacter</button>
+            <%= link_to 'En savoir plus', contact_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
 
             </div>
             <!-- Features -->
@@ -112,7 +114,9 @@
 
             <!-- Price -->
             <div class="price header white-text indigo rounded-top">
+
               <h2 class="">Pack Aventurier</h2>
+              <%= image_tag("car/traveller2.png", class:"card-img-top car-icons", alt:"Card image cap") %>
               <div class="version">
                 <p class="number mb-0">350 €</p>
               </div>
@@ -133,7 +137,7 @@
                   <p>Envoie d'une carte postale depuis une étape du parcours</p>
                 </li>
               </ul>
-              <button class="btn btn-indigo">Nous contacter</button>
+              <%= link_to 'En savoir plus', contact_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
 
             </div>
             <!-- Features -->
@@ -153,6 +157,8 @@
             <!-- Price -->
             <div class="price header white-text deep-purple rounded-top">
               <h2 class="">Pack globe-trotteur</h2>
+              <%= image_tag("car/globe.png", class:"card-img-top car-icons", alt:"Card image cap") %>
+
               <div class="version">
                 <p class="number mb-0">750 €</p>
               </div>
@@ -176,7 +182,7 @@
                   <p>Envoi d’'un cadeau souvenir</p>
                 </li>
               </ul>
-              <button class="btn btn-deep-purple">Nous contacter</button>
+              <%= link_to 'En savoir plus', contact_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
 
             </div>
             <!-- Features -->
