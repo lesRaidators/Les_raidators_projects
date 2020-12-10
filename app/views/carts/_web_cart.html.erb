@@ -103,29 +103,38 @@
                       <p><%= myproduct.product.price %>€</p>
 
                       <%= myproduct.quantity * myproduct.product.price %>
-                    </dd>
-                  </dl>
+                      </dd>
+                    </dl>
 
-                <% end %>
+                    <% end %>
 
+        
+                    <hr>
+                    <% if @cart.selected_products.length != 0 %>
+                    <dl class="row">
+                      <dt class="col-sm-8">
+                        Total
+                      </dt>
+                      <dt class="col-sm-4">
+                        <%= @cart.total %> €
+                      </dt>
+                    </dl>
+                     <% else %>
+                      <p> Votre panier est vide </p>
+                    <% end %>
+
+                  <div class="container mt-5 mb-3 text-center w-50 card-center">
+                    <div id="stripe" class="mt-2">
+                    <% if @user.addresses.empty? %>
+                    <button type="button" class= "btn btn-success my-3"><%= link_to "Créer Adresse",new_address_path %></button>
+                    <%else%>
+                      <%= render 'stripe' %>
+                    <%end%>
+                    </div>
+                  </div>
+
+                  </div>
     
-                <hr>
-                <% if @cart.selected_products.length != 0 %>
-                  <dl class="row">
-                    <dt class="col-sm-8">
-                      Total
-                    </dt>
-                    <dt class="col-sm-4">
-                      <%= @cart.total %> €
-                    </dt>
-                  </dl>
-                <% else %>
-                  <p> Votre panier est vide </p>
-                <% end %>
-              </div>
-              <div class="container mt-5 mb-3 text-center w-50 card-center">
-                <div id="stripe" class="mt-2">
-                  <%= render 'stripe' %>
                 </div>
               </div>
 
