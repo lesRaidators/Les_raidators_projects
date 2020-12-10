@@ -182,6 +182,7 @@
                           <%= link_to "Voir le détails", product_path(product.id), class:"btn btn-outline-primary btn-light-raidators btn-md  mx-0" %>
                         <% else %>
                           <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md  mx-0" %>
+                          <%= link_to "Voir le détails", product_path(product.id), class:"btn btn-outline-primary btn-light-raidators btn-md  mx-0" %>
                         <% end %>
                         <br>
                         <% if current_user && current_user.admin %>
