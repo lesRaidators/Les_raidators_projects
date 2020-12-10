@@ -94,7 +94,7 @@
                 <p class="mb-4 mt-1 text-center ">Résumé</p>
                 <% @cart.selected_products.each do |myproduct| %>
                   <hr>
-                  <div class="row">
+                  <dl class="row">
                     <dd class="col-sm-8">
                       <%= myproduct.product.title %>
                     </dd>
@@ -103,7 +103,7 @@
 
                       <%= myproduct.quantity * myproduct.product.price %>
                     </dd>
-                  </div>
+                  </dl>
 
                 <% end %>
 
