@@ -34,7 +34,8 @@
 .btn-warning-raidators{
   background: rgb(180, 87, 129);
   /* Actionable Item */
-  border-color:white;
+  color:white;
+  border-color: white;
   box-sizing: border-box;
   border-radius: 6px; 
 }
