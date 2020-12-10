@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :get_current_objective
 
   def get_current_objective
-    @current_objective = Order.current_objective
+    @current_objective = Order.current_goal
   end
 
   private
