@@ -255,3 +255,17 @@ width: 100%;
   width: 100%;
   
 }
+
+/* -------------------CAR------------------- */
+
+.car-picture{
+
+  width: 600px;
+  height: auto;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  display: block;
+
+
+}
