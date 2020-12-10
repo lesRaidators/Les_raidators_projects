@@ -1,124 +1,75 @@
 <% content_for :title, "Accueil | Raidators" %>
 <header>
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active ">
-      <div class="view">
-        <%= image_tag("home_page/EuropRaid-2017-051.jpg", class:"card-img-top", alt:"Card image cap") %>
-        <div class="banner-filter">
+  <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active ">
+        <div class="view">
+          <%= image_tag("home_page/EuropRaid-2017-051.jpg", class:"card-img-top", alt:"Card image cap") %>
+          <div class="banner-filter">
+          </div>
         </div>
-      </div>
-      <div class="carousel-caption">
-        <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
-        <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
-         <%= link_to 'Nous soutenir', products_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
-      </div>
-    </div>
-    <div class="carousel-item ">
-      <!--Mask color-->
-      <div class="view">
-        <%= image_tag("home_page/EuropRaid-2019-071.jpg", class:"card-img-top", alt:"Card image cap") %>
-        <div class="banner-filter">
-        </div>
-      </div>
-      <div class="carousel-caption">
-        <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
-        <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
-        <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
-      </div>
-    </div>
-    <div class="carousel-item ">
-      <!--Mask color-->
-      <div class="view">
-        <%= image_tag("home_page/EuropRaid-2019-038.jpg", class:"card-img-top", alt:"Card image cap") %>
-        <div class="banner-filter">
-        </div>
-      </div>
-      <div class="carousel-caption">
-        <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
-        <div class="col d-none d-md-block">
+        <div class="carousel-caption">
+          <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
           <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
+          <%= link_to 'Nous soutenir', products_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <!--Mask color-->
+        <div class="view">
+          <%= image_tag("home_page/EuropRaid-2019-071.jpg", class:"card-img-top", alt:"Card image cap") %>
+          <div class="banner-filter">
+          </div>
+        </div>
+        <div class="carousel-caption">
+          <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
+          <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
           <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
         </div>
       </div>
+      <div class="carousel-item ">
+        <!--Mask color-->
+        <div class="view">
+          <%= image_tag("home_page/EuropRaid-2019-038.jpg", class:"card-img-top", alt:"Card image cap") %>
+          <div class="banner-filter">
+          </div>
+        </div>
+        <div class="carousel-caption">
+          <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
+          <div class="col d-none d-md-block">
+            <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
+            <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
+          </div>
+        </div>
+      </div>
     </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
   </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
-
-
 </header>
-
-<section>
-
-
-                <!-- Card content -->
-                <div class="card-body">
-      
-                  <!-- Title -->
-                  <h3 class="black-text">20 pays en 23 jours</h3>
-                  <!-- Text -->
-
-                  <p class="card-title text-muted font-small mt-3 mb-2">Un itinéraire traversant des capitales et patrimoines mondiaux inscrits à l’UNESCO. Un parcours de 450 km par jour, avec seulement une boussole, une carte et un carnet de bord.</p>
-                  <br>
-                  <br>
-
-                </div>
-      
-              </div>
-              <!-- Card -->
-      
-            </div>
-            <!-- Grid column -->
-      
-            <!-- Grid column -->
-            <div class="col-lg-4 col-md-6 mb-0">
-      
-              <!-- Card -->
-              <div class="card small-card-raidators">
-      
-                <!-- Card image -->
-                <i class=" mt-5 text-center fas fa-hands-helping fa-5x"></i>
-
-                <!-- Card content -->
-                <div class="card-body">
-      
-                  <!-- Title -->
-                  <h3 class="black-text"> Tous solidaires</h3>
-                  <!-- Text -->
-                  <p class="card-title text-muted font-small mt-3 mb-2">En six ans, Europ.Raid a distribué plus de 65 tonnes de matériel scolaire, sportif et médical dans des écoles isolées en Europe. Chaque voiture permet de transporter 70Kg de matériel en plus.</p>
-                  <br>
-                  <br>
-                  
-                </div>
-      
-              </div>
-              <!-- Card -->
-      
 
 <section>
   <div class="container">
     <div>
-      <h2 class="text-left font-weight-bold mb-5">L'Équipe Raidators participent à Europ.Raid</h2>
-      <h3 class="text-left font-weight-bold mb-5">Le premier raid aventure en Europe</h3>
+      <h2 class="text-left mb-5">L'Équipe Raidators participent à Europ.Raid</h2>
+      <h3 class="text-left mb-5">Le premier raid aventure en Europe</h3>
     </div>
 
     <!-- Grid row -->
@@ -141,7 +92,6 @@
             
             <div class="card-product-aligment-center">
               <%= link_to "Découvrir l'équipe", equipe_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
-
             </div>
 
           </div>
@@ -158,76 +108,6 @@
         <!-- Card -->
         <div class="card small-card-raidators">
 
-
-        <!--Section: Content-->
-        <section class="">
-      
-          <!-- Section heading -->
-          <h2 class="text-left font-weight-bold mb-5">Une aventure solidaire</h2>
-          <p class="text-left font-weight-bold mb-5">Pour pouvoir aider des miliers d’élèves défavorisés, l’équipage Raidators a besoin de soutien. Entreprises, particulier ou écoles, chacun peut contribuer pour construire un monde meilleur. </p>
-  
-      
-          <!-- Grid row -->
-          <div class="row">
-      
-            <!-- Grid column -->
-            <div class="col-lg-6 col-md-12 mb-lg-3 mb-4">
-      
-              <!-- Card -->
-              <div class="card small-card-raidators">
-      
-                <!-- Card image -->
-                <%= image_tag("home_page/professionnal.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %>
-                  
-                  <!-- Card content -->
-                  <div class="card-body">
-        
-                    <!-- Title -->
-                    <h3 class="black-text">Je suis une professionnel</h3>
-                    <!-- Text -->
-
-                    <p class="card-title text-muted font-small mt-3 mb-2">Devenez partenaire ! <br> Financier ou en nature, vous pouvez soutenir la cause. <br> </p>                
-
-                    <%= link_to 'Devenir un partenaire', partenariat_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                    
-
-                  </div>   
-
-              </div>
-              <!-- Card -->
-      
-            </div>
-            <!-- Grid column -->
-      
-            <!-- Grid column -->
-            <div class="col-lg-6 col-md-6 mb-md-3 mb-4">
-      
-              <!-- Card -->
-              <div class="card small-card-raidators">
-      
-                <!-- Card image -->
-                <%= image_tag("home_page/particular.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %>
-      
-                <!-- Card content -->
-                <div class="card-body">
-      
-                  <!-- Title -->
-                  <h3 class="black-text">Je suis un particulier</h3>
-                  <!-- Text -->
-
-
-                  <p class="card-title text-muted font-small mt-3 mb-2">Soutenez Europ.Raid en achetant un produits ou en faisant un don de matériel ! <br></p>
-                
-                  <%= link_to 'Soutenir en tant que particulier', dons_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>                  
-
-                </div>
-      
-              </div>
-              <!-- Card -->
-      
-            </div>
-            <!-- Grid column -->
-            
-
           <!-- Card image -->
           <i class="mt-5 text-center fas fa-globe-europe fa-5x"></i>
 
@@ -239,7 +119,6 @@
             <!-- Text -->
             <p class="card-title text-muted font-small mt-3 mb-2">Un itinéraire traversant des capitales et patrimoines mondiaux inscrits à l’UNESCO. Un parcours de 450 km par jour, avec seulement une boussole, une carte et un carnet de bord.<br>Une aventure !</p>
             <br>
-
           </div>
 
         </div>
@@ -283,8 +162,8 @@
     <!--Container: Content-->
 
     <!-- container heading -->
-    <h2 class="text-left font-weight-bold mb-5">Une aventure solidaire</h2>
-    <p class="text-left font-weight-bold mb-5">Pour pouvoir aider des miliers d’élèves défavorisés, l’équipage Raidators a besoin de soutien. Entreprises, particulier ou écoles, chacun peut contribuer pour construire un monde meilleur. </p>
+    <h2 class="text-left mb-5">Une aventure solidaire</h2>
+    <p class="text-left mb-5">Pour pouvoir aider des miliers d’élèves défavorisés, l’équipage Raidators a besoin de soutien. Entreprises, particulier ou écoles, chacun peut contribuer pour construire un monde meilleur. </p>
 
 
     <!-- Grid row -->
@@ -351,11 +230,11 @@
 <section>
   <div class="container">
     <div>
-    <h2 class="text-left font-weight-bold mb-5"> L'initiative Europ.Raid</h2>
-    <p class="text-left font-weight-bold mb-5">Un rails qui réunit des centaines d'équipes telles que les Raidators chaque année.</p>
+      <h2 class="text-left mb-5"> L'initiative Europ.Raid</h2>
+      <p class="text-left mb-5">Un rails qui réunit des centaines d'équipes telles que les Raidators chaque année.</p>
     </div>
     <!--Section: Content-->
-    <section class="dark-grey-text">
+    <section>
         
       <!-- Grid row -->
       <div class="row align-items-center">
@@ -376,7 +255,7 @@
           <i class="fas fa-dumbbell"></i>
         
           <!-- Post title -->
-          <h3 class="font-weight-bold mb-3"><strong>Une aventure sportive</strong></h3>
+          <h3 class="mb-3"><strong>Une aventure sportive</strong></h3>
           <!-- Excerpt -->
           <p>L’ Europ’Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
             Ce raid consiste à traverser 20 pays de l’Europe en Peugeot 205 pendant 23 jours. L’équipage parcourra 10 000 kilomètres afin de  distribuer du matériel  dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.</p>
@@ -399,7 +278,7 @@
 
   <div class="container">
     <!--Section: Content-->
-    <section class="dark-grey-text">
+    <section class="">
         
       <!-- Grid row -->
       <div class="row align-items-center">
@@ -411,7 +290,7 @@
           <i class="fas fa-hands-helping"></i>
         
           <!-- Post title -->
-          <h3 class="font-weight-bold mb-3"><strong>Une aventure humaine</strong></h3>
+          <h3 class="mb-3"><strong>Une aventure humaine</strong></h3>
           <!-- Excerpt -->
           <p>Europ’Raid est une aventure sportive, culturelle et solidaire, mais surtout une action humanitaire hors du commun.
             Le but premier est de venir en aide à des enfants défavorisés d’Europe de l’Est. En effet, depuis 2014 tous les équipages ont pour mission d’apporter 70 kg de fournitures scolaires.</p>
@@ -447,7 +326,7 @@
 <section class="light-background-raidators">
   <div class="container"> 
     <!-- Section heading -->
-    <h3 class="font-weight-bold black-text mb-4 pb-2">Ils nous soutiennent</h3>
+    <h3 class="black-text mb-4 pb-2">Ils nous soutiennent</h3>
     <hr class="w-header">
     <!-- Section description -->
     <p class="lead text-muted mx-auto mt-4 pt-2 mb-5">Cette aventure ne serait pas possible sans le soutient de nos partenaires. Entreprise ou particulier, chaque soutien compte. </p>
@@ -499,8 +378,7 @@
           
           <!-- Card content -->
           <div class="card-body my-4">
-            <%= image_tag("home_page/ansys.png", class:"card-img-top", alt:"Card image cap") %>               
-              
+            <%= image_tag("home_page/ansys.png", class:"card-img-top", alt:"Card image cap") %>                 
           </div>
 
         </div>
@@ -533,6 +411,5 @@
 </section>
 
   
-</div>
 
-</section>
+

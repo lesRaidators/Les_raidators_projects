@@ -15,5 +15,10 @@ class StaticPagesController < ApplicationController
   def privatevisitors
   end
 
+  def contact
+  end
+
+  def car
+  end
   
 end
