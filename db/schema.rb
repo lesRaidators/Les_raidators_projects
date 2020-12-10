@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_150754) do
     t.integer "price"
     t.string "image_url"
     t.integer "category", default: 0
+    t.integer "donation_part"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
