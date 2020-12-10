@@ -1,29 +1,27 @@
 class Order < ApplicationRecord
-  has_many :products
   has_many :join_order_products
-  belongs_to :user
-  
   has_many :products, through: :join_order_products
+  belongs_to :user
 
   enum type: [:refuse, :waiting, :confirm]
-  
-  def goal
-    donation_goal = 6500
-  end
+
+    DONATION_GOAL = 650000
 
   def donation_amount
+    total = 0 
       self.join_order_products.each do |item|
-        total = item.product.quantity  * item.product.price * item.product.donation_part
-        progress_donation = total/donation_goal * 100
+        total += item.quantity * item.product.price * item.product.donation_part/100
       end
+      return total
   end
 
   def self.current_goal 
     total_donation_amount = 0 
     Order.all.each do |order|
-      total_donation_amount =+ order.donation_amount
+      puts order.donation_amount
+      puts total_donation_amount
+      total_donation_amount += order.donation_amount
     end
-    current_objective = total_donation_amount/donation_goal * 100
-    return current_objective
+    current_objective = (total_donation_amount.to_f/DONATION_GOAL * 100).round(2)
   end
 end
