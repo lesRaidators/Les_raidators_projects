@@ -256,3 +256,26 @@ width: 100%;
   width: 100%;
   
 }
+
+/* -------------------CAR------------------- */
+
+.car-picture{
+
+  width: 600px;
+  height: auto;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  display: block;
+
+
+}
+
+.car-icons{
+
+  width: 60px;
+  height: auto;
+  width: 50px;
+  height: auto;
+
+}
