@@ -6,6 +6,8 @@ This is the MVP of the Raidators project, a site that allows this association to
 #### How to see it 
 https://raidators-project.herokuapp.com/
 
+#### How to connect to the dashboard admin
+You can find the log in the seed 
 
 #### Tools 
 * Figma 
@@ -13,22 +15,30 @@ https://raidators-project.herokuapp.com/
 * Heroku 
 
 #### Gem 
-* Devise
-* Pry 
-* Erd
-* Dotenv 
-* Faker
-* Stripe
+```
+Devise
+Pry 
+Erd
+Dotenv 
+Faker
+Stripe
+```
 
 #### API 
 * Stripe
+
+#### Use Stripe 
+```
+4242 4242 4242 4242
+Random date in the future / 3 random digits
+```
 
 #### Versions
 * Ruby 2.7.1 
 * Rails 5.2.4.4
 
 #### Team 
-We have been working in peer programming.
+*We have been working in peer programming.*
 Le Goff Emma, Aussage Emillie, Boisselier Louison, Leandri Lola 
 
 #### Credit 
