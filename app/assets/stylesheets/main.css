@@ -34,7 +34,8 @@
 .btn-warning-raidators{
   background: rgb(180, 87, 129);
   /* Actionable Item */
-  border-color:white;
+  color:white;
+  border-color: white;
   box-sizing: border-box;
   border-radius: 6px; 
 }
@@ -151,7 +152,7 @@ section{
   margin-bottom:5% ;
 }
 
-.dark-color-raidator{
+.dark-background-raidators{
   background-color: #1B221D;
 }
 /* ------------Banner------------ */

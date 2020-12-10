@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
   has_many :products
-  has_many :join_order_products
+  has_many :join_order_products, dependent: :destroy
   belongs_to :user
   
   has_many :products, through: :join_order_products

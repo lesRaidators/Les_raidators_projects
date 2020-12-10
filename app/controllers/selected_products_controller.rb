@@ -15,7 +15,7 @@ class SelectedProductsController < ApplicationController
 
 def update
   @selected_product = SelectedProduct.find(params[:id])
-  @selected_product.update(quantity: @selected_product.quantity - 1)
+  @selected_product.update(quantity: @selected_product.quantity)
   @cart = Cart.find(current_user.id)
   respond_to do |format|
     format.html { redirect_to root_path }
