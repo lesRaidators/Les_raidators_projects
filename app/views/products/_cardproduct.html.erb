@@ -33,10 +33,10 @@
             <!-- Pills navs -->
             <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
               <li class="nav-item">
-                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel31" role="tab">1. Boutique solidaire</a>
+                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel31" role="tab">1. Don sans contre partie</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel32" role="tab">2. Don simple</a>
+                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel32" role="tab">2. Don avec contre partie</a>
               </li>
             </ul>
           </div>
@@ -150,10 +150,10 @@
             <!-- Pills navs -->
             <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
               <li class="nav-item">
-                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel31" role="tab">1. Boutique solidaire</a>
+                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel31" role="tab">1. Don sans contre partie</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel32" role="tab">2. Don simple</a>
+                <a class="nav-link text-uppercase" data-toggle="tab" href="#panel32" role="tab">2. Don avec contre partie</a>
               </li>
             </ul>
           </div>
@@ -216,6 +216,8 @@
                           <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
                           <% if user_signed_in? %>
                             <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
+                            <%= link_to "Voir le détails", product_path(product.id), class:"btn btn-outline-primary btn-light-raidators btn-md  mx-0" %>
+
                           <% else %>
                             <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
                           <% end %>

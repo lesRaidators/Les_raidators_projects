@@ -304,3 +304,10 @@ width: 100%;
   height: auto;
 
 }
+
+.btn-contact{
+
+  box-sizing: border-box;
+  border-radius: 6px; 
+  
+}
