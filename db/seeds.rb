@@ -66,6 +66,13 @@ Product.create(
 )
 puts "don de 30€"
 
+order = Order.create(
+  total_price: '30',
+  stripe_customer_id: 'AZERTY'
+)
+order.products << Product.first
+puts "il a payer 30"
+
 u = User.new
 u.email = "Raidators@outlook.fr"
 u.password = "123456"

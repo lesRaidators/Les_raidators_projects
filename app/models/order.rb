@@ -12,12 +12,10 @@ class Order < ApplicationRecord
   end
 
   def donation_amount
-    Order.all.each do |order|
-      order.join_order_products.each do |item|
+      self.join_order_products.each do |item|
         total = item.product.quantity  * item.product.price * item.product.donation_part
         progress_donation = total/donation_goal * 100
       end
-    end
   end
 
   def self.current_goal 
@@ -26,7 +24,6 @@ class Order < ApplicationRecord
       total_donation_amount =+ order.donation_amount
     end
     current_objective = total_donation_amount/donation_goal * 100
-    scope :confirmed, -> {where(type (confirmed)) }
     return current_objective
   end
 end
