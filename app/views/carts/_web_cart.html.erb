@@ -27,7 +27,7 @@
                     <div class="col-md-7 mb-4">
                       <hr class="mb-5">
                       <p class="mb-3 h3"><%= myproduct.product.title %></p>
-                      <p>Description<%= myproduct.product.description %></p>
+                      <p>Description: <%= myproduct.product.description %></p>
                       <p>Quantité : <%= myproduct.quantity %></p>
                       <p> Prix: <%= myproduct.product.price %>€</p>
                       <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-outline-primary p-2 mt-2 btn-warning-raidators btn-md'%>
