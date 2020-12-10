@@ -155,6 +155,18 @@ section{
 .dark-background-raidators{
   background-color: #1B221D;
 }
+.light-color-raidators{
+  color: rgb(249, 249, 249);
+}
+
+.dark-color-raidators{
+  color:  #1B221D;
+}
+
+.warning-color-raidators{
+  color: rgb(180, 87, 129);
+}
+
 /* ------------Banner------------ */
 .banner{
   height: 300px;
@@ -238,7 +250,6 @@ width: 100%;
   height: 100%; 
   width: 100%;
   right: -10%;
-
 
 }
 /* ----------Posts--------*/
