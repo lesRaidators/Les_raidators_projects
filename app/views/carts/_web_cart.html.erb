@@ -1,14 +1,15 @@
 <% content_for :title, "Panier | Raidators" %>
 
-<div class="container mt-5">
+<div class="container-fluid mt-3 mb-5 light-background-raidators">
 
   <!--Section: Content-->
-  <section class="">
-
-    <div class="card">
+  <div class="container mt-5">
+    <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
+      <div class="card-header card-header d-flex justify-content-between align-items-center  dark-color-raidator text-white top-corner-radius-card-image-raidators">
+        <h3 class="mb-0 text-white">Mon Panier </h3>
+      </div>
       <div class="card-body">
-        <h1>Mon Panier </h1>
-
+      
         <!--Grid row-->
         <div class="row">
 
@@ -94,7 +95,7 @@
                 <p class="mb-4 mt-1 text-center ">Résumé</p>
                 <% @cart.selected_products.each do |myproduct| %>
                   <hr>
-                  <div class="row">
+                  <dl class="row">
                     <dd class="col-sm-8">
                       <%= myproduct.product.title %>
                     </dd>
@@ -103,7 +104,7 @@
 
                       <%= myproduct.quantity * myproduct.product.price %>
                     </dd>
-                  </div>
+                  </dl>
 
                 <% end %>
 
@@ -142,7 +143,7 @@
       </div>
     </div>
 
-  </section>
+  </div>
   <!--Section: Content-->
   
 </div>
