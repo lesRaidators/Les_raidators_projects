@@ -1,176 +1,148 @@
-    <% content_for :title, "Panier | Raidators" %>
+<% content_for :title, "Panier | Raidators" %>
 
-    <div class="container mt-5">
+<div class="container mt-5">
 
+  <!--Section: Content-->
+  <section class="">
 
-      <!--Section: Content-->
-      <section class="dark-grey-text">
-    
-        <div class="card">
-          <div class="card-body">
-            <h1>Mon Panier </h1>
-    
-            <!--Grid row-->
-            <div class="row">
-    
-              <!--Grid column-->
-              <div class="col-lg-8">
-    
-                <!-- Pills navs -->
-                <ul class="nav md-pills nav-justified pills-primary font-weight-bold">
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#tabCheckoutAddons123" role="tab">Produit</a>
-                  </li>
-                </ul>
-    
-                <!-- Pills panels -->
-                <div class="tab-content pt-4">
+    <div class="card">
+      <div class="card-body">
+        <h1>Mon Panier </h1>
 
-                  <!--Panel 2-->
-                  <div class="tab-pane fade in show active" id="tabCheckoutAddons123" role="tabpanel">
-    
-                    <!--Grid row-->
-                    <form>
-                      <div class="row">
-      
-                        <!--Grid column-->
-                        <div class="col-md-5 mb-4">
-                          <% @cart.selected_products.each do |myproduct| %> 
-                          <hr class="mb-5">
+        <!--Grid row-->
+        <div class="row">
 
-                          <img class="img-fluid z-depth-1-half" alt="Second sample image"> <%=myproduct.product.image_url %> </img>
-                          <% end %>
-      
-      
-                        </div>
-                        <!--Grid column-->
-      
-                        <!--Grid column-->
-                        <div class="col-md-7 mb-4">
-                          <% @cart.selected_products.each do |myproduct| %> 
-                          <hr class="mb-5">
+          <!--Grid column-->
+          <div class="col-lg-8">
 
+            <!-- Pills navs -->
+            <ul class="nav md-pills nav-justified pills-primary ">
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tabCheckoutAddons123" role="tab">Produit</a>
+              </li>
+            </ul>
 
-      
-                          <h3 class="mb-3 h3"><%= myproduct.product.title %></h3>
-      
-                          <p>Description</p>
-      
-                          <!--Name-->
+            <!-- Pills panels -->
+            <div class="tab-content pt-4">
 
-                          <select class="mdb-select colorful-select dropdown-info">
-                            <option value="" disabled>Quantité</option>
-                            <option value="" selected> <%= myproduct.quantity %></option>
-                          </select>
+              <!--Panel 2-->
+              <div class="tab-pane fade in show active" id="tabCheckoutAddons123" role="tabpanel">
 
-                          <h3> Prix: <%= myproduct.product.price %>€</h3>
-                          <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
-              
-                          <% end %>
-
-
-                          
-
-                          <% if @cart.selected_products.length != 0 %>
-                          <% else %>
-                            <p> Votre panier est vide </p>
-                          <% end %>
-
-
-      
-                        </div>
-                        <!--Grid column-->
-      
-                      </div>
-                    <!--Grid row-->
-                    </form>
-                    <hr class="mb-5">
-    
-    
-    
-    
-                  </div>
-                  <!--/.Panel 2-->
-
-                </div>
-                <!-- Pills panels -->
-    
-    
-              </div>
-              <!--Grid column-->
-    
-              <!--Grid column-->
-
-              <div class="col-lg-4 mb-4">
-
-    
-
-                <!--Card-->
-                <div class="card z-depth-0 border border-light rounded-0">
-    
-                  <!--Card content-->
-                  <div class="card-body">
-                    <h4 class="mb-4 mt-1 h5 text-center font-weight-bold">Résumé</h4>
-                    <% @cart.selected_products.each do |myproduct| %>
-
-    
-                    <hr>
-    
-                    <dl class="row">
-                      <dd class="col-sm-8">
-                        <%= myproduct.product.title %>
-                      </dd>
-                      <dd class="col-sm-4">
-                      <p><%= myproduct.product.price %>€</p>
-                      </dd>
-                    </dl>
-
-                    <% end %>
-
-        
-                    <hr>
-
-    
-                    <% if @cart.selected_products.length != 0 %>
-                    <dl class="row">
-                      <dt class="col-sm-8">
-                        Total
-                      </dt>
-                      <dt class="col-sm-4">
-                        <%= @cart.total %> €
-                      </dt>
-                    </dl>
-                     <% else %>
-                      <p> Votre panier est vide </p>
-                    <% end %>
-
-                  <div class="container mt-5 mb-3 text-center w-50 card-center">
-                    <div id="stripe" class="mt-2">
-
-                      <%= render 'stripe' %>
+                <!--Grid row-->
+                <form>
+                  <div class="row">
+  
+                    <!--Grid column-->
+                    <div class="col-md-5 mb-4">
+                      <% @cart.selected_products.each do |myproduct| %> 
+                        <hr class="mb-5">
+                        <img class="img-fluid" alt="Second sample image"> <%=myproduct.product.image_url %> </img>
+                      <% end %>
+  
                     </div>
+                    <!--Grid column-->
+  
+                    <!--Grid column-->
+                    <div class="col-md-7 mb-4">
+                      <% @cart.selected_products.each do |myproduct| %> 
+                        <hr class="mb-5">
+                        <h3 class="mb-3 h3"><%= myproduct.product.title %></h3>
+                        <p>Description</p>
+  
+                        <!--Name-->
+                        
+                        <p>Quantité : <%= myproduct.quantity %></p>
+
+                        <h3> Prix: <%= myproduct.product.price %>€</h3>
+                        <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-danger btn-md btn-rounded mx-6'%>
+          
+                      <% end %>
+
+                      <% if @cart.selected_products.length != 0 %>
+                      <% else %>
+                        <p> Votre panier est vide </p>
+                      <% end %>
+
+                    </div>
+                    <!--Grid column-->
+  
                   </div>
+                  <!--Grid row-->
+                </form>
+                <hr class="mb-5">
 
 
-
-                  </div>
-    
-                </div>
-                <!--/.Card-->
-    
-    
-    
               </div>
-              <!--Grid column-->
-    
+              <!--/.Panel 2-->
+
             </div>
-            <!--Grid row-->
-    
+            <!-- Pills panels -->
+
+
           </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+
+          <div class="col-lg-4 mb-4">
+
+            <!--Card-->
+            <div class="card  border border-light rounded-0">
+
+              <!--Card content-->
+              <div class="card-body">
+                <p class="mb-4 mt-1 text-center ">Résumé</p>
+                <% @cart.selected_products.each do |myproduct| %>
+                  <hr>
+                  <div class="row">
+                    <dd class="col-sm-8">
+                      <%= myproduct.product.title %>
+                    </dd>
+                    <dd class="col-sm-4">
+                      <p><%= myproduct.product.price %>€</p>
+
+                      <%= myproduct.quantity * myproduct.product.price %>
+                    </dd>
+                  </div>
+
+                <% end %>
+
+    
+                <hr>
+                <% if @cart.selected_products.length != 0 %>
+                  <dl class="row">
+                    <dt class="col-sm-8">
+                      Total
+                    </dt>
+                    <dt class="col-sm-4">
+                      <%= @cart.total %> €
+                    </dt>
+                  </dl>
+                <% else %>
+                  <p> Votre panier est vide </p>
+                <% end %>
+              </div>
+              <div class="container mt-5 mb-3 text-center w-50 card-center">
+                <div id="stripe" class="mt-2">
+                  <%= render 'stripe' %>
+                </div>
+              </div>
+
+              </div>
+
+            </div>
+            <!--/.Card-->
+
+          </div>
+          <!--Grid column-->
+
         </div>
-    
-      </section>
-      <!--Section: Content-->
-    
-    
+        <!--Grid row-->
+
+      </div>
     </div>
+
+  </section>
+  <!--Section: Content-->
+  
+</div>

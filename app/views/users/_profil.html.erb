@@ -4,11 +4,10 @@
 
   <div class="container my-5 py-5">
 
-
     <!-- Section: Block Content -->
-    <section class="">
-      <h3 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Admin</h3>
-      <h2 class="font-weight-bold text-center dark-grey-text pb-2">Données</h2>
+    <section>
+      <h3 class="text-center text-uppercase small mb-4">Admin</h3>
+      <h2 class="text-center pb-2">Données</h2>
       <hr class="w-header my-4">
       <p class="lead text-center text-muted pt-2 mb-5">Bonjour petit raidator, cette page te permet d'avoir une vision global de l'avancement du projet.</p>
 
@@ -22,10 +21,10 @@
           <div class="card mt-3">
   
             <div class="">
-              <i class="far fa-money-bill-alt fa-lg primary-color z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
+              <i class="far fa-money-bill-alt fa-lg primary-color p-4 ml-3 mt-n3 rounded text-white"></i>
               <div class="float-right text-right p-3">
                 <p class="text-uppercase text-muted mb-1"><small>Ventes</small></p>
-                <h3 class="font-weight-bold mb-0">23 000$</h3>
+                <h3 class="mb-0">23 000$</h3>
               </div>
             </div>
   
@@ -50,10 +49,10 @@
           <div class="card mt-3">
   
             <div class="">
-              <i class="fas fa-chart-line fa-lg teal z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
+              <i class="fas fa-chart-line fa-lg teal p-4 ml-3 mt-n3 rounded text-white"></i>
               <div class="float-right text-right p-3">
                 <p class="text-uppercase text-muted mb-1"><small>subscriptions</small></p>
-                <h4 class="font-weight-bold mb-0">3534</h4>
+                <p class="mb-0">3534</p>
               </div>
             </div>
   
@@ -78,10 +77,10 @@
           <div class="card mt-3">
   
             <div class="">
-              <i class="fas fa-chart-pie fa-lg purple z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
+              <i class="fas fa-chart-pie fa-lg purple p-4 ml-3 mt-n3 rounded text-white"></i>
               <div class="float-right text-right p-3">
                 <p class="text-uppercase text-muted mb-1"><small>traffic</small></p>
-                <h4 class="font-weight-bold mb-0">656 234</h4>
+                <p class="mb-0">656 234</p>
               </div>
             </div>
   
@@ -119,7 +118,7 @@
         <div class="col-12">
           <div class="card card-list">
             <div class="card-header white d-flex justify-content-between align-items-center py-3">
-              <p class="h5-responsive font-weight-bold mb-0">Commandes des préventes</p>
+              <p class="mb-0">Commandes des préventes</p>
             </div>
             <div class="card-body">
               <table class="table">
@@ -169,7 +168,7 @@
 
 
 <% else %>
-<% content_for :title, "Profil | Raidators" %>
+  <% content_for :title, "Profil | Raidators" %>
 
   <div class="container my-5">
 
@@ -177,19 +176,27 @@
     <section class="team-section">
 
       <div class="card">
-        <div class="card-header white d-flex justify-content-between">
-          <p class="h3-responsive font-weight-bold mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
-        </div>
         <div class="card-body">
+          <div class="card-header white d-flex justify-content-between">
+            <p class="h3-responsive  mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
+          </div>
           <div class="row pt-4">
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-4">
-              <div class="avatar white text-center">
-              <%# Active storage %>
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="img-fluid rounded-circle z-depth-1"/>
-              </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 pb-4">            
+                <%if @user.avatar.attached?%>
+                  <%= image_tag @user.avatar, alt: 'avatar', class: 'avatar-storage' %>
+                <%else%>
+                  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+                <%end%>
+
             </div>
           </div>
-        </div>  
+         
+          <h3>Changer d'avatar ?</h3>
+          <%= form_tag user_avatars_path(@user), multipart: true do %>
+            <%= file_field_tag :avatar %>
+            <%= submit_tag "mettre à jour" %>
+          <% end %>
+        </div>
       </div>
 
     </section>
@@ -207,7 +214,7 @@
         <div class="col-12">
           <div class="card card-list">
             <div class="card-header white d-flex justify-content-between align-items-center py-3">
-              <p class="h5-responsive font-weight-bold mb-0">Vos commandes</p>
+              <p class="mb-0">Vos commandes</p>
             </div>
             <div class="card-body">
               <table class="table">
@@ -255,3 +262,4 @@
     
   </div>
 <% end %>
+
