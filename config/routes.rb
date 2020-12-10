@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   devise_for :users 
   resources :addresses
   resources :selected_products
-  resources :products, path: 'boutique'
+
+  resources :products do
+    resources :product_pictures, only: [:create]
+  end
+
   resources :orders, path: 'commande'
   resources :carts, path: 'panier'
   resources :addresses
