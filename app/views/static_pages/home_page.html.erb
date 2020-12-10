@@ -1,73 +1,69 @@
 <% content_for :title, "Accueil | Raidators" %>
 <header>
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active ">
-      <div class="view">
-        <%= image_tag("home_page/EuropRaid-2017-051.jpg", class:"card-img-top", alt:"Card image cap") %>
-        <div class="banner-filter">
+  <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active ">
+        <div class="view">
+          <%= image_tag("home_page/EuropRaid-2017-051.jpg", class:"card-img-top", alt:"Card image cap") %>
+          <div class="banner-filter">
+          </div>
         </div>
-      </div>
-      <div class="carousel-caption">
-        <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
-        <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
-         <%= link_to 'Nous soutenir', products_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
-      </div>
-    </div>
-    <div class="carousel-item ">
-      <!--Mask color-->
-      <div class="view">
-        <%= image_tag("home_page/EuropRaid-2019-071.jpg", class:"card-img-top", alt:"Card image cap") %>
-        <div class="banner-filter">
-        </div>
-      </div>
-      <div class="carousel-caption">
-        <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
-        <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
-        <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
-      </div>
-    </div>
-    <div class="carousel-item ">
-      <!--Mask color-->
-      <div class="view">
-        <%= image_tag("home_page/EuropRaid-2019-038.jpg", class:"card-img-top", alt:"Card image cap") %>
-        <div class="banner-filter">
-        </div>
-      </div>
-      <div class="carousel-caption">
-        <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
-        <div class="col d-none d-md-block">
+        <div class="carousel-caption">
+          <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
           <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
+          <%= link_to 'Nous soutenir', products_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <!--Mask color-->
+        <div class="view">
+          <%= image_tag("home_page/EuropRaid-2019-071.jpg", class:"card-img-top", alt:"Card image cap") %>
+          <div class="banner-filter">
+          </div>
+        </div>
+        <div class="carousel-caption">
+          <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
+          <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
           <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
         </div>
       </div>
+      <div class="carousel-item ">
+        <!--Mask color-->
+        <div class="view">
+          <%= image_tag("home_page/EuropRaid-2019-038.jpg", class:"card-img-top", alt:"Card image cap") %>
+          <div class="banner-filter">
+          </div>
+        </div>
+        <div class="carousel-caption">
+          <h1 class="h3-responsive text-white">La solidarité n'a pas de frontière</h1>
+          <div class="col d-none d-md-block">
+            <p>Les Raidators souhaitent récolter des dons divers afin de les distribuer à travers l’Europe en 2021. <br> Particuliers comme professionnels ont un rôle essentiel dans cette démarche.</p>
+            <%= link_to 'Nous soutenir', products_path, class: "btn btn-success  btn-raidators text-white p-2 mx-0"%>
+          </div>
+        </div>
+      </div>
     </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
   </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
-
-
 </header>
-
-<section>
 
 <section>
   <div class="container">
@@ -180,7 +176,7 @@
         <div class="card small-card-raidators">
 
           <!-- Card image -->
-          <%= image_tag("home_page/professionnal.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %>
+          <%= image_tag("home_page/professionnal.png", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap") %>
             
             <!-- Card content -->
             <div class="card-body">
@@ -205,7 +201,7 @@
         <div class="card small-card-raidators">
 
           <!-- Card image -->
-          <%= image_tag("home_page/particular.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %>
+          <%= image_tag("home_page/particular.png", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap") %>
 
           <!-- Card content -->
           <div class="card-body">
@@ -234,11 +230,11 @@
 <section>
   <div class="container">
     <div>
-    <h2 class="text-left mb-5"> L'initiative Europ.Raid</h2>
-    <p class="text-left mb-5">Un rails qui réunit des centaines d'équipes telles que les Raidators chaque année.</p>
+      <h2 class="text-left mb-5"> L'initiative Europ.Raid</h2>
+      <p class="text-left mb-5">Un rails qui réunit des centaines d'équipes telles que les Raidators chaque année.</p>
     </div>
     <!--Section: Content-->
-    <section class="dark-grey-text">
+    <section>
         
       <!-- Grid row -->
       <div class="row align-items-center">
@@ -247,7 +243,7 @@
         <div class="col-lg-5">
   
           <!-- Featured video -->
-          <%= video_tag "video_humanity.mp4", :controls => true, class:"video-size-homepage-raidators card-with-right-left-image-raidators" %>
+          <%= video_tag "video_humanity.mp4", :controls => true, class:"content-full-size-div-raidator card-with-right-left-image-raidators" %>
   
         </div>
         <!-- Grid column -->
@@ -282,7 +278,7 @@
 
   <div class="container">
     <!--Section: Content-->
-    <section class="dark-grey-text">
+    <section class="">
         
       <!-- Grid row -->
       <div class="row align-items-center">
@@ -382,8 +378,7 @@
           
           <!-- Card content -->
           <div class="card-body my-4">
-            <%= image_tag("home_page/ansys.png", class:"card-img-top", alt:"Card image cap") %>               
-              
+            <%= image_tag("home_page/ansys.png", class:"card-img-top", alt:"Card image cap") %>                 
           </div>
 
         </div>
@@ -416,6 +411,5 @@
 </section>
 
   
-</div>
 
-</section>
+
