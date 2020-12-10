@@ -5,9 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_one_attached :avatar
-         has_many :orders
+         has_many :orders, dependent: :destroy
          has_many :addresses
-         has_one :cart
+         has_one :cart, dependent: :destroy
          has_many :products, through: :cart
 
 end
