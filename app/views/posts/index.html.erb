@@ -5,13 +5,5 @@
 
 <button class="btn-primary" type="submit"> <%= link_to "nouvel article", new_post_path %>
 
-<%# <% @posts.each do |post| %> 
-  <%# <p> Titre <%= post.title %>
-  <%# <p><%= image_tag post.image_url, width: "100%", heigh: "100%", class:"small-card-image-raidators" %> 
-  <%# <p><%= post.content %>
-  <%# <button class="btn-primary" type="submit"> <%= link_to "article complet", post_path(post.id) %>
-  <%# <button class="btn-primary" type="submit"> <%= link_to "modifier l'article", edit_post_path(post.id) %>
-<%# <%end%> 
-
 <%= render :partial => "shared/banner" %>
 <%= render 'list_articles'%>

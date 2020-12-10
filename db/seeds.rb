@@ -36,6 +36,17 @@ puts "don de 20 euros"
 )
 puts "don de 30 euros"
 
+Product.create(
+  title:  'Pull Noir Raidators',
+  description: "Un pull en laine qui portera chaud tout l'hiver et même les soirs d'été",
+  price: '35€',
+  image_url: "products/pull.png",
+  category: 1
+)
+puts "-----Pull------"
+
+
+
 3.times do |post|
 Post.create(
   title: "Inauguration du site",
