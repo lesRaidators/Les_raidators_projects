@@ -1,79 +1,118 @@
+<% content_for :title, "Dons | Raidators" %>
+
 <%= render :partial => "shared/banner" %>
 
-<div class="container mt-5">
-  <!--Section: Content-->
-  <section class="">
-    <!-- Section heading -->
-    <h2 class="text-left font-weight-bold mb-5 text-center">Un achat solidaire</h2>
-    <p class="text-left font-weight-bold mb-5 text-center">Tout achat de produit nous rapproche de l’objectif : permettre à l’équipe Raidators de participer à Europ.Raid pour acheminer 70Kg de matériels vers des écoles défavorisées. </p>
-  </section>
-  <!--Section: Content-->
-</div>
-<br>
-<hr>
+<section>
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <section>
+      <!-- Section heading -->
+      <h2 class="text-left mb-5 text-center">Un achat solidaire</h2>
+      <p class="text-left mb-5 text-left">Tout achat de produit nous rapproche de l’objectif : permettre à l’équipe Raidators de participer à Europ.Raid pour acheminer 70Kg de matériels vers des écoles défavorisées. <br> Les produits sont proposés en partenariat avec des producteurs locaux, les goodies sont floqués Raidators. Vous pouvez aussi faire un simple don si vous le souhaitez.  </p>
+    </section>
+    <!--Section: Content-->
+  </div>
+</section>
 
-<!--Section: Content-->
-<div class="container mt-5">
-  <section class="mb-10">
+<section class="light-background-raidators">
+  <div class="container mt-5">
 
-    <div class="row">
-    
-    <h2> Don sans contrepartie  </h2>
-      <% @products.each do |product| %>
-        <% if product.donation? %>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100 card small-card-raidators card-product-aligment-center">
-            <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"small-card-image-raidators" %> </div>
-    
-            <!-- Card content -->
-              <div class="card-body">
-                <h3 class="black-text"> <%= product.title %> </h3>
-                <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
-                <% if user_signed_in? %>
-                  <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md  mx-0" %>
-                <% else %>
-                  <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md  mx-0" %>
-                <% end %>
-                <br>
-                <% if current_user && current_user.admin %>
-                <button type="button" class="btn btn-outline-primary p-2 mx-1 mt-2"><%= link_to "Modifier", edit_product_path(product.id) %></button>
-                <button type="button" class="btn btn-outline-primary p-2 mx-2 mt-2"><%= link_to "Supprimer", product_path(product.id), method: :DELETE %></button> 
-                <%end%> 
-                <%end%>    
-              </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-    <div class="row">
+    <!--Section: Content-->
+    <section>
 
-    <h2> Don avec contrepartie </h2>
-    <% @products.each do |product| %>
-      <% if product.merchandising? %>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100 card small-card-raidators">
-          <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"small-card-image-raidators" %> </div>
-  
-          <!-- Card content -->
-            <div class="card-body">
-              <h3 class="black-text"> <%= product.title %> </h3>
-              <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
-              <% if user_signed_in? %>
-                <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
-              <% else %>
-                <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
-              <% end %>
-              <br>
-              <% if current_user && current_user.admin %>
-              <button type="button" class="btn btn-outline-primary p-2 mx-1 mt-2"><%= link_to "Modifier", edit_product_path(product.id) %></button>
-              <button type="button" class="btn btn-outline-primary p-2 mx-2 mt-2"><%= link_to "Supprimer", product_path(product.id), method: :DELETE %></button> 
-              <%end%> 
-              <%end%>    
-            </div>
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-12">
+          <h3 class="text-left mb-5"> Achat solidaire</h3>
+          <!-- Pills navs -->
+          <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" data-toggle="tab" href="#panel31" role="tab">1. Boutique solidaire</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" data-toggle="tab" href="#panel32" role="tab">2. Don simple</a>
+            </li>
+          </ul>
         </div>
       </div>
-    <% end %>
-  </div>
-  </section>
-</div>
 
+      <!-- Pills panels -->
+      <div class="tab-content mb-5 align-items-center">
+
+        <!--Panel 1-->
+        <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+
+          <!--Grid row-->
+          <div class="row mx-4 my-4 justify-content-center">
+
+            <% @products.each do |product| %>
+              <% if product.donation? %>
+                <div class="col-lg-3 col-md-3 mb-4">
+                  <div class="card small-card-raidators card-product-aligment-center">
+                    <%= image_tag product.image_url, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap" %> 
+                    <!-- Card content -->
+                    <div class="card-body">
+                      <h3> <%= product.title %> </h3>
+                      <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
+                      <% if user_signed_in? %>
+                        <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md  mx-0" %>
+                        <%= link_to "Voir le détails", product_path(product.id), class:"btn btn-outline-primary btn-light-raidators btn-md  mx-0" %>
+                      <% else %>
+                        <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md  mx-0" %>
+                      <% end %>
+                      <br>
+                      <% if current_user && current_user.admin %>
+                        <%= link_to "Modifier", edit_product_path(product.id), class:"btn btn-outline-primary p-2 mx-1 mt-2 btn-raidators btn-md" %>
+                        <%= link_to "Supprimer", product_path(product.id), class:"btn btn-outline-primary p-2 mx-1 mt-2 btn-raidators btn-md", method: :DELETE  %>
+                      <%end%>   
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+
+          </div>
+          <!--Grid row-->
+
+        </div>
+        <!--Panel 2-->
+
+        <div class="tab-pane fade" id="panel32" role="tabpanel">
+
+          <div class="row mx-4 my-4 justify-content-center">
+            <% @products.each do |product| %>
+              <% if product.merchandising? %>
+                <div class="col-lg-4 col-md-3 mb-4">
+                  <div class="card h-100 card small-card-raidators">
+                    <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators" %> </div>
+            
+                    <!-- Card content -->
+                      <div class="card-body">
+                        <h3> <%= product.title %> </h3>
+                        <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
+                        <% if user_signed_in? %>
+                          <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
+                        <% else %>
+                          <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
+                        <% end %>
+                        <br>
+                        <% if current_user && current_user.admin %>
+                          <%= link_to "Modifier", edit_product_path(product.id), class:"btn btn-outline-primary p-2 mx-1 mt-2 btn-raidators btn-md" %>
+                          <%= link_to "Supprimer", product_path(product.id), class:"btn btn-outline-primary p-2 mx-1 mt-2 btn-raidators btn-md", method: :DELETE  %> 
+                        <%end%>    
+                      </div>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+
+        </div>
+
+      </div>
+      
+    
+    </section>
+  </div>
+</section>

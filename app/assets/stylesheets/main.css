@@ -30,6 +30,15 @@
   box-sizing: border-box;
   border-radius: 6px; 
 }
+
+.btn-warning-raidators{
+  background: rgb(180, 87, 129);
+  /* Actionable Item */
+  color:white;
+  border-color: white;
+  box-sizing: border-box;
+  border-radius: 6px; 
+}
 /* ----------CARROUSEL TEXT POSITION------------- */
 
 .carousel-caption {
@@ -86,7 +95,7 @@
   margin-bottom: 10px;
 }
 
-.small-card-image-raidators {
+.top-corner-radius-card-image-raidators {
   border-top-left-radius: 12px ;
   border-top-right-radius: 12px ;
   box-shadow: 0px 0px 0px;
@@ -103,7 +112,7 @@
 }
 
 
-.video-size-homepage-raidators{
+.content-full-size-div-raidator{
   height: 100%;
   width: 100%;
 }
@@ -132,7 +141,7 @@ p{
   justify-content: auto;
 }
 
-/* ------------background body------------ */
+/* ------------background and color body------------ */
 .light-background-raidators{
   background-color: rgb(249, 249, 249);
   padding-top:5%; 
@@ -142,12 +151,15 @@ section{
   margin-top: 5%;
   margin-bottom:5% ;
 }
+
+.dark-background-raidators{
+  background-color: #1B221D;
+}
 /* ------------Banner------------ */
 .banner{
   height: 300px;
 }
 .banner-background{
-  color: #f1f1f1; /* Grey text */
   background: url(home_page/EuropRaid-2017-051.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -197,7 +209,6 @@ section{
   margin: auto;
   text-align: center;
 }
-
 /* STRIPE */
 
 .stripe-button-el {
@@ -211,6 +222,15 @@ section{
   color: white;
 }
 
+/* ----------PROFIL ------*/
+
+.avatar-storage {
+vertical-align: middle;
+border-style: none;
+height: 100%;
+width: 100%;
+
+}
 /* ----------Maps--------*/
 
 .maps-sizing {
@@ -221,4 +241,18 @@ section{
 
 
 }
+/* ----------Posts--------*/
+.form-posts-content{
+  height : 300px !important;
+}
 
+
+/* --------------LIST_POSTS------------ */
+
+
+.post_image {
+
+  height: 100%;
+  width: 100%;
+  
+}

@@ -1,22 +1,21 @@
+<% content_for :title, "Privatevisitors | Raidators" %>
 <%= render :partial => "shared/banner" %>
-<!-- Container introduction and how to help -->
-<div class="container mt-5">
 
-  <!--Section: Content-->
-  <section class="">
-    <!-- Section heading -->
-    <h2 class="text-left font-weight-bold mb-5">Donner accès à l'éducation</h2>
-    <p class="text-left font-weight-bold mb-5">L’ Europ’Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
-    Ce raid consiste à traverser l’Europe en Peugeot 205 avec à son bord 70 Kg de matériel scolaire, sportif ou médical. Ces dernières seront ensuite distribuées dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.</p>
-    <br>
-  </section>
+<section>
+  <!-- Container introduction and how to help -->
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <div>
+      <!-- Section heading -->
+      <h2 class="text-left mb-5">Donner accès à l'éducation</h2>
+      <p class="text-left mb-5">L'Europ.Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
+      Ce raid consiste à traverser l’Europe en Peugeot 205 avec à son bord 70 Kg de matériel scolaire, sportif ou médical. Ces dernières seront ensuite distribuées dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.</p>
+      <br>
+    </div>
+  </div>
 
-</div>
-
-
-
-<div class="container mt-0 mb-5">
-  <div class="row align-items-center">
+  <div class="container mt-0 mb-5">
+    <div class="row align-items-center">
       <!-- Grid column -->
       <div class="col-lg-10"> 
         <h3> Objectif 100% </h3>
@@ -24,74 +23,63 @@
       <div class="col-lg-12 mb-5">
         <div class="progress">
           <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-       </div>
-  </div>
-<div class= "container mt-5">
-  <div class="col-lg-10 mt-5"> 
-  <h3 class="text-left font-weight-bold mb-5">Comment participer ?</h3>
- </div>
-</div>
-
-
-<!-- Container  -->
-<div class="container mt-5">
-
- <% content_for :title, "Dons | Raidators" %>
-
- <!--Section: Content-->
-  <section class="dark-grey-text">
-      
-    <!-- Grid row -->
-    <div class="row align-items-center">
-
-      <!-- Grid column -->
-      <div class="col-lg-7">
-
-        <!-- Category -->
-        <i class="fas fa-book"></i>
-      
-        <!-- Post title -->
-        <h3 class="font-weight-bold mb-3"><strong> Faire un don matériel </strong></h3>
-        <!-- Excerpt -->
-        <p>Notre mission est d'acheminer du matériel scolaire, sportif et médical dans des écoles défavorisées. Vous pouvez nous aider à atteindre les 70Kg d’équipements en faisant un don de matériel ! plus d’informations sur la page don de matériel.</p>
-
-        <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Faire un don", equipements_path %></button>
       </div>
-      <!-- Grid column -->
+    </div>
+  </div>
 
-      <!-- Grid column -->
-      <div class="col-lg-5">
+  <div class= "container mt-5">
+    <div class="col-lg-10 mt-5"> 
+    <h3 class="text-left mb-5">Comment participer ?</h3>
+  </div>
+    
+  <!-- Container  -->
+  <div class="container mt-5">
+    <!--container: Content-->
+    <section> 
+      <!-- Grid row -->
+      <div class="row align-items-center">
 
-        <!-- Featured image -->
-        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-          <%= image_tag("equipment/schoolmaterial.png", class:"img-fluid", alt:"Sample image") %> 
+        <!-- Grid column -->
+        <div class="col-lg-7">
+          <!-- Category -->
+          <i class="fas fa-book"></i>
+        
+          <!-- Post title -->
+          <h3 class="mb-3"><strong> Faire un don matériel </strong></h3>
+          <!-- Excerpt -->
+          <p>Notre mission est d'acheminer du matériel scolaire, sportif et médical dans des écoles défavorisées. Vous pouvez nous aider à atteindre les 70Kg d’équipements en faisant un don de matériel ! plus d’informations sur la page don de matériel.</p>
+          <%= link_to 'Faire un don', equipements_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>      
         </div>
 
+        <!-- Grid column -->
+        <div class="col-lg-5">
+
+          <!-- Featured image -->
+          <div class="view overlay rounded mb-lg-0 mb-4">
+            <%= image_tag("equipment/schoolmaterial.png", class:"img-fluid card-with-right-left-image-raidators", alt:"Sample image ") %> 
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
       </div>
-      <!-- Grid column -->
+      <!-- Grid row -->
 
-    </div>
-    <!-- Grid row -->
-
-    <hr class="my-5">
-    
-  </section>
-  <!--Section: Content-->
-</div>
-
-<div class="container mt-5">
-
-  <!--Section: Content-->
-  <section class="dark-grey-text">
+      <hr class="my-5">
       
+    </section>
+  </div>
+
+  <div class="container mt-5">
+
     <!-- Grid row -->
     <div class="row align-items-center">
 
       <!-- Grid column -->
       <div class="col-lg-5">
         <!-- Featured image -->
-        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <%= image_tag("equipment/wineshop.png", class:"img-fluid", alt:"Sample image") %> 
+        <div class="view overlay rounded mb-lg-0 mb-4">
+        <%= image_tag("equipment/wineshop.png", class:"img-fluid card-with-right-left-image-raidators", alt:"Sample image") %> 
         </div>
       </div>
       <!-- Grid column -->
@@ -103,19 +91,16 @@
         <i class="fas fa-shopping-cart"></i>
         
         <!-- Post title -->
-        <h3 class="font-weight-bold mb-3"><strong>Faire un achat solidaire ou un don</strong></h3>
+        <h3 class="mb-3"><strong>Faire un achat solidaire ou un don</strong></h3>
         <!-- Excerpt -->
         <p>Les fêtes de fin d'années approchent ! La solidarité est mise à l'honneur pendant cette période. Pourquoi ne pas soutenir une cause solidaire ? Pour nous soutenir, vous pouvez faire un achat solidaire sur notre magasin en ligne ou faire directement un don pour nous aider à couvrir les frais logistiques.</p>
-
-        <button type="button" class="btn btn-success text-white p-2 mx-1"><%= link_to "Faire un achat solidaire", products_path, class: "white-text" %></button>
+        <%= link_to 'Faire un achat solidaire', products_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>      
       </div>
       <!-- Grid column -->
 
     </div>
     <!-- Grid row -->
-    
-  </section>
-  <!--Section: Content-->
-  <hr class="my-5">
-</div>
+
+  </div>
+</section>
 

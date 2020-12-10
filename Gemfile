@@ -64,7 +64,10 @@ gem 'faker'
 gem 'pry'
 gem 'stripe'
 gem 'dotenv-rails'
+gem 'dotenv'
 
 gem 'devise'
 
 gem 'rails_12factor', group: :production
+
+gem "aws-sdk-s3", require: false

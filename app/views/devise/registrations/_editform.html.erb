@@ -8,11 +8,8 @@
     <!-- background -->
     <div class="col-lg-6 col-md-4 form-background-raidators">
       <!-- Content -->
-      <div class="container my-5">
-        
+      <div class="container my-5">     
         <h3 class="text-center pb-2">Modifier mon mot de passe</h3>
-        <p class="lead text-center text-dark pt-2 mb-5"></p>
-        
         <!--Grid row-->
         <div class="row d-flex align-items-center justify-content-center form-background-raidators">
           <!--Grid column-->
@@ -20,9 +17,8 @@
             <!--Form-->
             <div class="card">
               <div class="card-body px-4">
-
-              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-                <%= render "devise/shared/error_messages", resource: resource %>
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                  <%= render "devise/shared/error_messages", resource: resource %>
                   <div class="field md-form mt-3">
                     <%= f.label :email %><br />
                     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-raidators"  %>
@@ -52,7 +48,7 @@
                   </div>
 
                   <div class="actions my-3">
-                     <%= f.submit "Mettre à jour mon mot de passe",class:"btn btn-primary btn-md btn-dark-raidators mx-0" %>
+                    <%= f.submit "Mettre à jour mon mot de passe",class:"btn btn-primary btn-md btn-dark-raidators mx-0" %>
                   </div>
                 <% end %>
                 <br>
