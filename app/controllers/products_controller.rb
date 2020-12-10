@@ -20,7 +20,6 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.update(post_params)
     redirect_to products_path
-  
   end
 
   def edit

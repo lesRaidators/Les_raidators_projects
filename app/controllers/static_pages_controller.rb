@@ -9,10 +9,16 @@ class StaticPagesController < ApplicationController
   def partnership
   end
 
-  def equipment
+  def equipments
   end
 
   def privatevisitors
+  end
+
+  def contact
+  end
+
+  def car
   end
   
 end

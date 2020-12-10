@@ -1,16 +1,50 @@
-<h2>Forgot your password?</h2>
+<% content_for :title, "Mot de passe | Raidators" %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<!-- Main navigation -->
+<div class="container-fluid mt-3 mb-5 light-background-raidators">
+  <!-- Full Page Intro -->
+  <section class:"edit-password">
+    <!-- Mask & flexbox options-->
+    <div class="col-lg-6 col-md-4 form-background-raidators">
+      <!-- Content -->
+      <div class="container py-5 my-5">
+        <h3 class="text-center pb-2">Vous avez oublié votre mot de passe ?</h3>
+        <p class="lead text-center pt-2 text-dark">Veuillez remplir le formulaire ci-après pour modifier votre mot de passe.</p>
+    
+        <!--Grid row-->
+        <div class="row d-flex align-items-center justify-content-center form-background-raidators">
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-8">
+            <!--Form-->
+            <div class="card">
+              <div class="card-body px-4">
+                <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+                  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                  <div class="field md-form">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-raidators" %>
+                  </div>
+
+                  <div class="actions text-center my-3">
+                    <%= f.submit "Envoyer des instructions pour réinitialiser mon mot de passe", class:"btn btn-primary btn-dark-raidators" %>
+                  </div>
+                <% end %>
+
+                <%= render "devise/shared/links" %>
+
+                </div>
+              </div>
+              <!--/.Form-->
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!--div background-->
+    </section>
+    <!-- Full Page Intro -->
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

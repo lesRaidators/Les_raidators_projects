@@ -1,0 +1,106 @@
+<% content_for :title, "Un article | Raidators" %>
+<%= render :partial => "shared/banner" %>
+<div class="container-fluid mt-3 mb-5 light-background-raidators">
+  <section class="post">
+    <!-- Block -->
+    <div class="col-lg-10 col-md-8 form-background-raidators">
+      <!-- Content -->
+      <!--Section: Content-->
+      <div class="container py-5 my-5">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-12">
+
+            <!-- Card -->
+            <div class="card card-cascade wider reverse">
+
+              <!-- Card image -->
+              <div class="view view-cascade overlay">
+                <%= @post.image_url %>
+                  <div class="mask rgba-white-slight"></div>
+              </div>
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center">
+
+                <!-- Title -->
+                <h2 class=""><%= @post.title %></h2>
+                <!-- Social shares -->
+                <div class="social-counters">
+                  <!-- Facebook -->
+                  <i class="fab fa-facebook-f pr-2"></i>
+                  <%= link_to 'Facebook', "https://www.facebook.com/lesraidators/", class: "clearfix d-none d-md-inline-block pr-2 "%> 
+                
+                  <!-- Comments -->
+                  <div class="btn btn-default">
+                    <i class="far fa-comments pr-2"></i>
+                    <%= link_to 'Comments', products_path, class: "btn btn-default  btn-dark-raidators text-white p-2 mx-0 clearfix d-none d-md-inline-block"%>
+                  </div>
+
+                </div>
+                <!-- Social shares -->
+
+              </div>
+              <!-- Card content -->
+
+            </div>
+            <!-- Card -->
+
+            <!-- Excerpt -->
+            <div class="mt-5">
+              <p><%= @post.content %></p>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+        <hr class="mb-5 mt-4">
+      </div>
+      <!--Section: Content-->
+    </div>
+  </section>
+
+  <!--Section: Comments-->
+  <section>
+    <h2 class="text-center mb-4 pb-2">Commentaires</h2>
+    <!-- Block-->
+    <div class="col-lg-10 col-md-8 form-background-raidators">
+      <!-- Content -->
+      <div class="container py-5 my-5">
+        <% @post.comments.each do |comment| %>
+          <!--Grid row-->
+          <div class="row mb-5">
+            <div class="col-2 col d-none d-md-block">
+              <i class="fas fa-comment fa-2x mr-0"></i>
+            </div>
+            <div class="col-10">
+              <p><%= @user.email.split('@')[0].capitalize %></p>
+              <div class="card-data">
+                <ul class="list-unstyled mb-1">
+                  <li class="comment-date font-small grey-text">
+                    <i class="far fa-clock"></i><cite title="Source Title"><%= comment.created_at %></cite></li>
+                </ul>
+              </div>
+              <p><%= comment.content %></p>
+              <div class="">
+                <% if current_user %>
+                    <% if current_user.id == comment.user_id %>
+                    <%= link_to 'Supprimer', [comment.post, comment], method: :delete, data: { confirm: 'Êtes-vous certain.e de vouloir supprimer votre commentaire ?' }, class: 'btn btn-danger btn-warning-raidators' %>
+                    <% end %>
+                <% end %>
+              </div> 
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <hr>
+    </div>
+    <%= render :partial => "comments/comment" %>
+  </section>
+  <!--Section: Block Content-->
+</div>

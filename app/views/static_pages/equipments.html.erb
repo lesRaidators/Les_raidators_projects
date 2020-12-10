@@ -1,656 +1,650 @@
-<!-- Parts - line 3, line 21-how to give, line 155-material, line 651-link -->
+<% content_for :title, "Collecte | Raidators" %>
+
 <%= render :partial => "shared/banner" %>
-<!-- Container introduction and how to help -->
-<div class="container mt-5">
+<section>
+  <!-- Container introduction and how to help -->
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <section class="">
+      <!-- Section heading -->
+      <h2 class="text-left mb-5">Donner accès à l'éducation</h2>
+      <p class="text-left mb-5">L'Europ.Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
+      Ce raid consiste à traverser l’Europe en Peugeot 205 avec à son bord 70 Kg de matériel scolaire, sportif ou médical. Ces dernières seront ensuite distribuées dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.<br> 
+      <br>
+      Vous trouverez ci-dessous quels équipements nous pouvons collecter et quels sont les points de collectes. </p>
+    </section>
+    <!--Section: Content-->
+  </div>
+  <!-- Container introduction -->
+</section>
 
-  <!--Section: Content-->
-  <section class="">
-
-    <!-- Section heading -->
-    <h2 class="text-left font-weight-bold mb-5">Donner accès à l'éducation</h2>
-    <p class="text-left font-weight-bold mb-5">L’ Europ’Raid est le premier Raid-Aventure d’ Europe. Il organise cette action dans les pays de l’Europe de l’Est depuis 2014.
-    Ce raid consiste à traverser l’Europe en Peugeot 205 avec à son bord 70 Kg de matériel scolaire, sportif ou médical. Ces dernières seront ensuite distribuées dans des écoles et orphelinats locaux d’Europe de l’Est pour aider les enfants défavorisés.<br> 
-    <br>
-    Vous trouverez ci-dessous quels équipements nous pouvons collecter et quels sont les points de collectes. </p>
-
-
-  </section>
-  <!--Section: Content-->
-</div>
-<!-- Container introduction -->
-
-<!-- Container Place to give -->
-<div class="container mt-5">
-  <!--Section: Content-->
-  <section class="dark-grey-text">
-      
-    <!-- Grid row -->
-    <div class="row align-items-center">
-
-      <!-- Grid column -->
-      <div class="col-lg-7">
-
-        <!-- Category -->
-        <i class="fas fa-envelope-open-text"></i>
-      
-        <!-- Post title -->
-        <h3 class="font-weight-bold mb-3"><strong>Vous êtes Particulier  </strong></h3>
-        <!-- Excerpt -->
-        <p> Vous souhaitez soutenir une action solidaire ? Vous pouvez simplement nous expédier le matériel à l'adresse suivante :
-        10 Route de la Noé d'Armengeo 44600 Saint-Nazaire
-        Vous pouvez aussi nous le remettre en main propre à Saint-Nazaire, Nantes ou Angers ou dans des points de collectes listées ci-dessous.<br></p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-lg-5">
-
-        <!-- Featured image -->
-        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-          <%= image_tag("equipment/post.png", class:"img-fluid", alt:"Sample image") %> 
-        </div>
-
-      </div>
-      <!-- Grid column -->
-
-    
-
-    </div>
-    <!-- Grid row -->
-
-    <hr class="my-5">
-    
-  </section>
-  <!--Section: Content-->
-</div>
-
-<div class="container mt-5">
-
-
-  <!--Section: Content-->
-  <section class="dark-grey-text">
-      
-    <!-- Grid row -->
-    <div class="row align-items-center">
-
-      <!-- Grid column -->
-      <div class="col-lg-5">
-
-        <!-- Featured video -->
-        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <%= image_tag("equipment/shop.png", class:"img-fluid", alt:"Sample image") %> 
-        </div>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-lg-7">
-
-        <!-- Category -->
-        <i class="fas fa-shopping-cart"></i>
+<!-- Container Place to give equipment -->
+<section>
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <section class="">
         
-        <!-- Post title -->
-        <h3 class="font-weight-bold mb-3"><strong>Magasin</strong></h3>
-        <!-- Excerpt -->
-        <p>Les fêtes de fin d'années approchent ! La solidarité est mise à l'honneur pendant cette période. Pourquoi ne pas soutenir une cause solidaire en mettant en place un point de collecte ? Nous vous fournissons des affiches explicatives et venons récupérer le matériel. 
+      <!-- Grid row -->
+      <div class="row align-items-center">
 
-      </div>
-      <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-lg-7">
 
-    </div>
-    <!-- Grid row -->
-
-    <hr class="my-5">
-    
-  </section>
-  <!--Section: Content-->
-
-
-</div>
-
-<div class="container mt-5">
-  <!--Section: Content-->
-  <section class="dark-grey-text">
-      
-    <!-- Grid row -->
-    <div class="row align-items-center">
-
-      <!-- Grid column -->
-      <div class="col-lg-7">
-
-        <!-- Category -->
-        <i class="fas fa-school"></i>
-      
-        <!-- Post title -->
-        <h3 class="font-weight-bold mb-3"><strong> Écoles</strong></h3>
-        <!-- Excerpt -->
-        <p>En tant qu'établissement scolaire ou parent d'élève, nous proposons de réaliser une collecte au sein de l'établissement. En échange, nous pourrons venir expliquer et témoigner de notre expérience avant ou après la course. Nous vous enverrons aussi une carte lors de notre voyage.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-lg-5">
-
-        <!-- Featured image -->
-        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <%= image_tag("equipment/school.png", class:"img-fluid", alt:"Sample image") %> 
+          <!-- Category -->
+          <i class="fas fa-envelope-open-text"></i>
         
+          <!-- Post title -->
+          <h3 class="mb-3"><strong>Vous êtes Particulier  </strong></h3>
+          <!-- Excerpt -->
+          <p> Vous souhaitez soutenir une action solidaire ? Vous pouvez simplement nous expédier le matériel à l'adresse suivante :
+          10 Route de la Noé d'Armengeo 44600 Saint-Nazaire
+          Vous pouvez aussi nous le remettre en main propre à Saint-Nazaire, Nantes ou Angers ou dans des points de collectes listées ci-dessous.<br></p>
+
         </div>
+        <!-- Grid column -->
 
-      </div>
-      <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-lg-5 ">
 
-    
-
-    </div>
-    <!-- Grid row -->
-
-    <hr class="my-5">
-    
-  </section>
-  <!--Section: Content-->
-</div>
-
-<!-- Container Material -->
-<div class="container my-5 align-items-center">
-  <h3 class="text-left font-weight-bold mb-5">La liste de matériel</h2>
-  <section>
-    <!--First row-->
-    <div class="row">
-
-      <!--First column-->
-      <div class="col-12">
-
-        <!-- Nav tabs -->
-        <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active font-weight-bold text-uppercase" data-toggle="tab" href="#panel31" role="tab">Scolaire & Sportif</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#panel32" role="tab">Hygiène & Médical</a>
-          </li>
-        </ul>
-
-      </div>
-      <!--First column-->
-
-    </div>
-    <!--First row-->
-
-    <!--Tab panels-->
-
-    <div class="tab-content mb-5 align-items-center">
-
-      <!--Panel 1-->
-      <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
-
-        <!-- Grid row -->
-        <div class="row mx-4 my-4 justify-content-center">
-
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-3 mx-4">
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/backpack.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3"> Cartable et sac scolaire</p>
-                <p class="card-text text-muted font-small mb-3">Bon état ou neuf</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/notebook.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Grand cahier A4</p>
-                <p class="card-text text-muted font-small mb-3">Petits carreaux si possible</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/scissor.png", class:"card-img-top", alt:"Card image cap") %> 
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3"> Accessoires </p>
-                <p class="card-text text-muted font-small mb-3">Gomme, colle, scotch, paire de ciseaux, taille-crayons, ruban adhésif</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/postit.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3"> Accessoires </p>
-                <p class="card-text text-muted font-small mb-3">Marqueurs, stabilos, post-it, Règle en plastique</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/sportbag.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3"> Sac de sport</p>
-                <p class="card-text text-muted font-small mb-3">Bon état ou neuf</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/drawingbook.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Livres de dessin </p>
-                <p class="card-text text-muted font-small "></p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-3">
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/gridbook.png", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Petit cahier A5<p>
-                <p class="card-text text-muted font-small mb-3">Petits carreaux si possible</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/linebook.png", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Cahier de brouillon</p>
-                <p class="card-text text-muted font-small mb-3">Bon état ou neuf</p>
-
-              </div>
-
-              
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/computer.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Matériel informatique<p>
-                <p class="card-text text-muted font-small mb-3">Ordinateur, imprimante, vidéoprojecteur</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/pingpong.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Tennis de table</p>
-                <p class="card-text text-muted font-small mb-3">Balle et raquettes</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/basket.jpg", class:"card-img-top", alt:"Card image cap") %> 
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3"> Chaussure de sport  </p>
-                <p class="card-text text-muted font-small mb-3">Taille enfant</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/painting.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3"> Peinture </p>
-                <p class="card-text text-muted font-small mb-3">Tube de peinture, pinceaux, feuilles de peinture</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-3">
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/paper.png", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Feuilles A4 à carreaux </p>
-                <p class="card-text text-muted font-small ">Blanches, colorées</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/pencil.jpg", class:"card-img-top", alt:"Card image cap") %> 
-              <!-- Card content -->
-              <div class="card-body">
+          <!-- Featured image -->
           
-                <p class="my-3"> Crayons et stylos </p>
-                <p class="card-text text-muted font-small">Stylos à bille, crayons à papier, crayons de couleur, crayons feutres</p>
+            <!-- Google Maps -->
+              <iframe src="https://www.atlistmaps.com/map/44dddbcf-2c83-4c69-b563-cd35276cfbce?share=true" allow="geolocation"  frameborder="0" scrolling="no" allowfullscreen class="map-sizing"></iframe>              
+            <!-- Google Maps -->
 
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/chalkboard.png", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-        
-                <p class="my-3"> Ardoises, tableau blanc et accessoires </p>
-                <p class="card-text text-muted font-small mb-3">ardoises et chiffons, crayons ardoises ou craies</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-            
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/sportwear.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3"> Maillot de sport </p>
-                <p class="card-text text-muted font-small mb-3">taille enfant</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <%= image_tag("equipment/game.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <p class="my-3">Jeux éducatifs<p>
-                <p class="card-text text-muted font-small mb-3">animaux, nombres, saisons, alphabet)</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-
-          </div>
-          <!-- Grid column -->
-
+           
         </div>
-        <!-- Grid row -->
+        <!-- Grid column -->
+
+      
 
       </div>
-      <!--Panel 1-->
+      <!-- Grid row -->
 
-      <!--Panel 2-->
-      <div class="tab-pane fade" id="panel32" role="tabpanel">
-        <!-- Grid row -->
+      <hr class="my-5">
+      
+    </section>
+    <!--Section: Content-->
+  </div>
+
+  <div class="container mt-5">
+
+    <!--Section: Content-->
+    <section class="">
+        
+      <!-- Grid row -->
+      <div class="row align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-lg-5">
+
+          <!-- Featured video -->
+          <div class="view overlay mb-lg-0 mb-4">
+          <%= image_tag("equipment/shop.png", class:"img-fluid card-with-right-left-image-raidators", alt:"Sample image") %> 
+          </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-7">
+
+          <!-- Category -->
+          <i class="fas fa-shopping-cart"></i>
+          
+          <!-- Post title -->
+          <h3 class="mb-3">Magasin</h3>
+          <!-- Excerpt -->
+          <p>Les fêtes de fin d'années approchent ! La solidarité est mise à l'honneur pendant cette période. Pourquoi ne pas soutenir une cause solidaire en mettant en place un point de collecte ? Nous vous fournissons des affiches explicatives et venons récupérer le matériel. </p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+      <hr class="my-5">
+      
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <section class="">
+        
+      <!-- Grid row -->
+      <div class="row align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-lg-7">
+
+          <!-- Category -->
+          <i class="fas fa-school"></i>
+        
+          <!-- Post title -->
+          <h3 class="mb-3"><strong> Écoles</strong></h3>
+          <!-- Excerpt -->
+          <p>En tant qu'établissement scolaire ou parent d'élève, nous proposons de réaliser une collecte au sein de l'établissement. En échange, nous pourrons venir expliquer et témoigner de notre expérience avant ou après la course. Nous vous enverrons aussi une carte lors de notre voyage.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-5">
+
+          <!-- Featured image -->
+          <div class="view mb-lg-0 mb-4">
+          <%= image_tag("equipment/school.png", class:"img-fluid card-with-right-left-image-raidators", alt:"Sample image") %> 
+          
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </section>
+    <!--Section: Content-->
+  </div>
+</section>
+<!-- Container Material -->
+
+<section class="light-background-raidators">
+  <div class="container align-items-center">
+    <h3 class="text-left mb-5">La liste de matériel</h2>
+    <section>
+      <!--First row-->
+      <div class="row">
+
+        <!--First column-->
+        <div class="col-12">
+
+          <!-- Nav tabs -->
+          <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" data-toggle="tab" href="#panel31" role="tab">Scolaire & Sportif</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" data-toggle="tab" href="#panel32" role="tab">Hygiène & Médical</a>
+            </li>
+          </ul>
+
+        </div>
+        <!--First column-->
+
+      </div>
+      <!--First row-->
+
+      <!--Tab panels-->
+
+      <div class="tab-content mb-5 align-items-center">
+
+        <!--Panel 1-->
+        <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+
+          <!-- Grid row -->
           <div class="row mx-4 my-4 justify-content-center">
 
             <!-- Grid column -->
-            <div class="col-md-6 col-lg-3 mx-4">
+            <div class="col-md-3 col-lg-3 mx-4">
 
               <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <div class="card small-card-raidators">
 
                 <!-- Card image -->
-                <%= image_tag("equipment/soap.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/backpack.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3"> Savon à main </p>
-                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
+                  <p class=""> Cartable et sac scolaire</p>
+                  <p class="card-text text-muted font-small">Bon état ou neuf</p>
 
                 </div>
 
               </div>
-              <!-- Card --> 
+              <!-- Card -->
 
               <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <div class="card small-card-raidators">
 
                 <!-- Card image -->
-                <%= image_tag("equipment/shampoo.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/notebook.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3"> Gel douche et shampooing sec </p>
-                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
+                  <p class="">Grand cahier A4</p>
+                  <p class="card-text text-muted font-small">Petits carreaux si possible</p>
 
                 </div>
 
               </div>
-              <!-- Card -->       
-              
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators">
+
+                <!-- Card image -->
+                <%= image_tag("equipment/scissor.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class=""> Accessoires </p>
+                  <p class="card-text text-muted font-small">Gomme, colle, scotch, paire de ciseaux, taille-crayons, ruban adhésif</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators">
+
+                <!-- Card image -->
+                <%= image_tag("equipment/postit.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class=""> Accessoires </p>
+                  <p class="card-text text-muted font-small">Marqueurs, stabilos, post-it, Règle en plastique</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators">
+
+                <!-- Card image -->
+                <%= image_tag("equipment/sportbag.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class=""> Sac de sport</p>
+                  <p class="card-text text-muted font-small">Bon état ou neuf</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators" >
+
+                <!-- Card image -->
+                <%= image_tag("equipment/drawingbook.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class="my-3">Livres de dessin </p>
+                  <p class="card-text text-muted font-small"></p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3 mx-4">
 
               <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <div class="card small-card-raidators">
 
                 <!-- Card image -->
-                <%= image_tag("equipment/coton.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/gridbook.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3"> Coton-tige réutilisable </p>
-                  <p class="card-text text-muted font-small mb-3">réutilisable seulement</p>
+                  <p class="">Petit cahier A5<p>
+                  <p class="card-text text-muted font-small">Petits carreaux si possible</p>
 
                 </div>
 
               </div>
-              <!-- Card -->   
-              
               <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+              <!-- Card -->
+              <div class="card small-card-raidators" >
 
                 <!-- Card image -->
-                <%= image_tag("equipment/tissue.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/linebook.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3"> Mouchoirs </p>
-                  <p class="card-text text-muted font-small mb-3"></p>
+                  <p class="">Cahier de brouillon</p>
+                  <p class="card-text text-muted font-small">Bon état ou neuf</p>
+
+                </div>
+
+                
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators">
+
+                <!-- Card image -->
+                <%= image_tag("equipment/computer.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class="">Matériel informatique<p>
+                  <p class="card-text text-muted font-small">Ordinateur, imprimante, vidéoprojecteur</p>
 
                 </div>
 
               </div>
-              <!-- Card -->    
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators" >
+
+                <!-- Card image -->
+                <%= image_tag("equipment/pingpong.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class="">Tennis de table</p>
+                  <p class="card-text text-muted font-small">Balle et raquettes</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators" >
+
+                <!-- Card image -->
+                <%= image_tag("equipment/basket.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class=""> Chaussure de sport  </p>
+                  <p class="card-text text-muted font-small">Taille enfant</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators" >
+
+                <!-- Card image -->
+                <%= image_tag("equipment/painting.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class="my-3"> Peinture </p>
+                  <p class="card-text text-muted font-small">Tube de peinture, pinceaux, feuilles de peinture</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
 
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3 mx-4">
 
-              
               <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <div class="card small-card-raidators">
 
                 <!-- Card image -->
-                <%= image_tag("equipment/shampoo.jpg", class:"card-img-top", alt:"Card image cap") %> 
+                <%= image_tag("equipment/paper.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
 
                 <!-- Card content -->
                 <div class="card-body">
 
-                  <p class="my-3"> Gel douche et shampooing sec </p>
-                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
+                  <p class="">Feuilles A4 à carreaux </p>
+                  <p class="card-text text-muted font-small ">Blanches, colorées</p>
 
                 </div>
 
               </div>
-              <!-- Card -->  
+              <!-- Card -->
 
               <!-- Card -->
-              <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <div class="card small-card-raidators" >
 
                 <!-- Card image -->
-                <%= image_tag("equipment/toothbrush.jpg", class:"card-img-top", alt:"Card image cap") %> 
-
+                <%= image_tag("equipment/pencil.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
                 <!-- Card content -->
                 <div class="card-body">
-
-                  <p class="my-3">  Brosse à dent et dentifrice en bloc </p>
-                  <p class="card-text text-muted font-small mb-3">pas de liquide</p>
-
-                </div>
-
-              </div>
-              <!-- Card -->  
             
+                  <p class=""> Crayons et stylos </p>
+                  <p class="card-text text-muted font-small">Stylos à bille, crayons à papier, crayons de couleur, crayons feutres</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators">
+
+                <!-- Card image -->
+                <%= image_tag("equipment/chalkboard.png", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+          
+                  <p class=""> Ardoises, tableau blanc et accessoires </p>
+                  <p class="card-text text-muted font-small">ardoises et chiffons, crayons ardoises ou craies</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+              
+              <!-- Card -->
+              <div class="card small-card-raidators" >
+
+                <!-- Card image -->
+                <%= image_tag("equipment/sportwear.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class=""> Maillot de sport </p>
+                  <p class="card-text text-muted font-small">taille enfant</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
+              <!-- Card -->
+              <div class="card small-card-raidators" >
+
+                <!-- Card image -->
+                <%= image_tag("equipment/game.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p class="">Jeux éducatifs<p>
+                  <p class="card-text text-muted font-small">animaux, nombres, saisons, alphabet)</p>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+
 
             </div>
             <!-- Grid column -->
-            
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!--Panel 1-->
+
+        <!--Panel 2-->
+        <div class="tab-pane fade" id="panel32" role="tabpanel">
+          <!-- Grid row -->
+            <div class="row mx-4 my-4 justify-content-center">
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 mx-4">
+
+                <!-- Card -->
+                <div class="card small-card-raidators" >
+
+                  <!-- Card image -->
+                  <%= image_tag("equipment/soap.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                  <!-- Card content -->
+                  <div class="card-body">
+
+                    <p class=""> Savon à main </p>
+                    <p class="card-text text-muted font-small">pas de liquide</p>
+
+                  </div>
+
+                </div>
+                <!-- Card --> 
+
+                <!-- Card -->
+                <div class="card small-card-raidators">
+
+                  <!-- Card image -->
+                  <%= image_tag("equipment/shampoo.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                  <!-- Card content -->
+                  <div class="card-body">
+
+                    <p class=""> Gel douche et shampooing sec </p>
+                    <p class="card-text text-muted font-small">pas de liquide</p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->       
+                
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 mx-4">
+
+                <!-- Card -->
+                <div class="card small-card-raidators" >
+
+                  <!-- Card image -->
+                  <%= image_tag("equipment/coton.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                  <!-- Card content -->
+                  <div class="card-body">
+
+                    <p class=""> Coton-tige réutilisable </p>
+                    <p class="card-text text-muted font-small">réutilisable seulement</p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->   
+                
+                <!-- Card -->
+                <div class="card small-card-raidators" >
+
+                  <!-- Card image -->
+                  <%= image_tag("equipment/tissue.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                  <!-- Card content -->
+                  <div class="card-body">
+
+                    <p class=""> Mouchoirs </p>
+                    <p class="card-text text-muted font-small"></p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->    
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 mx-4">
+                
+                <!-- Card -->
+                <div class="card small-card-raidators">
+
+                  <!-- Card image -->
+                  <%= image_tag("equipment/shampoo.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                  <!-- Card content -->
+                  <div class="card-body">
+
+                    <p class=""> Gel douche et shampooing sec </p>
+                    <p class="card-text text-muted font-small">pas de liquide</p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->  
+
+                <!-- Card -->
+                <div class="card small-card-raidators">
+
+                  <!-- Card image -->
+                  <%= image_tag("equipment/toothbrush.jpg", class:"card-img-top small-card-image-raidators", alt:"Card image cap") %> 
+
+                  <!-- Card content -->
+                  <div class="card-body">
+
+                    <p class="">  Brosse à dent et dentifrice en bloc </p>
+                    <p class="card-text text-muted font-small">pas de liquide</p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->  
+              
+
+              </div>
+              <!-- Grid column -->
+              
+            </div>  
+          <!-- Grid row -->
           </div>  
-        <!-- Grid row -->
-        </div>  
+        </div>
+        <!--Panel 2-->
+
+
+
+
       </div>
-      <!--Panel 2-->
+      <!--Tab panels-->
 
 
+    </section>
+    <!-- Section -->
 
-
-    </div>
-    <!--Tab panels-->
-
-
-  </section>
-  <!-- Section -->
-
-</div>
+  </div>
+</section>
 <!-- Container Material -->
-
-<div class= "container align-items-center mb-10">
-  <%= link_to "Accueil", root_path,class:"btn btn-primary btn-md btn-rounded mx-0" %> 
-</div>
   
-</div>

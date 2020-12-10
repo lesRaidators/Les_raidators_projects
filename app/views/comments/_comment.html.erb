@@ -1,0 +1,19 @@
+
+   <div class="col-lg-10 col-md-8 form-background-raidators">
+    <div class="container">
+      <div class="row text-align-center ">
+       <% if current_user != nil %>
+          <div class="col-2 ">
+            <p>Ajoutez un commentaire</p>
+          </div>
+          <div class="col-10">
+            <%= form_for([@post, @post.comments.build]) do |f| %>
+              <div class="">
+                  <%= f.text_area :content,  class:"form-control form-control-raidators", placeholder: "Votre commentaire..." %>
+              </div>
+              <%= f.submit 'Ajoutez votre commentaire', :class => 'btn btn-success btn-raidators btn-block my-5', remote: true %>
+            <% end %> 
+        <% end %>
+      </div>
+    </div>
+  </div>

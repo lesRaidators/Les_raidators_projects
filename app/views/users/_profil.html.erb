@@ -1,0 +1,265 @@
+
+<% if current_user && current_user.admin %>
+<% content_for :title, "Admin | Raidators" %>
+
+  <div class="container my-5 py-5">
+
+    <!-- Section: Block Content -->
+    <section>
+      <h3 class="text-center text-uppercase small mb-4">Admin</h3>
+      <h2 class="text-center pb-2">Données</h2>
+      <hr class="w-header my-4">
+      <p class="lead text-center text-muted pt-2 mb-5">Bonjour petit raidator, cette page te permet d'avoir une vision global de l'avancement du projet.</p>
+
+      <!--Grid row-->
+      <div class="row">
+  
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+  
+          <!-- Admin card -->
+          <div class="card mt-3">
+  
+            <div class="">
+              <i class="far fa-money-bill-alt fa-lg primary-color p-4 ml-3 mt-n3 rounded text-white"></i>
+              <div class="float-right text-right p-3">
+                <p class="text-uppercase text-muted mb-1"><small>Ventes</small></p>
+                <h3 class="mb-0">23 000$</h3>
+              </div>
+            </div>
+  
+            <div class="card-body pt-0">
+              <div class="progress md-progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+              <p class="card-text">Better than last week (75%)</p>
+            </div>
+  
+          </div>
+          <!-- Admin card -->
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+  
+          <!-- Admin card -->
+          <div class="card mt-3">
+  
+            <div class="">
+              <i class="fas fa-chart-line fa-lg teal p-4 ml-3 mt-n3 rounded text-white"></i>
+              <div class="float-right text-right p-3">
+                <p class="text-uppercase text-muted mb-1"><small>subscriptions</small></p>
+                <p class="mb-0">3534</p>
+              </div>
+            </div>
+  
+            <div class="card-body pt-0">
+              <div class="progress md-progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 46%" aria-valuenow="46" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+              <p class="card-text">Worse than last week (46%)</p>
+            </div>
+  
+          </div>
+          <!-- Admin card -->
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+  
+          <!-- Admin card -->
+          <div class="card mt-3">
+  
+            <div class="">
+              <i class="fas fa-chart-pie fa-lg purple p-4 ml-3 mt-n3 rounded text-white"></i>
+              <div class="float-right text-right p-3">
+                <p class="text-uppercase text-muted mb-1"><small>traffic</small></p>
+                <p class="mb-0">656 234</p>
+              </div>
+            </div>
+  
+            <div class="card-body pt-0">
+              <div class="progress md-progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+              <p class="card-text">Better than last week (31%)</p>
+            </div>
+  
+          </div>
+          <!-- Admin card -->
+  
+        </div>
+        <!--Grid column-->
+  
+      </div>
+      <!--Grid row-->
+  
+    </section>
+    <!--Section: Content-->
+
+  
+  
+  </div>
+
+  <div class="container my-5">
+
+    
+    <!-- Section: Block Content -->
+    <section>
+      
+      <div class="row">
+        <div class="col-12">
+          <div class="card card-list">
+            <div class="card-header white d-flex justify-content-between align-items-center py-3">
+              <p class="mb-0">Commandes des préventes</p>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">N° de commande</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Prix (€)</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% Order.all.each do |order| %>
+                    <tr>
+                      <th scope="row"><strong><%= order.id %></strong></th>
+                      <td class="text-center"><%= order.user.email %></td>
+                      <% total = 0 %>
+                      <% order.join_order_products.each do |order_product| %>
+                        <% total += order_product.quantity * order_product.product.price %>
+
+                          <td class="text-center"><strong><%= order_product.product.title %></strong></td>
+                          <td class="text-center"><%= order_product.product.price %> €</td>
+                          <td class="text-center"><%= order_product.quantity %></td>
+                          <td class="text-center"><%= order_product.quantity * order_product.product.price %> €</td>
+                          <td class="text-center"><%= order_product.created_at.strftime("%d/%m/%Y") %></td>
+                        </tr>
+                      <% end %>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- Section: Block Content -->
+
+    
+  </div>
+
+
+
+
+<% else %>
+  <% content_for :title, "Profil | Raidators" %>
+
+  <div class="container my-5">
+
+    <!-- Section: Block Content -->
+    <section class="team-section">
+
+      <div class="card">
+        <div class="card-body">
+          <div class="card-header white d-flex justify-content-between">
+            <p class="h3-responsive  mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
+          </div>
+          <div class="row pt-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 pb-4">            
+                <%if @user.avatar.attached?%>
+                  <%= image_tag @user.avatar, alt: 'avatar', class: 'avatar-storage' %>
+                <%else%>
+                  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+                <%end%>
+
+            </div>
+          </div>
+         
+          <h3>Changer d'avatar ?</h3>
+          <%= form_tag user_avatars_path(@user), multipart: true do %>
+            <%= file_field_tag :avatar %>
+            <%= submit_tag "mettre à jour" %>
+          <% end %>
+        </div>
+      </div>
+
+    </section>
+    <!-- Section: Block Content -->
+
+  </div>
+
+  <div class="container my-5">
+
+    
+    <!-- Section: Block Content -->
+    <section>
+      
+      <div class="row">
+        <div class="col-12">
+          <div class="card card-list">
+            <div class="card-header white d-flex justify-content-between align-items-center py-3">
+              <p class="mb-0">Vos commandes</p>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">N° commande</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @orders.each do |order| %>
+                    <tr>
+                      <th><strong><%= order.id %></strong></th>
+                      <% total = 0 %>
+                      <% order.join_order_products.each do |order_product| %>
+                        <% total += order_product.quantity * order_product.product.price %>
+                        <tr>
+                          <th class="text-center"><strong><%= order_product.product.title %></strong></th>
+                          <th class="text-center"><%= order_product.product.price %></th>
+                          <th class="text-center"><%= order_product.quantity %></th>
+                          <th class="text-center"><%= order_product.quantity * order_product.product.price %></th>
+                        </tr>
+                      <% end %>
+                      <th class="text-right">Total du prix de la commande : <strong><%= total %></strong></th>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer white py-3 d-flex justify-content-between">
+              <button type="button" class="btn btn-outline-primary"><%= link_to "Nouvelle commande",products_path %></button>
+              <button type="button" class="btn btn-outline-primary"><%= link_to "Créer Adresse",new_address_path %></button>
+              <button type="button" class="btn btn-outline-primary"><%= link_to "Mes adresses",addresses_path %></button>
+              <button type="button" class="btn btn-outline-primary"><%= link_to "Modifier mon mot de passe",edit_user_registration_path %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- Section: Block Content -->
+
+    
+  </div>
+<% end %>
+
