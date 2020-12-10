@@ -115,49 +115,48 @@
       
       <!-- Section: Block Content -->
       <section>
-        
+    
         <div class="row">
-          <div class="col-12  form-background-raidators">
-            <div class="card card-list">
-              <div class="card-header white d-flex justify-content-between align-items-center py-3">
-                <p class="mb-0">Commandes des préventes</p>
-              </div>
-              <div class="card-body">
-                <table class="table">
-                  <thead>
+          <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
+            <div class="card-header d-flex justify-content-between align-items-center  dark-color-raidator text-white top-corner-radius-card-image-raidators ">
+              <p class="mb-0 text-white">Commandes des préventes</p>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">N° de commande</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Prix (€)</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% Order.all.each do |order| %>
                     <tr>
-                      <th scope="col">N° de commande</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Titre</th>
-                      <th scope="col">Prix (€)</th>
-                      <th scope="col">Quantité</th>
-                      <th scope="col">Total</th>
-                      <th scope="col">Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% Order.all.each do |order| %>
-                      <tr>
-                        <th scope="row"><strong><%= order.id %></strong></th>
-                        <td class="text-center"><%= order.user.email %></td>
-                        <% total = 0 %>
-                        <% order.join_order_products.each do |order_product| %>
-                          <% total += order_product.quantity * order_product.product.price %>
+                      <th scope="row"><strong><%= order.id %></strong></th>
+                      <td class="text-center"><%= order.user.email %></td>
+                      <% total = 0 %>
+                      <% order.join_order_products.each do |order_product| %>
+                        <% total += order_product.quantity * order_product.product.price %>
 
-                            <td class="text-center"><strong><%= order_product.product.title %></strong></td>
-                            <td class="text-center"><%= order_product.product.price %> €</td>
-                            <td class="text-center"><%= order_product.quantity %></td>
-                            <td class="text-center"><%= order_product.quantity * order_product.product.price %> €</td>
-                            <td class="text-center"><%= order_product.created_at.strftime("%d/%m/%Y") %></td>
-                          </tr>
-                        <% end %>
-                      </tr>
-                    <% end %>
-                  </tbody>
-                </table>
-              </div>
+                          <td class="text-center"><strong><%= order_product.product.title %></strong></td>
+                          <td class="text-center"><%= order_product.product.price %> €</td>
+                          <td class="text-center"><%= order_product.quantity %></td>
+                          <td class="text-center"><%= order_product.quantity * order_product.product.price %> €</td>
+                          <td class="text-center"><%= order_product.created_at.strftime("%d/%m/%Y") %></td>
+                        </tr>
+                      <% end %>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
             </div>
           </div>
+      
         </div>
 
       </section>
@@ -193,7 +192,7 @@
               </div>
             </div>
           
-            <h3>Changer de photo de profil ? ?</h3>
+            <h3>Changer de photo de profil</h3>
             <%= form_tag user_avatars_path(@user), multipart: true do %>
               <%= file_field_tag :avatar %>
               <%= submit_tag "mettre à jour", class:"btn btn-outline-primary btn-dark-raidators text-white p-2 mx-0" %>
