@@ -20,7 +20,7 @@ class AddressesController < ApplicationController
     @address = Address.new(post_params.merge(user_id: current_user.id)) 
   
     if @address.save
-      redirect_to products_path, notice: "Adresse créé avec succès"
+      redirect_to cart_path(Cart.find_or_create_by(user_id: current_user.id)), notice: "Address created"
     else
       puts "something goes wrong"
           puts @address.errors.messages

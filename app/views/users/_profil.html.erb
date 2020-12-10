@@ -4,7 +4,7 @@
   <% if current_user && current_user.admin %>
     <% content_for :title, "Admin | Raidators" %>
 
-    <div class="my-5 py-5 form-background-raidators">
+    <div class="my-5 py-5 container form-background-raidators">
 
       <!-- Section: Block Content -->
       <section>
@@ -53,7 +53,7 @@
               <div class="">
                 <i class="fas fa-chart-line fa-lg teal p-4 ml-3 mt-n3 rounded text-white"></i>
                 <div class="float-right text-right p-3">
-                  <p class="text-uppercase text-muted mb-1"><small>subscriptions</small></p>
+                  <p class="text-uppercase text-muted mb-1"><small>inscription</small></p>
                   <p class="mb-0">3534</p>
                 </div>
               </div>
@@ -110,14 +110,14 @@
     
     </div>
 
-    <div class="my-5 ">
+    <div class="container my-5 ">
       
       <!-- Section: Block Content -->
       <section>
     
         <div class="row">
           <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
-            <div class="card-header d-flex justify-content-between align-items-center  dark-color-raidator text-white top-corner-radius-card-image-raidators ">
+            <div class="card-header d-flex justify-content-between align-items-center dark-background-raidators text-white top-corner-radius-card-image-raidators ">
               <p class="mb-0 text-white">Commandes des préventes</p>
             </div>
             <div class="card-body">
@@ -175,7 +175,7 @@
       <div class="row">
 
         <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
-         <div class="card-header card-header d-flex justify-content-between align-items-center  dark-color-raidator text-white top-corner-radius-card-image-raidators">
+         <div class="card-header card-header d-flex justify-content-between align-items-center  dark-background-raidators text-white top-corner-radius-card-image-raidators">
           <p class="h3-responsive mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
          </div>
           <div class="card-body">
@@ -210,8 +210,8 @@
         <div class="row">
           
           <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
-            <div class="card-header d-flex justify-content-between align-items-center  dark-color-raidator text-white top-corner-radius-card-image-raidators ">
-              <h3 class="mb-0">Vos commandes</h3>
+            <div class="card-header d-flex justify-content-between align-items-center  dark-background-raidators top-corner-radius-card-image-raidators ">
+              <p class="mb-0 text-white ">Vos commandes</p>
             </div>
             <div class="card-body">
               <table class="table">

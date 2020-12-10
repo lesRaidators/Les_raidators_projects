@@ -1,9 +1,7 @@
 <h1>Blog</h1>
-<%# <br>
-<br>
-<br>
+  <button class="btn-primary" type="submit"> <%= link_to "nouvel article", new_post_path %>
 
-<button class="btn-primary" type="submit"> <%= link_to "nouvel article", new_post_path %>
+  <button class="btn-primary" type="submit"> <%= link_to "nouvel article", new_post_path %>
 
 <%= render :partial => "shared/banner" %>
 <%= render 'list_articles'%>

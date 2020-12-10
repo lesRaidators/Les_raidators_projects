@@ -34,7 +34,8 @@
 .btn-warning-raidators{
   background: rgb(180, 87, 129);
   /* Actionable Item */
-  border-color:white;
+  color:white;
+  border-color: white;
   box-sizing: border-box;
   border-radius: 6px; 
 }
@@ -151,9 +152,21 @@ section{
   margin-bottom:5% ;
 }
 
-.dark-color-raidator{
+.dark-background-raidators{
   background-color: #1B221D;
 }
+.light-color-raidators{
+  color: rgb(249, 249, 249);
+}
+
+.dark-color-raidators{
+  color:  #1B221D;
+}
+
+.warning-color-raidators{
+  color: rgb(180, 87, 129);
+}
+
 /* ------------Banner------------ */
 .banner{
   height: 300px;
@@ -238,7 +251,6 @@ width: 100%;
   width: 100%;
   right: -10%;
 
-
 }
 /* ----------Posts--------*/
 .form-posts-content{
@@ -254,4 +266,27 @@ width: 100%;
   height: 100%;
   width: 100%;
   
+}
+
+/* -------------------CAR------------------- */
+
+.car-picture{
+
+  width: 600px;
+  height: auto;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  display: block;
+
+
+}
+
+.car-icons{
+
+  width: 60px;
+  height: auto;
+  width: 50px;
+  height: auto;
+
 }

@@ -24,8 +24,14 @@
   </div>
 
   <div class="form-group">
-  <button class="btn-primary" type="submit"> Modifier le dons /produits </button>
+  <%= f.text_field :category, placeholder: 'Catégorie', class: 'form-control' %>
   </div>
+  
+  <div class="form-group">
+  <button class="btn-primary" type="submit"> Valider le dons /produits </button>
+  </div>
+
+
 
   <%end%>
   
