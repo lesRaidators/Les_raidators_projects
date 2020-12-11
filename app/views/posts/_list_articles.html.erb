@@ -23,34 +23,28 @@
 
 
         <% @posts.each do |post| %>
+          <!-- Grid column -->
+          <div class="col-lg-5 col-xl-4">
 
+            <!-- Featured image -->
+            <hr class="mb-5">
 
-        <!-- Grid column -->
-        <div class="col-lg-5 col-xl-4">
+            <%= image_tag post.avatar  %>
+              
+          </div>
+          <!-- Grid column -->
 
-          <!-- Featured image -->
-          <hr class="mb-5">
+          <!-- Grid column -->
+          <div class="col-lg-7 col-xl-8">
 
-          <%= image_tag post.image_url, class:"view overlay rounded z-depth-1-half mb-lg-0 mb-4 post_image" %>          
-          <div class="mask rgba-white-slight"></div>
-            
+            <!-- Post title -->
+            <p class=" mb-3"><strong><%= post.title %></strong></p>
+            <!-- Read more button -->
+            <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+            <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
 
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-lg-7 col-xl-8">
-
-          <!-- Post title -->
-          <p class=" mb-3"><strong><%= post.title %></strong></p>
-          <!-- Read more button -->
-          <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
-          <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
-
-
-        </div>
-        <!-- Grid column -->
-
+          </div>
+          <!-- Grid column -->
         <%end%>
 
 
@@ -85,30 +79,29 @@
         <% @posts.each do |post| %>
 
 
-        <!-- Grid column -->
-        <div class="col-lg-5 col-xl-4">
+          <!-- Grid column -->
+          <div class="col-lg-5 col-xl-4">
 
-          <!-- Featured image -->
-          <hr class="mb-5">
+            <!-- Featured image -->
+            <hr class="mb-5">
 
-          <%= image_tag post.image_url, class:"view overlay rounded mb-lg-0 mb-4 post_image" %>          
-          <div class="mask rgba-white-slight"></div>
-            
+            <%= image_tag post.avatar if post.avatar.attached?  %>
+              
 
-        </div>
-        <!-- Grid column -->
+          </div>
+          
 
-        <!-- Grid column -->
-        <div class="col-lg-7 col-xl-8">
+          <!-- Grid column -->
+          <div class="col-lg-7 col-xl-8">
 
-          <!-- Post title -->
-          <p class=" mb-3"><strong><%= post.title %></strong></p>
-          <!-- Read more button -->
-          <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+            <!-- Post title -->
+            <p class=" mb-3"><strong><%= post.title %></strong></p>
+            <!-- Read more button -->
+            <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
 
 
-        </div>
-        <!-- Grid column -->
+          </div>
+          <!-- Grid column -->
 
         <%end%>
 

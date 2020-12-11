@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :selected_products
 
   resources :products do
-    resources :product_pictures, only: [:create]
+    resources :avatars, only: [:create]
   end
 
   resources :orders, path: 'commande'
