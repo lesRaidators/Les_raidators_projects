@@ -14,7 +14,7 @@ class OrderMailer < ApplicationMailer
     @order = order
     @cart = @order.user.cart
     @user = User.find(order.user_id)
-    @url  = 'https://project-chaton-development.herokuapp.com/'
+    @url  = ''
     mail(to: @user.email, subject: 'Vos achats chez Catoon !')
   end
 
