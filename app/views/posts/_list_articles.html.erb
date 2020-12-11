@@ -1,8 +1,7 @@
 <% content_for :title, "Articles | Raidators" %>
-<%= render :partial => "shared/banner" %>
-
 <div class="container  mt-5">
   
+<% if current_user && current_user.admin %>
   <!--Section: Content-->
   <section>
     <!-- Section heading -->
@@ -11,60 +10,83 @@
     <p class="text-center mx-auto w-responsive mb-5">Les Raidators : "Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
       Bonne lecture &#128214;"
     </p>
-    
-<% if current_user && current_user.admin %>
-  <%= link_to "Nouvel article", new_post_path, class:"btn btn-success btn-raidators"%>
+
+    <%= link_to "Nouvel article", new_post_path, class:"card-img-top card-with-right-left-image-raidators"%>
 
 
 
+    <div>
+      <!-- Grid row -->
+      <% @posts.each do |post| %>
+        <div class="row align-items-center">
 
-  <% @posts.each do |post| %>
-    <!-- Grid column -->
-    <div class="col-lg-5 col-xl-4">
-      <!-- Featured image -->
-      <hr class="mb-5">
-      <%= image_tag post.avatar %>
+          <!-- Grid column -->
+          <div class="col-lg-5 col-xl-4">
+            <!-- Featured image -->
+            <hr class="mb-5">
+              <%= image_tag post.avatar, class:"avatar-articles" %>
+          </div>
+          <!-- Grid column -->
+          <div class="col-lg-7 col-xl-8">
+            <!-- Post title -->
+            <p class=" mb-3"><strong><%= post.title %></strong></p>
+            <!-- Read more button -->
+              <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
+              <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
 
+          </div>
+          <!-- Grid column -->
+        </div>
+      <%end%>
     </div>
-    <!-- Grid column -->
-    <div class="col-lg-7 col-xl-8">
+    <!-- Grid row -->
 
-        <!-- Post title -->
-        <p class=" mb-3"><strong><%= post.title %></strong></p>
-        <!-- Read more button -->
-          <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
-          <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
-        
-    </div>
-  <%end%>
-    <!-- Grid column -->     
+    <hr class="my-5">
+
+  </section>
 
 <%else%>
 
-  <% @posts.each do |post| %>
-    <!-- Grid column -->
-    <div class="col-lg-5 col-xl-4">
-      <!-- Featured image -->
-      <hr class="mb-5">
-      <%= image_tag post.avatar %>
+  <section>
+    <!-- Section heading -->
+    <h2 class="text-center  mb-4 pb-2">Articles</h2>
+    <!-- Section description -->
+    <p class="text-center mx-auto w-responsive mb-5">Les Raidators : "Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
+      Bonne lecture &#128214;"
+    </p>
 
-    </div>
-    <!-- Grid column -->
-    <div class="col-lg-7 col-xl-8">
+    <div>
+      <!-- Grid row -->
+      <% @posts.each do |post| %>
+        <div class="row align-items-center">
 
-        <!-- Post title -->
-        <p class=" mb-3"><strong><%= post.title %></strong></p>
-        <!-- Read more button -->
-          <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+          <!-- Grid column -->
+          <div class="col-lg-5 col-xl-4">
+            <!-- Featured image -->
+            <hr class="mb-5">
+            <div class="post-avatar">
+              <%= image_tag post.avatar %>
+            </div>
+          </div>
+          <!-- Grid column -->
+          <div class="col-lg-7 col-xl-8">
+            <!-- Post title -->
+            <p class=" mb-3"><strong><%= post.title %></strong></p>
+            <!-- Read more button -->
+              <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+          </div>
+          <!-- Grid column -->
+        </div>
+      <%end%>
     </div>
-  <%end%>
-    <!-- Grid column -->     
-<%end%>
-         
+    <!-- Grid row -->
+
     <hr class="my-5">
 
   </section>
   <!--Section: Content-->
+
+<%end%>
 
 </div>
 
