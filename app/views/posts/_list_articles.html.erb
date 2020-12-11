@@ -1,4 +1,6 @@
 <% content_for :title, "Articles | Raidators" %>
+<%= render :partial => "shared/banner" %>
+
 <div class="container  mt-5">
   
   <!--Section: Content-->
@@ -9,39 +11,56 @@
     <p class="text-center mx-auto w-responsive mb-5">Les Raidators : "Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
       Bonne lecture &#128214;"
     </p>
+    
+<% if current_user && current_user.admin %>
+  <%= link_to "Nouvel article", new_post_path, class:"btn btn-success btn-raidators"%>
 
-    <div>
-      <!-- Grid row -->
-      <% @posts.each do |post| %>
-        <div class="row align-items-center">
 
-          <!-- Grid column -->
-          <div class="col-lg-5 col-xl-4">
-            <!-- Featured image -->
-            <hr class="mb-5">
-            <div class="post-avatar">
-              <%= image_tag post.avatar %>
-            </div>
-          </div>
-          <!-- Grid column -->
-          <div class="col-lg-7 col-xl-8">
-            <!-- Post title -->
-            <p class=" mb-3"><strong><%= post.title %></strong></p>
-            <!-- Read more button -->
-            <% if current_user && current_user.admin %>
-              <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
-              <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
-              <%= link_to "Nouvel article", new_post_path, class:"btn btn-success btn-raidators"%>
-            <%else%>
-              <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
-            <%end%>
-          </div>
-          <!-- Grid column -->
-        </div>
-      <%end%>
+
+
+  <% @posts.each do |post| %>
+    <!-- Grid column -->
+    <div class="col-lg-5 col-xl-4">
+      <!-- Featured image -->
+      <hr class="mb-5">
+      <%= image_tag post.avatar %>
+
     </div>
-    <!-- Grid row -->
+    <!-- Grid column -->
+    <div class="col-lg-7 col-xl-8">
 
+        <!-- Post title -->
+        <p class=" mb-3"><strong><%= post.title %></strong></p>
+        <!-- Read more button -->
+          <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+          <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
+        
+    </div>
+  <%end%>
+    <!-- Grid column -->     
+
+<%else%>
+
+  <% @posts.each do |post| %>
+    <!-- Grid column -->
+    <div class="col-lg-5 col-xl-4">
+      <!-- Featured image -->
+      <hr class="mb-5">
+      <%= image_tag post.avatar %>
+
+    </div>
+    <!-- Grid column -->
+    <div class="col-lg-7 col-xl-8">
+
+        <!-- Post title -->
+        <p class=" mb-3"><strong><%= post.title %></strong></p>
+        <!-- Read more button -->
+          <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+    </div>
+  <%end%>
+    <!-- Grid column -->     
+<%end%>
+         
     <hr class="my-5">
 
   </section>
