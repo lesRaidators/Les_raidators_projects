@@ -1,6 +1,6 @@
 <% content_for :title, "Profil | Raidators" %>
 
-<div class="container-fluid mt-3 mb-5 light-background-raidators ">
+<div class="container-fluid mt-3 mb-5 brown-background-raidators ">
   <% if current_user && current_user.admin %>
     <% content_for :title, "Admin | Raidators" %>
 
@@ -175,16 +175,14 @@
       <div class="row">
 
         <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
-         <div class="card-header card-header d-flex justify-content-between align-items-center  dark-background-raidators text-white top-corner-radius-card-image-raidators">
-          <p class="h3-responsive mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
+         <div class="card-header card-header d-flex justify-content-between align-items-center dark-background-raidators py-3 top-corner-radius-card-image-raidators">
+          <p class="text-white mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
          </div>
           <div class="card-body">
             <div class="row pt-4">
-              <div class="col-lg-4 col-md-4 col-sm-6 pb-4">            
-                  
-                    
-              
-
+              <div class="col-lg-6 col-md-4 col-sm-6 pb-4">            
+                <h3> Email :</h3> <%= @user.email %> </p>
+                <h3> Mon adresse :</h3><p> <%= link_to "Voir", address_path(@address.id), class:"btn btn-outline-primary btn-light-raidators" %></p>
               </div>
             </div>
           </div>
@@ -202,7 +200,7 @@
         <div class="row">
           
           <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
-            <div class="card-header d-flex justify-content-between align-items-center  dark-background-raidators top-corner-radius-card-image-raidators ">
+            <div class="card-header d-flex justify-content-between align-items-center  py-3 dark-background-raidators top-corner-radius-card-image-raidators ">
               <p class="mb-0 text-white ">Vos commandes</p>
             </div>
             <div class="card-body">
@@ -238,7 +236,7 @@
             <div class="card-footer white py-3 d-flex justify-content-between">
               <%= link_to "Nouvelle commande", products_path, class: "btn btn-outline-primary btn-dark-raidators text-white p-2 mx-0"%>
               <%= link_to "Créer Adresse", new_address_path, class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
-              <%= link_to "Mes adresses", addresses_path, class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
+              <%= link_to "Modifier mon adresse", edit_address_path(@address.id), class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
               <%= link_to "Modifier mon mot de passe", edit_user_registration_path, class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
             </div>
           </div>
