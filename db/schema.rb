@@ -93,7 +93,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_105001) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.string "image_url"
     t.bigint "user_id", null: false
     t.integer "status", default: 0
     t.datetime "created_at", null: false
@@ -105,7 +104,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_105001) do
     t.string "title"
     t.string "description"
     t.integer "price"
-    t.string "image_url"
     t.integer "category", default: 0
     t.integer "donation_part", default: 1
     t.datetime "created_at", null: false

@@ -9,11 +9,12 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(post_params)
-
+    Rails.logger.info(@product.errors.inspect)
   end
 
   def new
     @product = Product.new
+    Rails.logger.info(@product.errors.inspect)
   end
 
   def update
@@ -35,6 +36,6 @@ class ProductsController < ApplicationController
 private 
 
   def post_params
-  params.require(:product).permit(:title, :description, :price, :image_url)
+  params.require(:product).permit(:title, :description, :price, :avatar, :category)
   end
 end 
