@@ -276,7 +276,7 @@ width: 100%;
 .post-avatar{
   height: 20%;
 }
-/* --------------LIST_POSTS------------ */
+/* --------------POSTS------------ */
 
 
 .post_image {
@@ -284,6 +284,24 @@ width: 100%;
   height: 100%;
   width: 100%;
   
+}
+
+.avatar-articles{
+
+  height: 60%;
+  width: 40%;
+
+
+}
+
+.show-post{
+
+  margin-left: auto;
+  margin-right: auto;
+  height: 60%;
+  width: 30%;
+
+
 }
 
 /* -------------------CAR------------------- */

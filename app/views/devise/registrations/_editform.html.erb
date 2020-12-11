@@ -29,7 +29,7 @@
                   <% end %>
 
                   <div class="field md-form mt-3">
-                    <%= f.label :mot_de_passe %> <i>(ne pas remplir si vous ne voulez pas changer de mot de passe)</i><br>
+                    <%= f.label :password, "Mot de passe" %> <i>(ne pas remplir si vous ne voulez pas changer de mot de passe)</i><br>
                     <%= f.password_field :password, autocomplete: "new-password", class:"field md-form form-control form-control-raidators" %>
                     <% if @minimum_password_length %>
                       <br/>
@@ -38,12 +38,12 @@
                   </div>
 
                   <div class="field md-form">
-                    <%= f.label :confirmation_mot_de_passe %><br/>
+                    <%= f.label :password_confirmation, "Confirmation mot de passe" %><br/>
                     <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"field md-form form-control form-control-raidators" %>
                   </div>
 
                   <div class="field md-form">
-                    <%= f.label :mot_de_passe_actuel %> <i>(Nous avons besoin de votre mot de passe actuel pour confirmer vos changements)</i><br/>
+                    <%= f.label :current_password, "Mot de passe actuel" %> <i>(Nous avons besoin de votre mot de passe actuel pour confirmer vos changements)</i><br/>
                     <%= f.password_field :current_password, autocomplete: "current-password", class:"field md-form form-control form-control-raidators mt-3" %>
                   </div>
 
