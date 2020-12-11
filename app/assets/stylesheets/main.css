@@ -293,8 +293,12 @@ width: 100%;
 
 .avatar-articles{
 
+  margin-right: auto;
+  margin-left: auto;
+
   height: 60%;
   width: 40%;
+
 
 
 }
