@@ -9,4 +9,12 @@ class User < ApplicationRecord
          has_one :cart, dependent: :destroy
          has_many :products, through: :cart
 
+
+         after_create :welcome_send
+
+         def welcome_send
+           puts " ==== WELCOME SEND METHOD STARTING === "
+           UserMailer.welcome_email(self).deliver_now
+         end
+
 end

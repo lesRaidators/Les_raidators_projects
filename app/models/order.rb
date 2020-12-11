@@ -8,5 +8,16 @@ class Order < ApplicationRecord
 
   enum type: [:refuse, :waiting, :confirm]
 
+  after_create :order_save
+  after_create :order_send
+
+def order_save
+    OrderMailer.new_order_email(@order).deliver_now
+end
+
+def order_send
+  OrderMailer.order_email(self).deliver_now
+end 
+
 
 end
