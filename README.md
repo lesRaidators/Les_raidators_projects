@@ -8,7 +8,9 @@ https://raidators-project-development.herokuapp.com/
 https://raidators-project.herokuapp.com/
 
 #### How to connect to the dashboard admin
-You can find the log in the seed 
+- Raidators@outlook.fr
+- 123456
+
 
 #### Tools 
 * Figma 
