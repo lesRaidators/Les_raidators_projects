@@ -166,6 +166,11 @@ section{
   margin-bottom:5% ;
 }
 
+.brown-background-raidators{
+  background-color:rgba(180, 138, 87,0.1);
+  padding-top:5%; 
+  padding-bottom: 5%;
+}
 .dark-background-raidators{
   background-color: #1B221D;
   padding-top:5%; 
@@ -288,8 +293,12 @@ width: 100%;
 
 .avatar-articles{
 
+  margin-right: auto;
+  margin-left: auto;
+
   height: 60%;
   width: 40%;
+
 
 
 }

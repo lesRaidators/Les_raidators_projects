@@ -55,7 +55,11 @@
                 <% if product.donation? %>
                   <div class="col-lg-3 col-md-3 mb-4">
                     <div class="card small-card-raidators card-product-aligment-center">
-                      <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap" %> 
+                      <div class="card-img-top "> 
+                        <% if product.avatar.attached? %>
+                          <%= image_tag product.avatar, class:"card-img-top top-corner-radius-card-image-raidators" %> 
+                        <%end%>    
+                      </div>   
                       <!-- Card content -->
                       <div class="card-body">
                         <h3> <%= product.title %> </h3>
@@ -90,8 +94,12 @@
                 <% if product.merchandising? %>
                   <div class="col-lg-4 col-md-3 mb-4">
                     <div class="card h-100 card small-card-raidators">
-                      <div class="card-img-top "> <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators" %> </div>
-              
+                      <div class="card-img-top "> 
+                        <% if product.avatar.attached? %>
+                          <%= image_tag product.avatar, class:"card-img-top top-corner-radius-card-image-raidators" %> 
+                          <%end%>    
+                      </div>   
+                      
                       <!-- Card content -->
                         <div class="card-body">
                           <h3> <%= product.title %> </h3>
@@ -172,8 +180,12 @@
                 <% if product.donation? %>
                   <div class="col-lg-3 col-md-3 mb-4">
                     <div class="card small-card-raidators card-product-aligment-center">
-                      <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap" %> 
-                      <!-- Card content -->
+                      <div class="card-img-top "> 
+                        <% if product.avatar.attached? %>
+                          <%= image_tag product.avatar, class:"card-img-top top-corner-radius-card-image-raidators" %> 
+                          <%end%>    
+                      </div>   
+                    <!-- Card content -->
                       <div class="card-body">
                         <h3> <%= product.title %> </h3>
                         <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price %> </p>
@@ -208,8 +220,12 @@
                 <% if product.merchandising? %>
                   <div class="col-lg-4 col-md-3 mb-4">
                     <div class="card h-100 card small-card-raidators">
-                      <div class="card-img-top "> <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators" %> </div>
-              
+                      <div class="card-img-top "> 
+                        <% if product.avatar.attached? %>
+                          <%= image_tag product.avatar, class:"card-img-top top-corner-radius-card-image-raidators" %> 
+                          <%end%>    
+                      </div>   
+
                       <!-- Card content -->
                         <div class="card-body">
                           <h3> <%= product.title %> </h3>

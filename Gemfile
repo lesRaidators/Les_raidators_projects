@@ -71,3 +71,5 @@ gem 'devise'
 gem 'rails_12factor', group: :production
 
 gem "aws-sdk-s3", require: false
+
+gem 'mailjet', :git => 'https://github.com/mailjet/mailjet-gem.git'
