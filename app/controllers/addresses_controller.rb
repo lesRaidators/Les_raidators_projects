@@ -50,7 +50,7 @@ class AddressesController < ApplicationController
   end
 
   def get_user
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
 end
