@@ -3,16 +3,14 @@
 <% if current_user && current_user.admin %>
 
   <div class="container mt-5">
-
-
     <!--Section: Content-->
     <section class="">
 
       <!-- Section heading -->
       <h2 class="text-center  mb-4 pb-2">Articles</h2>
       <!-- Section description -->
-      <p class="text-center mx-auto w-responsive mb-5">Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
-        Bonne lecture &#128214;
+      <p class="text-center mx-auto w-responsive mb-5">Les Raidators : "Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
+        Bonne lecture &#128214;"
       </p>
 
       <%= link_to "Nouvel article", new_post_path, class:"btn btn-success btn-raidators"%>
@@ -21,11 +19,10 @@
       <!-- Grid row -->
       <div class="row align-items-center">
 
-
         <% @posts.each do |post| %>
           <!-- Grid column -->
           <div class="col-lg-5 col-xl-4">
-
+          
             <!-- Featured image -->
             <hr class="mb-5">
 
