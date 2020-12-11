@@ -238,7 +238,7 @@
             <div class="card-footer white py-3 d-flex justify-content-between">
               <%= link_to "Nouvelle commande", products_path, class: "btn btn-outline-primary btn-dark-raidators text-white p-2 mx-0"%>
               <%= link_to "Créer Adresse", new_address_path, class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
-              <%= link_to "Mes adresses", addresses_path, class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
+              <%= link_to "Mon adresse", address_path(@address.id), class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
               <%= link_to "Modifier mon mot de passe", edit_user_registration_path, class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
             </div>
           </div>
