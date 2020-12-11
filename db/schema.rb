@@ -95,7 +95,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_105001) do
     t.text "content"
     t.bigint "user_id", null: false
     t.integer "status", default: 0
-    t.integer "category", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
@@ -106,6 +105,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_105001) do
     t.string "description"
     t.integer "price"
     t.integer "category", default: 0
+    t.integer "donation_part", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

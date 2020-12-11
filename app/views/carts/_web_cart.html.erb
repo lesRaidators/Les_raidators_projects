@@ -21,7 +21,6 @@
                     <!--Grid column-->
                     <div class="col-md-5 mb-4">
                       <hr class="mb-5">
-                      <%= image_tag myproduct.avatar, width: "100%", class:"card-img-top card-rounded-raidators", alt:"Card image cap" %> 
                     </div>
                     <!--Grid column-->
                     <div class="col-md-7 mb-4">
@@ -81,10 +80,16 @@
                 <% else %>
                   <p> Votre panier est vide </p>
                 <% end %>
+                <button type="button" class= "btn btn-success my-3"><%= link_to "Aller a la Boutique",products_path %></button>
               </div>
               <div class="container mt-5 mb-3 text-center w-50 card-center">
+              <% if @user.addresses.empty? %>
+                    <button type="button" class= "btn btn-success my-3"><%= link_to "Créer Adresse",new_address_path %></button>
+              <%else%>
                 <div id="stripe" class="mt-2">
                   <%= render 'stripe' %>
+              <%end%>
+
                 </div>
               </div>
             </div>

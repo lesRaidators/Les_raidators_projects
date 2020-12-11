@@ -2,11 +2,9 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
   before_action :configure_permitted_params, if: :devise_controller?
-  before_action :get_current_objective
+ 
 
-  def get_current_objective
-    @current_objective = Order.current_goal
-  end
+
 
   private
   def configure_permitted_params
