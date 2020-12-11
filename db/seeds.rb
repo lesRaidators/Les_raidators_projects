@@ -76,7 +76,7 @@ description: "Bonnet avec logo raidators",
 price: 0500/10,
 category: 1
 )
-@product_5.avatar.attach(io: File.open('app/assets/images/products/bonnet.png'), filename: 'bonnet.png')
+@product_5.avatar.attach(io: File.open('app/assets/images/products/Bonnet.png'), filename: 'Bonnet.png')
 @product_5.save
 
 puts "-----Pull/Casquette/Casquette------"
