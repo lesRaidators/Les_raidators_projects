@@ -76,7 +76,7 @@ description: "Bonnet avec logo raidators",
 price: 0500/10,
 category: 1
 )
-@product_5.avatar.attach(io: File.open('app/assets/images/products/bonnet.png'), filename: 'bonnet.png')
+@product_5.avatar.attach(io: File.open('app/assets/images/products/Bonnet.png'), filename: 'Bonnet.png')
 @product_5.save
 
 puts "-----Pull/Casquette/Casquette------"
@@ -108,7 +108,7 @@ content: "Pour le moment nous sommes dans les préparatifs, mise en place du sit
 arrivera très rapidement. On vous laisse avec cette photo.",
 user_id: 1
 )
-@post_3.avatar.attach(io: File.open('app/assets/images/posts/surprise.png'), filename: 'surprise.png')
+@post_3.avatar.attach(io: File.open('app/assets/images/posts/Surprise.png'), filename: 'Surprise.png')
 @post_3.save
 
 
