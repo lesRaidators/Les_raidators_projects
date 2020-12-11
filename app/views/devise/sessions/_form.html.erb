@@ -27,19 +27,19 @@
                   </div>
 
                   <div class="field  md-form mt-3">
-                    <%= f.label :password %><br />
+                    <%= f.label :password, "Mot de passe" %><br />
                     <%= f.password_field :password, autocomplete: "current-password", class:"form-control form-control-raidators" %>
                   </div>
 
                   <% if devise_mapping.rememberable? %>
                     <div class="field form-check mt-3">
                       <%= f.check_box :remember_me %>
-                      <%= f.label :remember_me %>
+                      <%= f.label "Se souvenir" %>
                     </div>
                   <% end %>
 
                   <div class="actions text-center my-3">
-                    <%= f.submit "Log in", class:"btn btn-primary btn-raidators" %>
+                    <%= f.submit "Se connecter", class:"btn btn-primary btn-raidators" %>
                   </div>
                 <% end %>
 

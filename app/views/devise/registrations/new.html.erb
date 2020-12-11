@@ -28,20 +28,20 @@
                   </div>
 
                   <div class="field md-form form-control-raidators mt-3">
-                    <%= f.label :password %>
+                    <%= f.label :password, "Mot de passe" %>
                     <% if @minimum_password_length %>
-                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <em>(<%= @minimum_password_length %> caractères minimum)</em>
                     <% end %><br />
                     <%= f.password_field :password, autocomplete: "new-password", id:"form4", class:"form-control form-control-raidators" %>
                   </div>
 
                   <div class="field md-form form-control-raidators mt-3">
-                    <%= f.label :password_confirmation %><br />
+                    <%= f.label :password_confirmation, "Confirmation mot de passe" %><br />
                     <%= f.password_field :password_confirmation, autocomplete: "new-password", id:"form4", class:"form-control form-control-raidators" %>
                   </div>
 
                   <div class="actions text-center my-3">
-                    <%= f.submit "Sign up", class:"btn btn-primary btn-dark-raidators" %>
+                    <%= f.submit "Créer un compte", class:"btn btn-primary btn-dark-raidators" %>
                   </div>
                 <% end %>
 
