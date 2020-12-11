@@ -273,7 +273,9 @@ width: 100%;
   height : 300px !important;
 }
 
-
+.post-avatar{
+  height: 20%;
+}
 /* --------------LIST_POSTS------------ */
 
 
