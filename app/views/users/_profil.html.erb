@@ -181,20 +181,12 @@
           <div class="card-body">
             <div class="row pt-4">
               <div class="col-lg-4 col-md-4 col-sm-6 pb-4">            
-                  <%if @user.avatar.attached?%>
-                    <%= image_tag @user.avatar, alt: 'avatar', class: 'avatar-storage ' %>
-                  <%else%>
-                    <p><i class="fas fa-surprise"></i> Il n'y a pas encore de photo utilisateur lié à cet utilisateur. Vous pouvez en ajouter une.</p>
-                  <%end%>
+                  
+                    
+              
 
               </div>
             </div>
-          
-            <h3>Changer de photo de profil</h3>
-            <%= form_tag user_avatars_path(@user), multipart: true do %>
-              <%= file_field_tag :avatar %>
-              <%= submit_tag "mettre à jour", class:"btn btn-outline-primary btn-dark-raidators text-white p-2 mx-0" %>
-            <% end %>
           </div>
         </div>
 
