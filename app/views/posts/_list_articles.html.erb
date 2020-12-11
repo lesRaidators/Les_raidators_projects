@@ -1,116 +1,53 @@
 <% content_for :title, "Articles | Raidators" %>
+<div class="container  mt-5">
+  
+  <!--Section: Content-->
+  <section>
+    <!-- Section heading -->
+    <h2 class="text-center  mb-4 pb-2">Articles</h2>
+    <!-- Section description -->
+    <p class="text-center mx-auto w-responsive mb-5">Les Raidators : "Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
+      Bonne lecture &#128214;"
+    </p>
 
-<% if current_user && current_user.admin %>
-
-  <div class="container mt-5">
-    <!--Section: Content-->
-    <section class="">
-
-      <!-- Section heading -->
-      <h2 class="text-center  mb-4 pb-2">Articles</h2>
-      <!-- Section description -->
-      <p class="text-center mx-auto w-responsive mb-5">Les Raidators : "Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
-        Bonne lecture &#128214;"
-      </p>
-
-      <%= link_to "Nouvel article", new_post_path, class:"btn btn-success btn-raidators"%>
-
-
+    <div>
       <!-- Grid row -->
-      <div class="row align-items-center">
-
-        <% @posts.each do |post| %>
-          <!-- Grid column -->
-          <div class="col-lg-5 col-xl-4">
-          
-            <!-- Featured image -->
-            <hr class="mb-5">
-
-            <%= image_tag post.avatar  %>
-              
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-lg-7 col-xl-8">
-
-            <!-- Post title -->
-            <p class=" mb-3"><strong><%= post.title %></strong></p>
-            <!-- Read more button -->
-            <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
-            <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
-
-          </div>
-          <!-- Grid column -->
-        <%end%>
-
-
-      </div>
-      <!-- Grid row -->
-
-      <hr class="my-5">
-
-    </section>
-    <!--Section: Content-->
-
-
-  </div>
-
-
-<% else %>
-  <div class="container mt-5">
-
-
-    <!--Section: Content-->
-    <section class="">
-
-      <!-- Section heading -->
-      <h2 class="text-center  mb-4 pb-2">Articles récents</h2>
-      <!-- Section description -->
-      <p class="text-center mx-auto w-responsive mb-5">Retrouve ici l'ensemble des articles de notre blog. Ces articles peuvent aborder à la fois l'avancement de notre projet, des conseils, des recettes secrètes pour faire votre meilleur gâteau au chocolat.
-        Bonne lecture &#128214;
-      </p>
-
-      <!-- Grid row -->
-      <div class="row align-items-center">
-        <% @posts.each do |post| %>
-
+      <% @posts.each do |post| %>
+        <div class="row align-items-center">
 
           <!-- Grid column -->
           <div class="col-lg-5 col-xl-4">
-
             <!-- Featured image -->
             <hr class="mb-5">
-
-            <%= image_tag post.avatar if post.avatar.attached?  %>
-              
-
+            <div class="post-avatar">
+              <%= image_tag post.avatar %>
+            </div>
           </div>
-          
-
           <!-- Grid column -->
           <div class="col-lg-7 col-xl-8">
-
             <!-- Post title -->
             <p class=" mb-3"><strong><%= post.title %></strong></p>
             <!-- Read more button -->
-            <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
-
-
+            <% if current_user && current_user.admin %>
+              <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+              <%= link_to "Modifier l'article", edit_post_path(post.id), class:"btn bg-info text-white btn-raidators"%>
+              <%= link_to "Nouvel article", new_post_path, class:"btn btn-success btn-raidators"%>
+            <%else%>
+              <%= link_to "Voir l'article", post_path(post.id), class:"btn btn-success btn-raidators"%>
+            <%end%>
           </div>
           <!-- Grid column -->
+        </div>
+      <%end%>
+    </div>
+    <!-- Grid row -->
 
-        <%end%>
+    <hr class="my-5">
+
+  </section>
+  <!--Section: Content-->
+
+</div>
 
 
-      </div>
-      <!-- Grid row -->
 
-      <hr class="my-5">
-
-    </section>
-    <!--Section: Content-->
-
-
-  </div>
-<% end %>
