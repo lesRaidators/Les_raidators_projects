@@ -276,7 +276,7 @@ width: 100%;
 .post-avatar{
   height: 20%;
 }
-/* --------------LIST_POSTS------------ */
+/* --------------POSTS------------ */
 
 
 .post_image {
@@ -286,6 +286,13 @@ width: 100%;
   
 }
 
+.avatar-articles{
+
+  height: 60%;
+  width: 40%;
+
+
+}
 
 .show-post{
 
