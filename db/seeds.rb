@@ -83,16 +83,36 @@ puts "-----Pull/Casquette/Casquette------"
 
 
 
-
-3.times do |post|
-@post = Post.create(
-title: 'Article dingue',
-content: "Nous voilà arriver à .............. C'est chouette....",
+@post_1 = Post.create(
+title: 'Inauguration de notre site',
+content: "Ça y est, il est là, la version 2.0 du site des Raidators. C'est notre point de départ. C'est comme un être cher que l'on attend. Il est là, avec plein de fonctionnalités.
+Bon, vous l'aviez compris, on est content, mais pourquoi ? Ce site offre plus de fonctionnalité que le précédent. Et oui, si vous être particuliers vous pouvez nous faire un don. Si vous êtes
+un professionnel, vous pouvez nous sponsoriser financièrement (si si on vous promet) ou nous aider à collecter du matériel au sein de votre établissement.",
 user_id: 1
 )
-end
-@post.avatar.attach(io: File.open('app/assets/images/posts/website.jpg'), filename: 'website.jpg')
-@post.save
+@post_1.avatar.attach(io: File.open('app/assets/images/posts/website.jpg'), filename: 'website.jpg')
+@post_1.save
+
+@post_2 = Post.create(
+title: 'Achat de notre Peugeot 205',
+content: "En Juillet dernier, Hélène a trouvé cette beauté sur le marché de la peugeot 205. Nous sommes heureux de vous présenter la Big Berta surnommée la Bb",
+user_id: 1
+)
+@post_2.avatar.attach(io: File.open('app/assets/images/partnership/205.png'), filename: '205.png')
+@post_2.save
+
+
+@post_3 = Post.create(
+title: 'Une petite surprise',
+content: "Pour le moment nous sommes dans les préparatifs, mise en place du site, etc. Nous nous réunissons souvent pour pouvoir vous préparer une petite surprise qui 
+arrivera très rapidement. On vous laisse avec cette photo.",
+user_id: 1
+)
+@post_3.avatar.attach(io: File.open('app/assets/images/posts/surprise.png'), filename: 'surprise.png')
+@post_3.save
+
+
+
 
 puts "-----Articles du blog-----"
 
