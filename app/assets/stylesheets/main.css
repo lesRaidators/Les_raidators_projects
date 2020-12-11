@@ -168,6 +168,8 @@ section{
 
 .dark-background-raidators{
   background-color: #1B221D;
+  padding-top:5%; 
+  padding-bottom: 5%;
 }
 .light-color-raidators{
   color: rgb(249, 249, 249);

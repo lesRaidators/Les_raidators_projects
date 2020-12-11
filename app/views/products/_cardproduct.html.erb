@@ -27,9 +27,9 @@
           <!--Grid column-->
           <div class="col-lg-12">
             <h3 class="text-left mb-5"> Achat solidaire</h3>
-
-            <%= link_to 'Créer un produit', new_product_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
-
+            <br>
+            <%= link_to 'Créer un produit', new_product_path, class: "btn btn-success btn-raidators text-white p-2 mx-0 mb-3"%>
+            <br>
             <!-- Pills navs -->
             <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
               <li class="nav-item">
@@ -55,7 +55,7 @@
                 <% if product.donation? %>
                   <div class="col-lg-3 col-md-3 mb-4">
                     <div class="card small-card-raidators card-product-aligment-center">
-                      <%= image_tag product.image_url, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap" %> 
+                      <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap" %> 
                       <!-- Card content -->
                       <div class="card-body">
                         <h3> <%= product.title %> </h3>
@@ -90,7 +90,7 @@
                 <% if product.merchandising? %>
                   <div class="col-lg-4 col-md-3 mb-4">
                     <div class="card h-100 card small-card-raidators">
-                      <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators" %> </div>
+                      <div class="card-img-top "> <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators" %> </div>
               
                       <!-- Card content -->
                         <div class="card-body">
@@ -172,7 +172,7 @@
                 <% if product.donation? %>
                   <div class="col-lg-3 col-md-3 mb-4">
                     <div class="card small-card-raidators card-product-aligment-center">
-                      <%= image_tag product.image_url, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap" %> 
+                      <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators", alt:"Card image cap" %> 
                       <!-- Card content -->
                       <div class="card-body">
                         <h3> <%= product.title %> </h3>
@@ -208,7 +208,7 @@
                 <% if product.merchandising? %>
                   <div class="col-lg-4 col-md-3 mb-4">
                     <div class="card h-100 card small-card-raidators">
-                      <div class="card-img-top "> <%= image_tag product.image_url, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators" %> </div>
+                      <div class="card-img-top "> <%= image_tag product.avatar, width: "100%", class:"card-img-top top-corner-radius-card-image-raidators" %> </div>
               
                       <!-- Card content -->
                         <div class="card-body">
