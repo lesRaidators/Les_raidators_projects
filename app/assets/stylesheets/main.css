@@ -179,10 +179,13 @@ section{
   padding-top:5%; 
   padding-bottom: 5%;
 }
-.dark-background-raidators{
-  background-color: #1B221D;
-  padding-top:5%; 
-  padding-bottom: 5%;
+.banner-background{
+  background: url(home_page/EuropRaid-2017-051.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  position: relative;
 }
 .light-color-raidators{
   color: rgb(249, 249, 249);
