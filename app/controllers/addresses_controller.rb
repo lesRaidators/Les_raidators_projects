@@ -1,5 +1,6 @@
 class AddressesController < ApplicationController
   before_action :get_user
+  before_action :authenticate_user!
 
   def index
     @addresses = Address.all
@@ -8,6 +9,9 @@ class AddressesController < ApplicationController
 
   def show
     @address = Address.find(params[:id])
+    if current_user.id != @address.user_id 
+      redirect_to root_path
+    end
   end
 
   def new

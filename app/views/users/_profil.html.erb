@@ -182,9 +182,9 @@
             <div class="row pt-4">
               <div class="col-lg-6 col-md-4 col-sm-6 pb-4">            
                 <h3> Email :</h3> <%= @user.email %> </p>
-                  <% if @user.addresses.first %>
-                  <h3> Mon adresse :</h3><p> <%= link_to "Voir", user_address_path(@user, @user.addresses.first), class:"btn btn-outline-primary btn-light-raidators" %></p>
-                  <%else%>
+                <% if @user.addresses.first %>
+                <h3> Mon adresse :</h3><p> <%= link_to "Voir", user_address_path(@user, @user.addresses.first), class:"btn btn-outline-primary btn-light-raidators" %></p>
+                <%else%>
           
                 <%end %>
               </div>
