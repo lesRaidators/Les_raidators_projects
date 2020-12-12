@@ -3,7 +3,6 @@ class AddressesController < ApplicationController
 
   def index
     @addresses = Address.all
-
   end 
 
   def show
@@ -12,19 +11,16 @@ class AddressesController < ApplicationController
 
   def new
     @address = Address.new
-
   end
 
   def create
     @address = Address.new(post_params.merge(user_id: current_user.id)) 
-  
     if @address.save
       redirect_to cart_path(Cart.find_or_create_by(user_id: current_user.id)), notice: "Address created"
     else
       puts "something goes wrong"
-          puts @address.errors.messages
-    end 
-         
+      puts @address.errors.messages
+    end        
   end
 
   def edit
@@ -44,10 +40,7 @@ class AddressesController < ApplicationController
   end
 
   private 
-
   def post_params
   params.require(:address).permit(:first_name, :last_name, :street_number, :street, :zip_code, :city, :country, :phone_number, :user_id)
   end
-
-
 end

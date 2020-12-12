@@ -10,14 +10,12 @@ before_action :set_cart, only: [:show]
     end
   end
 
-
   def destroy
     @carts = Cart.find(params[:id]) 
     @carts.destroy
   end
-  
+ 
   private
-
   def set_cart
     @cart = Cart.find(params[:id])
   end

@@ -23,30 +23,19 @@ class ChargesController < ApplicationController
 
     if customer.save && charge.save
       @order = Order.create(stripe_customer_id: customer.id, user_id: current_user.id)
-       @cart.selected_products.destroy_all
+      @cart.selected_products.destroy_all
 
-       @selected_products.each do |product|
+      @selected_products.each do |product|
         @order_product = JoinOrderProducts.create(order_id: @order.id, product_id: product.product_id, quantity: product.quantity)
         @order_product.save
 			end
-
-
-        redirect_to products_path
-      else
-       render 'new'
+      redirect_to products_path
+    else
+      render 'new'
     end
   
-  
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to new_charge_path
-  end
-
-
-
-
-
-
-
-
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_charge_path
+    end
 end

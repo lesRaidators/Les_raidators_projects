@@ -5,5 +5,4 @@ class PictureProductsController < ApplicationController
     @product.picture_product.attach(params[:picture_product])
     redirect_to(products_path(@product))
   end
-
 end
