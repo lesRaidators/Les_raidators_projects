@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/car', to:"static_pages#car"
   
   devise_for :users 
-  resources :addresses
+
   resources :selected_products
 
   resources :products do
@@ -18,12 +18,15 @@ Rails.application.routes.draw do
 
   resources :orders, path: 'commande'
   resources :carts, path: 'panier'
-  resources :addresses
+  
   resources :charges, path: 'paiement'
   
-  resources :users, path: 'profil'do
+  resources :users, path: 'profil' do
   resources :avatars, only: [:create]
+  resources :addresses
   end
+
+ 
 
   resources :posts do
     resources :comments

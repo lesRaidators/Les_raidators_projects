@@ -11,5 +11,4 @@ class Address < ApplicationRecord
   validates :phone_number, presence: true
   
   enum type: [:billing, :shipping]
-
 end

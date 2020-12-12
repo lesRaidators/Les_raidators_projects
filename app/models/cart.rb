@@ -12,20 +12,16 @@ class Cart < ApplicationRecord
     item
   end
 
-
-def total 
- selected_products.to_a.sum(&:total)
-end
-
-
-def total_stripe
-  selected_products = self.selected_products
-  total = 0
-  selected_products.each do |item|
-    total += item.product.price
+  def total 
+    selected_products.to_a.sum(&:total)
   end
-  return total
-end
 
-
+  def total_stripe
+    selected_products = self.selected_products
+    total = 0
+    selected_products.each do |item|
+    total += item.product.price
+    end
+    return total
+  end
 end
