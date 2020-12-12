@@ -1,5 +1,6 @@
 class AddressesController < ApplicationController
   before_action :get_user
+  before_action :only_see_own_page, only: [:show]
 
   def index
     @addresses = Address.all
@@ -51,6 +52,14 @@ class AddressesController < ApplicationController
 
   def get_user
     @user = User.find(params[:user_id])
+  end
+
+  def only_see_own_page
+    @user = User.find(params[:id])
+
+    if current_user != @user
+      redirect_to root_path, notice: "Sorry, but you are only allowed to view your own profile page."
+    end
   end
 
 end
