@@ -27,6 +27,7 @@ class AddressesController < ApplicationController
     else
       puts "something goes wrong"
           puts @address.errors.messages
+          redirect_to root_path
     end 
          
   end
@@ -38,13 +39,13 @@ class AddressesController < ApplicationController
   def update
     @address = Address.find(params[:id])
     @address.update(post_params)
-    redirect_to products_path
+    redirect_to root_path
   end
 
   def destroy
     @address = Address.find(params[:id])
     @address.destroy
-    redirect_to products_path
+    redirect_to root_path
   end
 
   private 
