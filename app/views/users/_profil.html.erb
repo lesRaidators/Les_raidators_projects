@@ -182,9 +182,9 @@
             <div class="row pt-4">
               <div class="col-lg-6 col-md-4 col-sm-6 pb-4">            
                 <h3> Email :</h3> <%= @user.email %> </p>
-                <% if @user.addresses %>
-                <h3> Mon adresse :</h3><p> <%= link_to "Voir", user_address_path(@user, @user.addresses.first), class:"btn btn-outline-primary btn-light-raidators" %></p>
-                <%else%>
+                  <% if @user.addresses.first %>
+                  <h3> Mon adresse :</h3><p> <%= link_to "Voir", user_address_path(@user, @user.addresses.first), class:"btn btn-outline-primary btn-light-raidators" %></p>
+                  <%else%>
           
                 <%end %>
               </div>
@@ -240,7 +240,7 @@
             <div class="card-footer white py-3 d-flex justify-content-between">
             <%= link_to "Nouvelle commande", products_path, class: "btn btn-outline-primary btn-dark-raidators text-white p-2 mx-0"%>
 
-            <% if @user.addresses %>
+            <% if @user.addresses.first %>
               <%= link_to "Modifier mon adresse", edit_user_address_path(@user, @user.addresses.first), class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
             <% else %>
               <%= link_to "Créer Adresse", new_user_address_path(@user), class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
