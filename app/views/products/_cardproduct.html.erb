@@ -160,7 +160,7 @@
             <div class="row mx-4 my-4 justify-content-center">
               <% @products.each do |product| %>
                 <% if product.donation? %>
-                  <div class="col-lg-3 col-md-3 mb-4">
+                  <div class="col-lg-3 col-md-4 mb-4">
                     <div class="card small-card-raidators card-product-aligment-center">
                       <div class="card-img-top "> 
                         <% if product.avatar.attached? %>
@@ -196,7 +196,7 @@
             <div class="row mx-4 my-4 justify-content-center">
               <% @products.each do |product| %>
                 <% if product.merchandising? %>
-                  <div class="col-lg-4 col-md-3 mb-4">
+                  <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100 card small-card-raidators">
                       <div class="card-img-top "> 
                         <% if product.avatar.attached? %>
