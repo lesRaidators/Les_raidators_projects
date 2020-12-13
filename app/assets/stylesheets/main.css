@@ -29,6 +29,7 @@
   background: rgb(235, 235, 235);
   /* Actionable Item */
   border-color:white;
+  color:#1B221D;
   box-sizing: border-box;
   border-radius: 6px; 
 }
