@@ -1,35 +1,28 @@
 <% content_for :title, "Profil | Raidators" %>
 
-<div class="container-fluid mt-3 mb-5 brown-background-raidators ">
+<div class="container-fluid mt-3 mb-5 brown-background-raidators">
   <% if current_user && current_user.admin %>
     <% content_for :title, "Admin | Raidators" %>
-
     <div class="my-5 py-5 container form-background-raidators">
-
       <!-- Section: Block Content -->
       <section>
         <h3 class="text-center text-uppercase small mb-4">Admin</h3>
         <h2 class="text-center pb-2">Données</h2>
         <hr class="w-header my-4">
         <p class="lead text-center text-muted pt-2 mb-5">Bonjour petit raidator, cette page te permet d'avoir une vision global de l'avancement du projet.</p>
-
         <!--Grid row-->
-        <div class="row">
-    
+        <div class="row">  
           <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-    
+          <div class="col-lg-4 col-md-12 mb-4">    
             <!-- Admin card -->
-            <div class="card mt-3">
-    
-              <div class="">
+            <div class="card mt-3">   
+              <div>
                 <i class="far fa-money-bill-alt fa-lg primary-color p-4 ml-3 mt-n3 rounded text-white"></i>
                 <div class="float-right text-right p-3">
                   <p class="text-uppercase text-muted mb-1"><small>Ventes</small></p>
                   <h3 class="mb-0">23 000$</h3>
                 </div>
-              </div>
-    
+              </div>  
               <div class="card-body pt-0">
                 <div class="progress md-progress">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
@@ -37,55 +30,43 @@
                 </div>
                 <p class="card-text">Better than last week (75%)</p>
               </div>
-    
             </div>
             <!-- Admin card -->
-    
           </div>
           <!--Grid column-->
-    
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
-    
+          <div class="col-lg-4 col-md-6 mb-4">   
             <!-- Admin card -->
-            <div class="card mt-3">
-    
-              <div class="">
+            <div class="card mt-3">  
+              <div >
                 <i class="fas fa-chart-line fa-lg teal p-4 ml-3 mt-n3 rounded text-white"></i>
                 <div class="float-right text-right p-3">
                   <p class="text-uppercase text-muted mb-1"><small>inscription</small></p>
                   <p class="mb-0">3534</p>
                 </div>
-              </div>
-    
+              </div> 
               <div class="card-body pt-0">
                 <div class="progress md-progress">
                   <div class="progress-bar bg-danger" role="progressbar" style="width: 46%" aria-valuenow="46" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
                 <p class="card-text">Worse than last week (46%)</p>
-              </div>
-    
+               </div>  
             </div>
             <!-- Admin card -->
-    
           </div>
           <!--Grid column-->
     
           <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4">
-    
             <!-- Admin card -->
             <div class="card mt-3">
-    
-              <div class="">
+              <div>
                 <i class="fas fa-chart-pie fa-lg purple p-4 ml-3 mt-n3 rounded text-white"></i>
                 <div class="float-right text-right p-3">
                   <p class="text-uppercase text-muted mb-1"><small>traffic</small></p>
                   <p class="mb-0">656 234</p>
                 </div>
               </div>
-    
               <div class="card-body pt-0">
                 <div class="progress md-progress">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0"
@@ -93,28 +74,18 @@
                 </div>
                 <p class="card-text">Better than last week (31%)</p>
               </div>
-    
             </div>
             <!-- Admin card -->
-    
           </div>
           <!--Grid column-->
-    
         </div>
         <!--Grid row-->
-    
       </section>
       <!--Section: Content-->
-
-    
-    
     </div>
-
     <div class="container my-5 ">
-      
       <!-- Section: Block Content -->
       <section>
-    
         <div class="row">
           <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
             <div class="card-header d-flex justify-content-between align-items-center dark-background-raidators text-white top-corner-radius-card-image-raidators ">
@@ -141,7 +112,6 @@
                       <% total = 0 %>
                       <% order.join_order_products.each do |order_product| %>
                         <% total += order_product.quantity * order_product.product.price %>
-
                           <td class="text-center"><strong><%= order_product.product.title %></strong></td>
                           <td class="text-center"><%= order_product.product.price %> €</td>
                           <td class="text-center"><%= order_product.quantity %></td>
@@ -155,25 +125,14 @@
               </table>
             </div>
           </div>
-      
         </div>
-
       </section>
       <!-- Section: Block Content -->
-
-      
     </div>
-
-
-
-
   <% else %>
-  
     <div class="container mt-5">
-
       <!-- div: Block Content -->
       <div class="row">
-
         <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
          <div class="card-header card-header d-flex justify-content-between align-items-center dark-background-raidators py-3 top-corner-radius-card-image-raidators">
           <p class="text-white mb-0">Bonjour <%= @user.email.split('@')[0].capitalize %>, voici votre profil</p>
@@ -182,27 +141,21 @@
             <div class="row pt-4">
               <div class="col-lg-6 col-md-4 col-sm-6 pb-4">            
                 <h3> Email :</h3> <%= @user.email %> </p>
-                  <% if @user.addresses.first %>
-                  <h3> Mon adresse :</h3><p> <%= link_to "Voir", user_address_path(@user, @user.addresses.first), class:"btn btn-outline-primary btn-light-raidators" %></p>
-                  <%else%>
+                <% if @user.addresses.first %>
+                <h3> Mon adresse :</h3><p> <%= link_to "Voir", user_address_path(@user, @user.addresses.first), class:"btn btn-outline-primary btn-light-raidators" %></p>
+                <%else%>
           
                 <%end %>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
-
-    <div class="container ">
-      
+    <div class="container"> 
       <!-- Section: Block Content -->
-      <section>
-        
-        <div class="row">
-          
+      <section>      
+        <div class="row">          
           <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
             <div class="card-header d-flex justify-content-between align-items-center  py-3 dark-background-raidators top-corner-radius-card-image-raidators ">
               <p class="mb-0 text-white ">Vos commandes</p>
@@ -248,14 +201,10 @@
               <%= link_to "Modifier mon mot de passe", edit_user_registration_path, class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
 
             </div>
-          </div>
-         
+          </div>         
         </div>
-
       </section>
       <!-- Section: Block Content -->
-
-      
     </div>
   <% end %>
 </div>

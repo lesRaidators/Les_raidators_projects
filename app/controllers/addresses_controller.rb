@@ -1,6 +1,6 @@
 class AddressesController < ApplicationController
   before_action :get_user
-  before_action :only_see_own_page, only: [:show]
+  before_action :authenticate_user!
 
   def index
     @addresses = Address.all
@@ -9,6 +9,9 @@ class AddressesController < ApplicationController
 
   def show
     @address = Address.find(params[:id])
+    if current_user.id != @address.user_id 
+      redirect_to root_path
+    end
   end
 
   def new
@@ -20,10 +23,15 @@ class AddressesController < ApplicationController
     @address = @user.addresses.build(post_params) 
   
     if @address.save
+      if current_user.cart.selected_products.empty?
+        redirect_to user_path(current_user.id)
+      else
       redirect_to cart_path(Cart.find_or_create_by(user_id: current_user.id)), notice: "Address created"
+      end
     else
       puts "something goes wrong"
           puts @address.errors.messages
+          redirect_to root_path
     end 
          
   end
@@ -35,13 +43,13 @@ class AddressesController < ApplicationController
   def update
     @address = Address.find(params[:id])
     @address.update(post_params)
-    redirect_to products_path
+    redirect_to root_path
   end
 
   def destroy
     @address = Address.find(params[:id])
     @address.destroy
-    redirect_to products_path
+    redirect_to root_path
   end
 
   private 

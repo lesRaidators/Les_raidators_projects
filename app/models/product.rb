@@ -9,6 +9,6 @@ validates :description, presence: true
 validates :price, presence: true
 
 
-enum category: [:donation, :merchandising]
+enum category: {donation: "Don", merchandising: "Produit"}
 
 end
