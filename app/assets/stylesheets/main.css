@@ -20,6 +20,7 @@
   background: #1B221D;
   /* Actionable Item */
   border-color:white;
+  color: white;
   box-sizing: border-box;
   border-radius: 6px; 
 }
@@ -111,6 +112,11 @@
   border-top-right-radius: 12px ;
   box-shadow: 0px 0px 0px;
 }
+
+.card-img-top{
+  height:100%;
+}
+
 /* ------------Center card content------------ */
 .card-product-aligment-center{
   margin: auto;
@@ -264,6 +270,22 @@ section{
   color: white;
 }
 
+.product-card-image {
+  border-radius: 12px 12px 0 0;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 0px;
+}
+
+.card-img-top-products{
+  height:100%;
+  width: unset !important;
+  transform: scale(1.1);
+  transform-origin: top;
+}
+
 /* ----------PROFIL ------*/
 
 .avatar-storage {
@@ -370,5 +392,10 @@ width: 100%;
   .title-carousel-raidators {
     font-size: 2.1em;
   }
-  
 }
+
+@media screen and (min-width: 200px) and (max-width: 750px) {
+  .card-img-top-products {
+    margin-top: 2rem;
+    border-radius: 6px 6px 0 0;
+  }
