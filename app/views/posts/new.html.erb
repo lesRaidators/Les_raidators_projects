@@ -1,6 +1,6 @@
 <% content_for :title, "Nouvel article | Raidators" %>
 
-<div class="container-fluid mt-3 mb-5 light-background-raidators ">
+<div class="container-fluid mt-3 mb-5 dark-background-raidators ">
 
   <div class="col-lg-6 col-md-4 form-background-raidators">
     <div class="container py-5 my-5">
@@ -22,7 +22,8 @@
         </div>
     
         <div class="actions text-center my-3">
-          <%= f.submit "Valider le don/produit", class:"btn btn-primary btn-dark-raidators" %>
+          <%= f.submit "Valider l'article", class:"btn btn-success btn-raidators" %>
+          <%= link_to "Retour aux articles", posts_path, class:"btn btn-primary btn-dark-raidators"%>
         </div>
 
       <%end%>
