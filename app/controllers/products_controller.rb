@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   
+ before_action :authenticate_user!, only: [:edit, :new]
+  
   def index
     @products = Product.all
   end
@@ -9,23 +11,39 @@ class ProductsController < ApplicationController
   end
 
   def create
+  
     @product = Product.create(post_params)
-    Rails.logger.info(@product.errors.inspect)
-  end
+      if @product.save
+        redirect_to products_path
+     else
+        render :new
+     end
+  end 
 
   def new
-    @product = Product.new
-    Rails.logger.info(@product.errors.inspect)
+    if current_user.admin?
+      @product = Product.new
+    else
+      redirect_to products_path
+    end
   end
 
   def update
     @product = Product.find(params[:id])
     @product.update(post_params)
-    redirect_to products_path
+    if @product.save
+      redirect_to products_path
+   else
+      render :new
+   end
   end
 
   def edit
+    if current_user.admin?
     @product = Product.find(params[:id])
+  else
+    redirect_to products_path
+  end
   end
 
   def destroy

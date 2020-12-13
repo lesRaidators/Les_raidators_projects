@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :new]
+
+
   def index
     @posts = Post.all 
   end
@@ -10,11 +13,19 @@ class PostsController < ApplicationController
 
   def create 
     @post = Post.create(post_params.merge(user_id: current_user.id))
-    redirect_to posts_path
+    if @post.save
+      redirect_to posts_path
+   else
+      render :new
+   end 
   end
 
   def new 
-    @post = Post.new 
+    if current_user.admin?
+     @post = Post.new 
+    else
+      redirect_to posts_path
+    end
   end
 
   def destroy
@@ -24,7 +35,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    if current_user.admin?
+      @post = Post.find(params[:id])
+    else
+      redirect_to posts_path
+     end
   end
 
   def update

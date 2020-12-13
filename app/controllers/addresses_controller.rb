@@ -29,9 +29,7 @@ class AddressesController < ApplicationController
       redirect_to cart_path(Cart.find_or_create_by(user_id: current_user.id)), notice: "Address created"
       end
     else
-      puts "something goes wrong"
-          puts @address.errors.messages
-          redirect_to root_path
+      render :new
     end 
          
   end
@@ -43,13 +41,13 @@ class AddressesController < ApplicationController
   def update
     @address = Address.find(params[:id])
     @address.update(post_params)
-    redirect_to root_path
+    redirect_to user_path(current_user.id)
   end
 
   def destroy
     @address = Address.find(params[:id])
     @address.destroy
-    redirect_to root_path
+    redirect_to user_path(current_user.id)
   end
 
   private 
