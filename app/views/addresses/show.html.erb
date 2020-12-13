@@ -24,7 +24,7 @@
                 <h3> Pays :</h3><p> <%= @address.country %> </p>
                 <h3> Numéros de téléphone :</h3><p> <%= @address.phone_number %></p>
                 <h3> Nom d'entreprise:</h3><p> <%= @address.company_name %></p>
-                <%= link_to "Modifier", edit_user_address_path(@address), class: "btn btn-outline-primary text-white btn-dark-raidators p-2 mx-0"%>
+                <%= link_to "Modifier", edit_user_address_path(@user, @user.addresses.first), class: "btn btn-outline-primary text-white btn-dark-raidators p-2 mx-0"%>
                 <%= link_to "Retour au profil", user_path(current_user.id), class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
               </div>
             </div>

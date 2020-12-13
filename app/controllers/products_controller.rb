@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   
+ before_action :authenticate_user!, only: [:edit, :new]
+  
   def index
     @products = Product.all
   end
@@ -14,7 +16,7 @@ class ProductsController < ApplicationController
       if @product.save
         redirect_to products_path
      else
-        render :new, notice: "Sorry, but you are only allowed to view your own profile page."
+        render :new
      end
   end 
 
@@ -32,7 +34,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to products_path
    else
-      render :new, notice: "Sorry, but you are only allowed to view your own profile page."
+      render :new
    end
   end
 
