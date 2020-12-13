@@ -15,7 +15,8 @@ Comment.destroy_all
 @product_1 = Product.new(
   title: 'Don 10€',
   description: "Soutenez l'équipe Raidators",
-  price: 1000/100
+  price: 1000/100,
+  category: 'Don'
 )
   @product_1.avatar.attach(io: File.open('app/assets/images/seed/donation.jpg'), filename: 'donation.jpg')
   @product_1.save
@@ -27,7 +28,8 @@ Comment.destroy_all
 @product_2 = Product.new(
 title: 'Don 20€',
 description: "Participer aux frais logistiques et aider Raidators à atteindre son objectif",
-price: 2000/100
+price: 2000/100,
+category: 'Don'
 )
 @product_2.avatar.attach(io: File.open('app/assets/images/seed/donation.jpg'), filename: 'donation.jpg')
 @product_2.save
@@ -39,7 +41,8 @@ puts "------don de 20 euros--------"
 @product_3 = Product.new(
   title: 'Don 30€',
   description: "Participer aux frais logistiques et aider Raidators à atteindre son objectif",
-  price: 3000/100
+  price: 3000/100,
+  category: 'Don'
 )
   @product_3.avatar.attach(io: File.open('app/assets/images/seed/donation.jpg'), filename: 'donation.jpg')
   @product_3.save
@@ -53,7 +56,7 @@ puts "------don de 20 euros--------"
 title: 'Sweat-shirt à capuche Raidators',
 description: "Un pull en laine qui portera chaud tout l'hiver et même les soirs d'été. 65% Coton - 35% Polyester.",
 price: 3500/100,
-category: 1
+category: 'Produit'
 )
 @product_4.avatar.attach(io: File.open('app/assets/images/products/pull.png'), filename: 'pull.png')
 @product_4.save
@@ -64,7 +67,7 @@ category: 1
 title: 'Casquette Raidators',
 description: "Casquette avec logo raidators - 100% coton",
 price: 1500/100,
-category: 1
+category: 'Produit'
 )
 @product_5.avatar.attach(io: File.open('app/assets/images/products/casquette.png'), filename: 'casquette.png')
 @product_5.save
@@ -74,7 +77,7 @@ category: 1
 title: 'Bonnet Raidators',
 description: "Bonnet avec logo raidators",
 price: 0500/10,
-category: 1
+category: 'Produit'
 )
 @product_5.avatar.attach(io: File.open('app/assets/images/products/Bonnet.png'), filename: 'Bonnet.png')
 @product_5.save
