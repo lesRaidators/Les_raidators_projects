@@ -7,6 +7,7 @@ has_one_attached :avatar
 validates :title, presence: true
 validates :description, presence: true
 validates :price, presence: true
+validates :avatar, presence: true
 
 
 enum category: {donation: "Don", merchandising: "Produit"}
