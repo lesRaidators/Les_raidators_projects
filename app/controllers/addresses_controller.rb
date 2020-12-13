@@ -23,7 +23,11 @@ class AddressesController < ApplicationController
     @address = @user.addresses.build(post_params) 
   
     if @address.save
+      if current_user.cart.selected_products.empty?
+        redirect_to user_path(current_user.id)
+      else
       redirect_to cart_path(Cart.find_or_create_by(user_id: current_user.id)), notice: "Address created"
+      end
     else
       puts "something goes wrong"
           puts @address.errors.messages
