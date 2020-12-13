@@ -352,6 +352,14 @@ width: 100%;
   
 }
 
+/* -------------------CAR------------------- */
+.flash-raidators{
+  position: absolute;
+  margin-top: 6em;
+  z-index: 5;
+  width: 100%;
+}
+
 @media screen and (min-width: 200px) and (max-width: 640px) {
   .bloc {
     display:block;
