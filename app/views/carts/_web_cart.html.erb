@@ -79,16 +79,16 @@
                 <% else %>
                   <p> Votre panier est vide </p>
                 <% end %>
-                <button type="button" class= "btn btn-success btn-raidators my-3"><%= link_to "Aller a la Boutique",products_path %></button>
+                  <%= link_to "Aller a la Boutique",products_path, class:"btn btn-outline-primary btn-dark-raidators my-3" %>
               </div>
               <div class="container mt-5 mb-3 text-center w-50 card-center">
-              <% if @user.addresses.empty? %>
-                    <button type="button" class= "btn btn-success btn-dark-raidators my-3"><%= link_to "Créer Adresse",new_user_address_path(@user) %></button>
-              <%else%>
-                <div id="stripe" class="mt-2">
-                  <%= render 'stripe' %>
-              <%end%>
-                </div>
+                <% if @user.addresses.empty? %>
+                    <%= link_to "Créer Adresse",new_user_address_path(@user), class:"btn btn-success btn-raidators my-3" %>
+                <%else%>
+                  <div id="stripe" class="mt-2">
+                    <%= render 'stripe' %>
+                <%end%>
+                  </div>
               </div>
             </div>
             <!--/.Card-->
