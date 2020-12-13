@@ -14,7 +14,11 @@ class PostsController < ApplicationController
   end
 
   def new 
-    @post = Post.new 
+    if current_user.admin?
+     @post = Post.new 
+    else
+      redirect_to products_path
+    end
   end
 
   def destroy
