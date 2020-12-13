@@ -53,7 +53,7 @@ puts "------don de 20 euros--------"
 
 
 @product_4 = Product.new(
-title: 'Sweat-shirt à capuche Raidators',
+title: 'Sweat Raidators',
 description: "Un pull en laine qui portera chaud tout l'hiver et même les soirs d'été. 65% Coton - 35% Polyester.",
 price: 3500/100,
 category: 'Produit'
