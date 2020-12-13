@@ -2,17 +2,14 @@
 
 <!-- Main navigation -->
 <div class="container-fluid mt-3 mb-5 light-background-raidators">
-
   <!-- Full Page Intro -->
   <section class:"image-edit-registration">
     <!-- background -->
     <div class="col-lg-6 col-md-4 form-background-raidators">
       <!-- Content -->
-      <div class="container my-5">
-        
+      <div class="container my-5">      
         <h3 class="text-center pb-2">Envoyer les instructions de connexion.</h3>
-        <p class="lead text-center text-dark pt-2 mb-5"></p>
-        
+        <p class="lead text-center text-dark pt-2 mb-5"></p>     
         <!--Grid row-->
         <div class="row d-flex align-items-center justify-content-center form-background-raidators">
           <!--Grid column-->
@@ -22,17 +19,14 @@
               <div class="card-body px-4">
                 <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
                   <%= render "devise/shared/error_messages", resource: resource %>
-
                   <div class="field">
                     <%= f.label :email %><br />
                     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-raidators" %>
                   </div>
-
                   <div class="actions">
                     <%= f.submit "Resend unlock instructions", class:"btn btn-primary btn-md btn-dark-raidators mx-0" %>
                   </div>
                 <% end %>
-
                 <%= render "devise/shared/links" %>
               </div>
               <!--/.Form-->

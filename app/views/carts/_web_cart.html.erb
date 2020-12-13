@@ -29,8 +29,7 @@
                       <p>Description: <%= myproduct.product.description %></p>
                       <p>Quantité : <%= myproduct.quantity %></p>
                       <p> Prix: <%= myproduct.product.price %>€</p>
-                      <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-outline-primary p-2 mt-2 btn-warning-raidators btn-md'%>
-                      
+                      <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-outline-primary p-2 mt-2 btn-warning-raidators btn-md'%>                 
                       <% if @cart.selected_products.length != 0 %>
                       <% else %>
                         <p> Votre panier est vide. </p>
@@ -89,7 +88,6 @@
                 <div id="stripe" class="mt-2">
                   <%= render 'stripe' %>
               <%end%>
-
                 </div>
               </div>
             </div>

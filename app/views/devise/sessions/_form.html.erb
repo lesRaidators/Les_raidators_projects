@@ -1,17 +1,14 @@
 <% content_for :title, "Mot de passe | Raidators" %>
 
 <div class="container-fluid mt-3 mb-5 light-background-raidators ">
-
   <!-- Full Page Intro -->
   <section class="signup">
     <!-- Block-->
     <div class="col-lg-6 col-md-4 form-background-raidators">
       <!-- Content -->
       <div class="container py-5 my-5">
-        
         <h3 class="text-center pb-2">Bonjour</h3>
-        <p class="lead text-center pt-2 mb-5">Ravis de vous revoir sur Europ.Raid</p>
-        
+        <p class="lead text-center pt-2 mb-5">Ravis de vous revoir sur Europ.Raid</p> 
         <!--Grid row-->
         <div class="row d-flex align-items-center justify-content-center form-background-raidators">
           <!--Grid column-->
@@ -19,30 +16,25 @@
             <!--Form-->
             <div class="card">
               <div class="card-body px-4">
-
                 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                   <div class:"field md-form mt-3">
                     <%= f.label :email %><br />
                     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-raidators"  %>
                   </div>
-
                   <div class="field  md-form mt-3">
                     <%= f.label :password, "Mot de passe" %><br />
                     <%= f.password_field :password, autocomplete: "current-password", class:"form-control form-control-raidators" %>
                   </div>
-
                   <% if devise_mapping.rememberable? %>
                     <div class="field form-check mt-3">
                       <%= f.check_box :remember_me %>
                       <%= f.label "Se souvenir" %>
                     </div>
                   <% end %>
-
                   <div class="actions text-center my-3">
                     <%= f.submit "Se connecter", class:"btn btn-primary btn-raidators" %>
                   </div>
                 <% end %>
-
                 <%= render "devise/shared/links" %>
               </div>
             </div>
