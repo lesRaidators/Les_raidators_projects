@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     if current_user.admin?
      @post = Post.new 
     else
-      redirect_to products_path
+      redirect_to posts_path
     end
   end
 
