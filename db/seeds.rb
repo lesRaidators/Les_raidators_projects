@@ -121,7 +121,7 @@ puts "-----Articles du blog-----"
 
 
 u = User.new
-u.email = "Raidators@yopmail.com"
+u.email = "raidator@yopmail.com"
 u.password = "123456"
 u.admin = true
 u.save
