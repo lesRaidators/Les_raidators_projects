@@ -15,4 +15,5 @@
 //= require jquery
 //= require bootstrap
 //= require sb-admin-2
-
+//= require dataTables.bootstrap4
+//= require jquery.dataTables
