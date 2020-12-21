@@ -1,0 +1,149 @@
+<% content_for :title, "La voiture | Raidators" %>
+
+<%= render :partial => "shared/banner" %>
+<div class="container my-5 py-5 z-depth-1">  
+  <!--Section: Content-->
+  <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+    <!--Grid row-->
+    <div class="row mb-4">
+      <!--Grid column-->
+      <div class="col-md-12 mb-4 mb-md-0">
+        <h3 class="text-left mb-5">Présentation de la voiture</h3>
+        <p class="text-left mb-5">L'équipage est composé de 3 pilotes, voyageurs téméraires aguerris qui se serreront les coudes pour toucher à leur but. En effet, au cours de leurs différentesaventures, ils ont pu se rendre compte qu'ils pouvaient aider autrement les pays et les enfants dans le besoin. Ils cherchaient à se rendre utile autrement qu'en visitant le pays...En juillet 2020, sur la côte, face à l'océan, l'histoire des Raid'ateurs et de leur petite 205 commence.
+          Ils s'apprêtent à parcourir un long périple pour accomplir une mission très importante : livrer du matériel dans des pays de l'Europe de l'Est.
+          Nous devions créer une association afin d’encadrer légalement nos démarches: ouvrir un compte bancaire ou même être assuré lors des événements que nous organiserons.
+          </p>
+        <%= image_tag("car/car.jpg", class:"card-img-top car-picture", alt:"Card image cap") %>
+      </div>
+      <!--Grid column-->
+      <div class="col-md-12 mb-4 mb-md-0">
+        <h3 class="text-left mb-5">Les plans de la voiture</h3>
+        <%= image_tag("car/plans.png", class:"card-img-top car-plans", alt:"Card image cap") %>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+    <!--Image-->
+  </section>
+  <!--Section: Content-->
+</div>
+
+<!--Section: Content-->
+<section class="text-center ">
+  <div class="container my-5">
+    <!-- Section heading -->
+    <h3 class=" pb-2 mb-4">Plan de sponsoring</h3>
+    <!-- Section description -->
+    <p class="text-muted w-responsive mx-auto mb-5">La carrosserie de la 205 est réservée aux encarts publicitaires de nos sponsors, 
+      avec des tarifs différents selon la taille et l'emplacement sur la voiture. Votre entreprise peut choisir l'emplacement 
+      qui lui convient, parmi ceux disponibles.</p>
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <!-- Pricing card -->
+        <div class="card pricing-card">
+          <!-- Price -->
+          <div class="price header white-text blue rounded-top">
+            <h2 class="">Pack voyageur</h2>
+            <%= image_tag("car/traveller1.png", class:"card-img-top car-icons", alt:"Card image cap") %>
+            <div class="version">
+              <p class="number mb-0">250 €</p>
+            </div>
+          </div>
+          <!-- Features -->
+          <div class="card-body striped mb-1">
+            <ul>
+              <li>
+              <p>Encart minimum 100 x 100
+              </p>
+              </li>
+              <li>
+                <p class="mt-2">Logo et lien url sur notre site internet</p>
+              </li>
+              <li>
+                <p>Post individuel à la signature du contrat de sponsoring</p>
+              </li>
+              <li>
+                <p>Posts remerciements avant/pendant/ fin du raid</p>
+              </li>
+            </ul>
+          <%= link_to 'En savoir plus', contact_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+          </div>
+          <!-- Features -->
+        </div>
+        <!-- Pricing card -->
+      </div>
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <!-- Pricing card -->
+        <div class="card pricing-card">
+          <!-- Price -->
+          <div class="price header white-text indigo rounded-top">
+            <h2 class="">Pack Aventurier</h2>
+            <%= image_tag("car/traveller2.png", class:"card-img-top car-icons", alt:"Card image cap") %>
+            <div class="version">
+              <p class="number mb-0">350 €</p>
+            </div>
+          </div>         
+          <!-- Features -->
+          <div class="card-body striped mb-1">
+            <ul>
+              <li>
+              <p>Encart minimum 200 x 200</p>
+              </li>
+              <li>
+                <p class="mt-2">Même contrepartie que le pack voyageur</p>
+              </li>
+              <li>
+                <p>Envoi d'une carte postale depuis une étape du parcours</p>
+              </li>
+            </ul>
+            <%= link_to 'En savoir plus', contact_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+          </div>
+          <!-- Features -->
+        </div>
+        <!-- Pricing card -->
+
+      </div>
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <!-- Pricing card -->
+        <div class="card pricing-card">
+          <!-- Price -->
+          <div class="price header white-text deep-purple rounded-top">
+            <h2 class="">Pack globe-trotteur</h2>
+            <%= image_tag("car/globe.png", class:"card-img-top car-icons", alt:"Card image cap") %>
+            <div class="version">
+              <p class="number mb-0">750 €</p>
+            </div>
+          </div>
+          <!-- Features -->
+          <div class="card-body striped mb-1">
+            <ul>
+              <li>
+              <p>Encart minimum 500 x 500
+              </p>
+              </li>
+              <li>
+                <p class="mt-2">Même contrepartie que le pack “Voyageur”</p>
+              </li>
+              <li>
+                <p>Présence de votre logo sur les t-shirts portés lors des événements</p>
+              </li>
+              <li>
+                <p>Envoi d’un cadeau souvenir</p>
+              </li>
+            </ul>
+            <%= link_to 'En savoir plus', contact_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
+          </div>
+          <!-- Features -->
+        </div>
+        <!-- Pricing card -->
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+</section>
+<!--Section: Content-->

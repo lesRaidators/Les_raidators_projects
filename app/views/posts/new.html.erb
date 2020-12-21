@@ -1,0 +1,34 @@
+<% content_for :title, "Nouvel article | Raidators" %>
+
+<div class="container-fluid mt-3 mb-5 dark-background-raidators ">
+
+  <div class="col-lg-6 col-md-4 form-background-raidators">
+    <div class="container py-5 my-5">
+      <h3 class="text-center pb-2">Nouvel article</h3>
+      <%= form_for @post do |f| %>
+
+        <div class="form-group">
+          <%= f.text_field :title, placeholder: 'Titre', class:"form-control form-control-raidators" %>
+        </div>
+
+        <div class="form_group">
+          <%= f.text_area :content, placeholder: "Contenu de l'article",  class:"form-control form-posts-content form-control-raidators mb-5" %>
+        </div>
+
+        <div>
+          <h3>Ajouter une photo</h3>
+          <%= f.label :avatar %>
+          <%= f.file_field :avatar, class: 'form-control', accept: "image/png, image/gif, image/jpeg" %>
+        </div>
+    
+        <div class="actions text-center my-3">
+          <%= f.submit "Valider l'article", class:"btn btn-success btn-raidators" %>
+          <%= link_to "Retour aux articles", posts_path, class:"btn btn-primary btn-dark-raidators"%>
+        </div>
+
+      <%end%>
+    </div>
+  </div>
+</div>
+
+

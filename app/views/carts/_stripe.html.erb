@@ -1,0 +1,3 @@
+<% if @cart.total > 0%>
+<%= button_to "Passer commande", checkout_index_path(total: @cart.total), class: "btn btn-success btn-raidators my-3", remote: true %>
+<% end %>

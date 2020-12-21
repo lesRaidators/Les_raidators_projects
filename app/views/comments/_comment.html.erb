@@ -1,0 +1,49 @@
+<section>
+  <h2 class="text-center mb-4 pb-2">Commentaires</h2>
+  <!-- Block-->
+  <div class="col-lg-10 col-md-8 form-background-raidators">
+    <!-- Content -->
+    <div class="container py-5 my-5">
+      <% @post.comments.each do |comment| %>
+        <!--Grid row-->
+        <div class="row mb-5">
+          <div class="col-2 col d-none d-md-block">
+            <i class="fas fa-comment fa-2x mr-0"></i>
+          </div>
+          <div class="col-10">
+            <p><%= @user.email.split('@')[0].capitalize %></p>
+            <div class="card-data">
+              <ul class="list-unstyled mb-1">
+                <li class="comment-date font-small grey-text">
+                  <i class="far fa-clock"></i><cite title="Source Title"><%= comment.created_at %></cite></li>
+              </ul>
+            </div>
+            <p><%= comment.content %></p>
+            <div class="">
+              <% if current_user %>
+                  <% if current_user.id == comment.user_id %>
+                  <%= link_to 'Supprimer', [comment.post, comment], method: :delete, data: { confirm: 'Êtes-vous certain.e de vouloir supprimer votre commentaire ?' }, class: 'btn btn-danger btn-warning-raidators' %>
+                  <% end %>
+              <% end %>
+            </div> 
+          </div>
+        </div>
+      <% end %>
+      <hr>
+      <div class="row text-align-center ">
+       <% if current_user != nil %>
+          <div class="col-2 ">
+            <p>Ajoutez un commentaire</p>
+          </div>
+          <div class="col-10">
+            <%= form_for([@post, @post.comments.build]) do |f| %>
+              <div class="">
+                  <%= f.text_area :content,  class:"form-control form-control-raidators", placeholder: "Votre commentaire..." %>
+              </div>
+              <%= f.submit 'Ajoutez votre commentaire', :class => 'btn btn-success btn-raidators btn-block my-5', remote: true %>
+            <% end %> 
+        <% end %>
+      </div>
+    </div>
+  </div>
+<section>

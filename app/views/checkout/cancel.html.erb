@@ -1,0 +1,28 @@
+<% content_for :title, " Commande passée | Raidators" %>
+<!-- Main navigation -->
+<div class="container-fluid mt-3 mb-5 light-background-raidators">
+  <!-- background -->
+  <div class="col-lg-6 col-md-4  mt-5 mb-5 form-background-raidators">
+    <!-- Content -->
+    <div class="container my-5">     
+      <h3 class="text-center pb-2"><i class="fas fa-sad-tear"></i></i> Votre commande a échoué </h3>
+      <!--Grid row-->
+      <div class="row d-flex align-items-center justify-content-center form-background-raidators">
+        <!--Grid column-->
+        <div class="col-md-6 col-xl-8">
+          <!--Form-->
+          <div class="card">
+            <div class="card-body px-4">
+              <div class="container text-center my-5">
+                <h1>Echec</h1>
+                <h3>Le paiement a échoué.<br> Essayez de nouveau ou choisissez d'autres produits.</h3>
+                <div> <%= link_to "retour aux dons", products_path, class:"btn btn-outline btn-light-raidators btn-md btn-rounded my-2" %></div>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

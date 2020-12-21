@@ -1,0 +1,52 @@
+<% content_for :title, "Un article | Raidators" %>
+<%= render :partial => "shared/banner" %>
+<div class="container-fluid mb-5 light-background-raidators">
+  <section class="post">
+    <!-- Block -->
+    <div class="col-lg-10 col-md-8 form-background-raidators">
+      <!-- Content -->
+      <!--Section: Content-->
+      <div class="container py-5 my-5">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-12">
+            <!-- Card -->
+            <div class="card card-cascade wider reverse">
+              <!-- Card image -->
+                <%= image_tag @post.avatar, class:"card-img-top show-post" %>
+              </div>
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center">
+                <!-- Title -->
+                <h2 ><%= @post.title %></h2>
+                <!-- Social shares -->
+                <div class="social-counters">
+                  <!-- Facebook -->
+                  <i class="fab fa-facebook-f pr-2"></i>
+                  <%= link_to 'Facebook', "https://www.facebook.com/lesraidators/", class: "clearfix d-none d-md-inline-block pr-2 "%>  
+                </div>
+                <!-- Social shares -->
+              </div>
+              <!-- Card content -->
+            </div>
+            <!-- Card -->
+            <!-- Excerpt -->
+            <div class="mt-5">
+              <p><%= @post.content %></p>
+            </div>
+          </div>
+          <!-- Grid column -->
+          <div class="mt-5">
+          <%= link_to "Retour aux articles", posts_path, class:"btn btn-primary btn-dark-raidators"%>
+          </div>
+        </div>
+        <!-- Grid row -->
+      </div>
+    </div>
+  </section>
+ 
+  <!--Section: Comments-->
+  <%= render :partial => "comments/comment" %>
+  <!--Section: Block Content-->
+</div>

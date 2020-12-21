@@ -1,0 +1,40 @@
+<% content_for :title, "Mon adresse | Raidators" %>
+<!-- Main navigation -->
+<div class="container-fluid mt-3 mb-5 brown-background-raidators">
+  <!-- Full Page Intro -->
+  <section class="image-edit-registration">
+    <!-- background -->
+    <div class="col-lg-6 col-md-4 form-background-raidators">
+      <!-- Content -->
+      <div class="container my-5">     
+        <h3 class="text-center pb-2">Mon adresse</h3>
+        <!--Grid row-->
+        <div class="row d-flex align-items-center justify-content-center form-background-raidators">
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-8">
+            <!--Form-->
+            <div class="card">
+              <div class="card-body px-4">
+                <h3>Prénom</h3><p> <%= @address.first_name %></p>
+                <h3>Nom  : </h3><p><%= @address.last_name %> </p>
+                <h3> Numéro de Rue :</h3><p> <%= @address.street_number %> </p>
+                <h3> Rue :</h3><p> <%= @address.street %> </p>
+                <h3> Code Postal :</h3><p> <%= @address.zip_code %> </p>
+                <h3> Ville: </h3><p><%= @address.city %> </p>
+                <h3> Pays :</h3><p> <%= @address.country %> </p>
+                <h3> Numéros de téléphone :</h3><p> <%= @address.phone_number %></p>
+                <h3> Nom d'entreprise:</h3><p> <%= @address.company_name %></p>
+                <%= link_to "Modifier", edit_user_address_path(@user, @user.addresses.first), class: "btn btn-outline-primary text-white btn-dark-raidators p-2 mx-0"%>
+                <%= link_to "Retour au profil", user_path(current_user.id), class: "btn btn-outline-primary btn-light-raidators p-2 mx-0"%>
+              </div>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
