@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-=======
 
   get '/partenariat', to: "static_pages#partnership"
   get '/accueil', to: "static_pages#home_page"
@@ -10,8 +7,8 @@ Rails.application.routes.draw do
   get '/equipements', to: "static_pages#equipments"
   get '/contact', to: "static_pages#contact"
   get '/car', to:"static_pages#car"
-  
-  devise_for :users 
+
+  devise_for :users
 
   resources :selected_products
 
@@ -21,25 +18,24 @@ Rails.application.routes.draw do
 
   resources :orders, path: 'commande'
   resources :carts, path: 'panier'
-  
+
   resources :charges, path: 'paiement'
-  
+
   resources :users, path: 'profil' do
   resources :avatars, only: [:create]
   resources :addresses
   end
 
- 
+
 
   resources :posts do
     resources :comments
-  end 
+  end
   root 'static_pages#home_page'
-  
-resources :checkout, only: [:create]
-get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
-get 'success', to: 'checkout#success', as: 'checkout_success'
- 
-  
->>>>>>> development
+
+  resources :checkout, only: [:create]
+  get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
+  get 'success', to: 'checkout#success', as: 'checkout_success'
+
+
 end
