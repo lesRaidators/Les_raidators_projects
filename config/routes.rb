@@ -26,8 +26,6 @@ Rails.application.routes.draw do
   resources :addresses
   end
 
-
-
   resources :posts do
     resources :comments
   end
@@ -37,5 +35,9 @@ Rails.application.routes.draw do
   get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
   get 'success', to: 'checkout#success', as: 'checkout_success'
 
+
+  namespace :admin do
+    root "admin#index"
+  end
 
 end

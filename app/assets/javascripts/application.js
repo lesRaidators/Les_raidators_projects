@@ -14,4 +14,5 @@
 //= require activestorage
 //= require jquery
 //= require bootstrap
+//= require sb-admin-2
 

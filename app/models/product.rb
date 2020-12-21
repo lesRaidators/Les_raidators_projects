@@ -10,6 +10,6 @@ class Product < ApplicationRecord
   validates :avatar, presence: true
 
 
-  enum category: {donation: "Don", merchandising: "Produit"}
+  enum category: { :donation => 0, :merchandising => 1 }
 
 end
