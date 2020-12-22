@@ -10,4 +10,6 @@ class Post < ApplicationRecord
   presence: true
 
   enum status: { :draft => 0, :published => 1 }
+
+  scope :published, -> {where(status: "published") }
 end
