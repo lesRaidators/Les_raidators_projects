@@ -12,13 +12,13 @@
       </li>
       <li class="nav-item">
         <%= link_to "Professionnels", partenariat_path, class:"nav-link" %>
-      </li> 
+      </li>
       <li class="nav-item">
         <%= link_to "Faire un don", products_path, class:"nav-link" %>
-      </li> 
+      </li>
       <li class="nav-item">
-        <%= link_to "Collecte de fourniture", equipements_path, class:"nav-link" %> 
-      </li> 
+        <%= link_to "Collecte de fourniture", equipements_path, class:"nav-link" %>
+      </li>
       <li class="nav-item">
         <%= link_to "L'équipe", equipe_path, class:"nav-link" %>
       </li>
@@ -29,7 +29,12 @@
         <%= link_to "Contact", contact_path, class:"nav-link" %>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto">  
+    <ul class="navbar-nav ml-auto">
+      <% if current_user.admin %>
+        <li class="nav-item bg-white">
+          <%= link_to "Dashboard admin", admin_root_path,  class:"nav-link text-dark" %>
+        </li>
+      <% end %>
       <% if user_signed_in? %>
         <li class="nav-item active navbar-hamburger-display">
         <%= link_to "Panier", cart_path(Cart.find_or_create_by(user_id: current_user.id)), class:"nav-link" %> </i> <b>
@@ -48,7 +53,7 @@
           <%else%>
             <%= link_to "Inscription", new_user_registration_path, class:"dropdown-item" %>
             <%= link_to "Se connecter", new_user_session_path, class:"dropdown-item" %>
-          <%end%> 
+          <%end%>
         </div>
       </li>
     </ul>

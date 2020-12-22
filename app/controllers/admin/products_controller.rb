@@ -2,7 +2,7 @@ class Admin::ProductsController < Admin::BaseController
   before_action :get_product, only: [:show, :edit, :destroy, :update]
 
   def index
-    @products = Product.all
+    @products = Product.all.order('created_at DESC')
   end
 
   def show

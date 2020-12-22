@@ -39,6 +39,8 @@ Rails.application.routes.draw do
   namespace :admin do
     root "admin#index"
     resources :products
+    resources :users, only: [:index, :show, :destroy]
+    resources :orders
   end
 
 end
