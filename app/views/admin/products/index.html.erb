@@ -40,8 +40,12 @@
               <td><%= product.donation_part %>% du prix</td>
               <td>status</td>
               <td>
-                <i class="fas fa-eye mr-2"></i>
-                <i class="far fa-edit"></i>
+                <%= link_to admin_product_path(product) do %>
+                  <i class="fas fa-eye mr-2 fa-lg"></i>
+                <%end%>
+                <%= link_to edit_admin_product_path(product) do %>
+                  <i class="far fa-edit ml-2 fa-lg"></i>
+                <%end%>
               </td>
             </tr>
           <% end %>

@@ -1,0 +1,33 @@
+<div class="container-fluid mt-3 mb-5 light-background-raidators">
+  <div class="container mt-5">
+    <div class="card card-list content-full-size-div-raidator card-rounded-raidators">
+      <div class="card-header card-header d-flex justify-content-between align-items-center dark-background-raidators text-white top-corner-radius-card-image-raidators">
+        <h3 class="mb-0">Description Produit </h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-5 mb-4">
+            <% if @product.avatar.attached? %>
+            <%= image_tag @product.avatar, width: "70%", class:"card-img-top card-rounded-raidators"  %>
+            <% end %>
+          </div>
+          <!--Grid column-->
+          <div class="col-md-7 mb-4">
+            <h3 class="mb-3"> <%= @product.title %></h3>
+            <p>Description: <%= @product.description %></p>
+            <p> Prix: <%= @product.price / 100 %>€</p>
+            <p><%= @product.donation_part %>% du prix du produit est une donation</p>
+            <%= link_to "Modifier", edit_admin_product_path(@product), class:"btn btn-warning" %>
+            <%= link_to "Supprimer", admin_product_path(@product), method: 'DELETE', class:"btn btn-danger", :data => {:confirm => 'Attetion cette action est définitive'} %>
+            <%= link_to "Retour à la liste des produits", admin_products_path, class:"btn btn-info"%>
+          </div>
+          <!--Grid column-->
+        </div>
+      </div>
+      <!--/.Panel 2-->
+    </div>
+    <!-- Pills panels -->
+
+  </div>
+</div>
