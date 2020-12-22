@@ -41,6 +41,7 @@ Rails.application.routes.draw do
     resources :products
     resources :users, only: [:index, :show, :destroy]
     resources :orders
+    resources :posts
   end
 
 end

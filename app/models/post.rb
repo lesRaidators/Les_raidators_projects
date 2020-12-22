@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  belongs_to :user 
+  belongs_to :user
   has_many :comments, dependent: :destroy
   has_one_attached :avatar
 
@@ -9,5 +9,5 @@ class Post < ApplicationRecord
   validates :content,
   presence: true
 
-
+  enum status: { :draft => 0, :published => 1 }
 end
