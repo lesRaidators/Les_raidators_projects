@@ -12,4 +12,6 @@
  *
  *= require bootstrap
  *= require main
+ *= require sb-admin-2
+ *= require dataTables.bootstrap4
  */
