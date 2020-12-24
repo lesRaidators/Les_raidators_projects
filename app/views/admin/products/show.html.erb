@@ -17,6 +17,7 @@
             <h3 class="mb-3"> <%= @product.title %></h3>
             <p>Description: <%= @product.description %></p>
             <p> Prix: <%= @product.price / 100 %>€</p>
+            <p>Catégorie : <%= @product.category %>
             <p><%= @product.donation_part %>% du prix du produit est une donation</p>
             <%= link_to "Modifier", edit_admin_product_path(@product), class:"btn btn-warning" %>
             <%= link_to "Supprimer", admin_product_path(@product), method: 'DELETE', class:"btn btn-danger", :data => {:confirm => 'Attetion cette action est définitive'} %>

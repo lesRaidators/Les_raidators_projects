@@ -17,21 +17,21 @@
                   <div class="row">
                     <!--Grid column-->
                     <div class="col-md-5 mb-4">
-                      <hr class="mb-5">  
-                      <%= image_tag @product.avatar, width: "70%", class:"card-img-top card-rounded-raidators"  %> 
+                      <hr class="mb-5">
+                      <%= image_tag @product.avatar, width: "70%", class:"card-img-top card-rounded-raidators"  %>
                     </div>
                     <!--Grid column-->
                     <div class="col-md-7 mb-4">
                       <hr class="mb-5">
                       <h3 class="mb-3"> <%= @product.title %></h3>
                       <p>Description: <%= @product.description %></p>
-                      <p> Prix: <%= @product.price %>€</p>
+                      <p> Prix: <%= @product.price / 100%>€</p>
                       <% if user_signed_in? %>
                         <%= link_to "Ajouter à mon panier", selected_products_path(product_id: @product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md  mx-0" %>
                       <% else %>
                         <%= link_to "Ajouter à mon panier", new_user_session_path, class:"btn btn-success btn-raidators btn-md  mx-0" %>
                       <% end %>
-                      <p> <%= link_to "retour aux dons", products_path, class:"btn btn-outline btn-light-raidators btn-md btn-rounded my-2" %></p>
+                      <p> <%= link_to "Retour aux dons", products_path, class:"btn btn-outline btn-light-raidators btn-md btn-rounded my-2" %></p>
                     </div>
                     <!--Grid column-->
                   </div>

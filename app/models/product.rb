@@ -13,4 +13,6 @@ class Product < ApplicationRecord
 
   enum category: { :donation => 0, :merchandising => 1 }
 
+  scope :donation, -> {where(category: "donation") }
+  scope :merchandising, -> {where(category: "merchandising") }
 end
