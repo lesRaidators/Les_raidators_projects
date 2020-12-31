@@ -1,0 +1,25 @@
+<div class="row mx-4 my-4 justify-content-center h-100">
+  <% @products.merchandising.each do |product| %>
+    <div class="col-lg-3 col-md-5 mb-4">
+      <div class="card small-card-raidators card-product-aligment-center h-100">
+        <div class="top-corner-radius-card-image-raidators product-card-image">
+          <% if product.avatar.attached? %>
+            <%= image_tag product.avatar, class:"card-img-top-products" %>
+          <%end%>
+        </div>
+        <!-- Card content -->
+        <div class="card-body">
+          <h3> <%= product.title %> </h3>
+          <p class="card-title text-muted font-small mt-3 mb-2"> Prix:<%= product.price / 100 %> €</p>
+          <% if user_signed_in? %>
+            <%= link_to "soutenir le projet", selected_products_path(product_id: product.id), method: 'POST', class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
+            <%= link_to "Voir le détails", product_path(product.id), class:"btn btn-outline-primary btn-light-raidators btn-md  mx-0" %>
+          <% else %>
+            <%= link_to "soutenir le projet", new_user_session_path, class:"btn btn-success btn-raidators btn-md btn-rounded mx-0" %>
+          <% end %>
+          <br>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
