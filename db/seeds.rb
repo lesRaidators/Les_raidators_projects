@@ -54,44 +54,6 @@ puts "------don de 20 euros--------"
 
 
 
-
-@product_4 = Product.new(
-title: 'Sweat Raidators',
-description: "Un pull en laine qui portera chaud tout l'hiver et même les soirs d'été. 65% Coton - 35% Polyester.",
-price: 3500,
-category: 'merchandising',
-donation_part: 5
-)
-@product_4.avatar.attach(io: File.open('app/assets/images/products/pull.png'), filename: 'pull.png')
-@product_4.save
-
-
-
-@product_5 = Product.new(
-title: 'Casquette Raidators',
-description: "Casquette avec logo raidators - 100% coton",
-price: 1500,
-category: 'merchandising',
-donation_part: 10
-)
-@product_5.avatar.attach(io: File.open('app/assets/images/products/casquette.png'), filename: 'casquette.png')
-@product_5.save
-
-
-@product_5 = Product.new(
-title: 'Bonnet Raidators',
-description: "Bonnet avec logo raidators",
-price: 500,
-category: 'merchandising',
-donation_part: 10
-)
-@product_5.avatar.attach(io: File.open('app/assets/images/products/Bonnet.png'), filename: 'Bonnet.png')
-@product_5.save
-
-puts "-----Pull/Casquette/Casquette------"
-
-
-
 @post_1 = Post.create(
 title: 'Inauguration de notre site',
 content: "Ça y est, il est là, la version 2.0 du site des Raidators. C'est notre point de départ. C'est comme un être cher que l'on attend. Il est là, avec plein de fonctionnalités.
