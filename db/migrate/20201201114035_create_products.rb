@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.integer :price
-      t.string :category, default: "Don"
+      t.string :category
       t.integer :donation_part, default: 1
       t.timestamps
     end
