@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_105001) do
     t.string "title"
     t.string "description"
     t.integer "price"
-    t.string "category", default: "Don"
+    t.string "category"
     t.integer "donation_part", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
