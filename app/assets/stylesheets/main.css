@@ -1,6 +1,42 @@
 
 /* custom.css */
 
+/* HOME PAGE */
+
+
+.img-fluid-THP{
+  height: 100%;
+  width: 50%;
+
+}
+
+.title-THP-team{
+  height: 15%;
+  margin-left: 10%;
+
+}
+
+.title-THP-ce{
+  height: 15%;
+  margin-left: -7%;
+}
+
+
+.lkdn-position{
+  width: 80%;
+  margin-top: 5%;
+
+}
+
+.lkdn-position-1{
+  width: 80%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+
+}
+
+
+
 
 .footerend{
   display: flex;
