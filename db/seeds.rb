@@ -89,8 +89,8 @@ puts "-----Articles du blog-----"
 
 
 u = User.new
-u.email = "raidator@yopmail.com"
-u.password = "123456"
+u.email = "Raidators@outlook.fr"
+u.password = "Raidingdetoaclapclap3!"
 u.admin = true
 u.save
 
