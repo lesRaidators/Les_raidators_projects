@@ -22,7 +22,7 @@ def total_stripe
   selected_products = self.selected_products
   total = 0
   selected_products.each do |item|
-    total += item.product.price
+    total += item.product.price / 100
   end
   return total
 end

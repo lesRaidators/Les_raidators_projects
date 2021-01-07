@@ -28,7 +28,7 @@
                       <p class="mb-3 h3"><%= myproduct.product.title %></p>
                       <p>Description: <%= myproduct.product.description %></p>
                       <p>Quantité : <%= myproduct.quantity %></p>
-                      <p> Prix: <%= myproduct.product.price %>€</p>
+                      <p> Prix: <%= myproduct.product.price / 100 %>€</p>
                       <%= button_to 'Supprimer', myproduct, method: :delete, class: 'btn btn-outline-primary p-2 mt-2 btn-warning-raidators btn-md'%>                 
                       <% if @cart.selected_products.length != 0 %>
                       <% else %>
@@ -61,8 +61,8 @@
                       <%= myproduct.product.title %>
                     </dd>
                     <dd class="col-sm-4">
-                      <p><%= myproduct.product.price %>€</p>
-                      <%= myproduct.quantity * myproduct.product.price %>
+                      <p><%= myproduct.product.price / 100 %>€</p>
+                      <%= myproduct.quantity * myproduct.product.price / 100 %>
                     </dd>
                   </dl>
                 <% end %>

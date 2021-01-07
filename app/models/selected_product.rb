@@ -4,7 +4,7 @@ class SelectedProduct < ApplicationRecord
   belongs_to :product
 
   def total
-    total = quantity * product.price
+    total = quantity * product.price / 100
   end
 
 end
