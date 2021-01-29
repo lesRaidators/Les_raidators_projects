@@ -269,6 +269,19 @@ section{
   width: 100%;
 }
 
+/* ------------------SPONSORS SECTION ------------------- */
+
+.partner-proposition {
+  width: 100%;
+  margin: 5%;
+
+}
+
+.cidexport-btn{
+  width: 75%;
+  margin-top: 10%;
+
+}
 /* ------------Form------------ */
 .form-background-raidators{
   display: flex;

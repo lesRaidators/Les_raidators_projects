@@ -265,21 +265,22 @@
     <h3 class="black-text mb-4 pb-2">Ils nous soutiennent</h3>
     <hr class="w-header">
     <!-- Section description -->
-    <p class="lead text-muted mx-auto mt-4 pt-2 mb-5">Cette aventure ne serait pas possible sans le soutien de nos partenaires. Entreprise ou particulier, chaque soutien compte. </p>
+    <p class="lead text-muted mx-auto mt-4 pt-2 mb-5">Cette aventure ne serait pas possible sans le soutien de nos sponsors. Entreprise ou particulier, chaque soutien compte. </p>
     <!--First row-->
     <div class="row">
 
-      <%= link_to 'Soyez 1er partenaire', partenariat_path, class: "btn btn-success btn-raidators text-white p-2 mx-0"%>
 
       <!--Premier logo-->
 
-      <!--<div class="col-md-3 mb-4">
+      <div class="col-md-3 mb-4">
         <div class="card card-rounded-raidators">
           <div class="card-body my-4 ">
-            <%= image_tag("home_page/scootcoot.png", class:"card-img-top", alt:"Card image cap") %>                 
+            <%= image_tag("sponsors/CIDEXPORT.png", class:"card-img-top", alt:"Card image cap") %>                 
           </div>
+
         </div>   
-      </div> -->
+        <%= link_to "Cidexport", "https://www.cidexport.net/", class:"cidexport-btn btn btn-info btn-raidators text-white p-2 mx-0" %> 
+      </div> 
 
       <!--Second logo-->
       <!--<div class="col-md-3 mb-4">
@@ -312,6 +313,7 @@
 
     </div>
     <!--First row-->
+      <%= link_to 'Devenir sponsors', partenariat_path, class: "partner-proposition btn btn-success btn-raidators text-white p-2 mx-0"%>
   </div>
 </section>
 
